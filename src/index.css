@@ -6,6 +6,10 @@
 }
 
 body {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,25 +17,5 @@ body {
   --red: #e44145;
   --white: whitesmoke;
   --black: black;
-}
-
-.app {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 800px;
-  border: 1px solid white;
-}
-
-@media screen and (max-width: 768px) {
-  .app {
-    width: 620px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .app {
-    width: 620px;
-  }
 }
 

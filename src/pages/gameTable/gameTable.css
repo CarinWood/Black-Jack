@@ -1,0 +1,31 @@
+.game-table {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .dealers-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 800px;
+    border: 1px solid white;
+  }
+  
+  @media screen and (max-width: 811px) {
+    .dealers-box {
+      width: 720px;
+      justify-content: center;
+      border: 1px solid lime;
+    }
+  }
+  
+  @media screen and (max-width: 471px) {
+    .dealers-box {
+      width: 400px;
+      border: 1px solid pink;
+  
+    
+    }
+  }
+  
+  

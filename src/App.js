@@ -1,15 +1,10 @@
-import Card02 from './components/card02/Card02';
-
-
+import GameTable from "./pages/gameTable/GameTable";
 
 function App() {
   return (
-    <div className='app'>
-      <Card02 suit={"diamonds"}/>
-      <Card02 suit={"clubs"}/>
-      <Card02 suit={"hearts"}/>
-      <Card02 suit={"spades"}/>
-    </div>
+    <>
+      <GameTable />
+    </>
   );
 }
 

@@ -1,7 +1,7 @@
 .card-frame {
     margin-top: 10px;
-    width: 162px;
-    height: 220px;
+    width: 122px;
+    height: 165px;
     padding: 4px;
     font-size: 23px;
     background-color: whitesmoke;
@@ -37,8 +37,8 @@
 .heart-suit-small-2 {
     transform: rotate(180deg);
     position: absolute;
-    bottom: 11%;
-    right: 6%;
+    bottom: 15%;
+    right: 8%;
 }
 
 .clubs-suit-small, .clubs-suit-small-2 {
@@ -52,8 +52,8 @@
 .clubs-suit-small-2 {
     transform: rotate(180deg);
     position: absolute;
-    bottom: 11%;
-    right: 6%;
+    bottom: 15%;
+    right: 8%;
 }
 
 .diamonds-suit-small, .diamonds-suit-small-2 {
@@ -67,8 +67,8 @@
 .diamonds-suit-small-2 {
     transform: rotate(180deg);
     position: absolute;
-    bottom: 11%;
-    right: 5.4%;
+    bottom: 15%;
+    right: 7%;
 }
 
 .spades-suit-small, .spades-suit-small-2 {
@@ -82,8 +82,8 @@
 .spades-suit-small-2 {
     transform: rotate(180deg);
     position: absolute;
-    bottom: 11%;
-    right: 6%;
+    bottom: 15%;
+    right: 8%;
 }
 
 .first-heart, .second-heart {
@@ -151,62 +151,93 @@
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 811px) {
     .card-frame {
         margin-top: 10px;
-        width: 142px;
-        height: 200px;
-        padding: 4px;
-        font-size: 23px;
+        width: 102px;
+        height: 145px;
+      
     }
+
+    .heart-suit-small-2, .clubs-suit-small-2, .spades-suit-small-2, .diamonds-suit-small-2 {
+        bottom: 17%;
+        right: 9.5%;
+    }
+
+  
+
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 471px) {
     .card-frame {
         margin-top: 10px;
-        width: 98px;
-        height: 130px;
-        padding: 4px;
+        width: 88px;
+        height: 120px;
+        padding: 2px;
         font-size: 23px;
     }
 
-    .spades-suit-small-2, .heart-suit-small-2, .spades-suit-small-2 {
-        bottom: 13%;
-        right: 7.6%;
+    .spades-suit-small-2, .clubs-suit-small-2 {
+        bottom: 10.8%;
+        right: 5%;
     }
 
-    .diamonds-suit-small-2 {
-        bottom: 13%;
-        right: 6.7%;
-    }
-
-    .spades-suit-small {
-        margin-left: 4.5px;
-        margin-bottom: 11px;
-    }
-
+    
     .heart-suit-small {
-        margin-left: 5.2px;
-        margin-bottom: 11px;
+        margin-left: 2px;
+        margin-bottom: 13px;
     }
 
-    .diamonds-suit-small {
-        margin-left: 3.6px;
+    .heart-suit-small-2 {
+        bottom: 10.9%;
+        right: 5.8%;
     }
 
     .heart-suit-small, .heart-suit-small-2 {
-        font-size: 9px;
+        font-size: 8px;
     }
 
+    .diamonds-suit-small {
+        margin-left: 0.6px;
+    }
+ 
+    .diamonds-suit-small-2 {
+        bottom: 10%;
+        right: 3.5%;
+    } 
+
+    .spades-suit-small, .clubs-suit-small {
+        margin-left: 1.2px;
+        margin-bottom: 11px;
+    }
+
+
+   
+
+   
+
     .first-digit {
-        font-size: 20px;
-        margin-top: 2px;
+        font-size: 18px;
+        margin-top: 0px;
+        margin-left: 2px;
     }
 
     .second-digit {
-        font-size: 20px;
-        margin-bottom: 2px;
-        margin-right: 8px;
+        font-size: 18px;
+        margin-bottom: 0px;
+        margin-right: 5px;
+    }
+
+    .first-heart, .second-heart {
+        font-size: 19px;
+        width: 19px;
+        height: 19px;
+    }
+
+    .second-heart {
+        transform: rotate(180deg);
+
+       
     }
 
   

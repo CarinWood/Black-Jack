@@ -8,7 +8,6 @@
     width: 800px;
     height: 200px;  
     position: relative;
-    border: 1px solid white;
   }
 
   .first-dealer-card, .second-dealer-card, .third-dealer-card,
@@ -21,42 +20,36 @@
   .active1 {
       top: 0;
       left: 30%;
-      animation-name: firstFall;
       animation-duration: 500ms;
       transition: ease 0.5s
   }
   .active2 {
       top: 0;
       left: 35%;
-      animation-name: secondFall;
       animation-duration: 500ms;
       transition: ease 0.5s
   }
   .active3 {
       top: 0;
       left: 40%;
-      animation-name: thirdFall;
       animation-duration: 500ms;
       transition: ease 0.5s
   }
   .active4 {
       top: 0;
       left: 45%;
-      animation-name: fourthFall;
       animation-duration: 500ms;
       transition: ease 0.5s
   }
   .active5 {
       top: 0;
       left: 50%;
-      animation-name: fifthFall;
       animation-duration: 500ms;
       transition: ease 0.5s
   }
   .active6 {
       top: 0;
       left: 55%;
-      animation-name: sixthFall;
       animation-duration: 500ms;
       transition: ease 0.5s
   }
@@ -64,86 +57,8 @@
   .active7 {
       top: 0;
       left: 60%;
-      animation-name: seventhFall;
       animation-duration: 500ms;
       transition: ease 0.5s
-  }
-
-  @keyframes firstFall {
-    0% {
-      top: -200%;
-      left: -70%;
-    }
-    100% {
-      top: 0;
-      left: 30%;
-    } 
-  }
-
-    @keyframes secondFall {
-    0% {
-      top: -200%;
-      left: -70%;
-    }
-    100% {
-      top: 0;
-      left: 35%;
-    } 
-  }
-
-  @keyframes thirdFall {
-    0% {
-      top: -200%;
-      left: -70%;
-    }
-    100% {
-      top: 0;
-      left: 40%;
-    } 
-  }
-
-  @keyframes fourthFall {
-    0% {
-      top: -200%;
-      left: -70%;
-    }
-    100% {
-      top: 0;
-      left: 45%;
-    } 
-  }
- 
-  @keyframes fifthFall {
-    0% {
-      top: -200%;
-      left: -70%;
-    }
-    100% {
-      top: 0;
-      left: 50%;
-    } 
-  }
-
-  @keyframes sixthFall {
-    0% {
-      top: -200%;
-      left: -70%;
-    }
-    100% {
-      top: 0;
-      left: 55%;
-    } 
-  }
-
-  @keyframes seventhFall {
-    0% {
-      top: -200%;
-      left: -70%;
-    }
-    100% {
-      top: 0;
-      left: 60%;
-    } 
   }
 
 
@@ -185,7 +100,6 @@
     .dealers-box {
       width: 620px;
       height: 200px;
-      border: 1px solid white;
     }
   }
   
@@ -214,130 +128,32 @@
         width: 80px;
     }
 
+ 
    
 
   .active1 {
       left: 5%;
-      animation-name: first;
   }
   .active2 {
     left: 15%;
-    animation-name: second;
   }
   .active3 {
     left: 25%;
-    animation-name: third;
   }
   .active4 {
     left: 35%;
-    animation-name: fourth;
   }
   .active5 {
     left: 45%;
-    animation-name: fifth;
   }
   .active6 {
     left: 55%;
-    animation-name: sixth;
   }
   .active7 {
     left: 65%;
-    animation-name: seventh;
   }
 
-  @keyframes first {
-    0% {
-      top: -200%;
-      left: -70%;
-    }
-    100% {
-      top: 0;
-      left: 5%;
-    } 
-  }
-
-  @keyframes second {
-    0% {
-      top: -200%;
-      left: -70%;
-    }
-    100% {
-      top: 0;
-      left: 15%;
-    } 
-  }
-
-  @keyframes third {
-    0% {
-      top: -200%;
-      left: -70%;
-    }
-    100% {
-      top: 0;
-      left: 25%;
-    } 
-  }
-  @keyframes fourth {
-    0% {
-      top: -200%;
-      left: -70%;
-    }
-    100% {
-      top: 0;
-      left: 35%;
-    } 
-  }
-  @keyframes fifth {
-    0% {
-      top: -200%;
-      left: -70%;
-    }
-    100% {
-      top: 0;
-      left: 45%;
-    } 
-  }
-  @keyframes sixth {
-    0% {
-      top: -200%;
-      left: -70%;
-    }
-    100% {
-      top: 0;
-      left: 55%;
-    } 
-  }
-  @keyframes seventh {
-    0% {
-      top: -200%;
-      left: -70%;
-    }
-    100% {
-      top: 0;
-      left: 65%;
-    } 
-  }
-
-   
-
-    .third-dealer-card {
-        left: 25%;
-    }
-    .fourth-dealer-card {
-        left: 35%;
-    }
   
-    .fifth-dealer-card {
-        left: 45%;
-    }
-  
-    .sixth-dealer-card {
-        left: 55%;
-    }
-   
-    .seventh-dealer-card {
-        left: 65%;
-    }
   }
   
   

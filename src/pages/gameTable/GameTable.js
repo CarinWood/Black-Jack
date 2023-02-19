@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './gameTable.css'
 import { Deck } from "../../data/deck/Deck";
 
@@ -6,13 +6,16 @@ const GameTable = () => {
   const [countDealerCards, setCountDealerCards] = useState(0)
   const [firstDealerCard, setFirstDealerCard] = useState(false);
 
+  useEffect(() => {
+      if(countDealerCards === 1) {
+        setFirstDealerCard(true)
+      }
+
+
+  },[countDealerCards])
 
    const drawDealerCards = () => {
     setCountDealerCards(countDealerCards + 1);
-    if(countDealerCards === 1) {
-      setFirstDealerCard(true)
-      console.log(firstDealerCard)
-    }
   }
 
   const drawFirstCard = () => {

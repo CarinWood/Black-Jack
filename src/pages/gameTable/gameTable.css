@@ -5,26 +5,79 @@
   
   .dealers-box {
     display: flex;
+    width: 800px;
+    position: relative;
+  }
+
+  .first-dealer-card {
+    position: absolute; 
+    left: 0;
+    top: 0;
+  }
+
+  .user-box {
+    width: 300px;
+    border: 1px solid goldenrod;
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    bottom: 0;
+    padding: 40px;
+    display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 800px;
-    border: 1px solid white;
-  }
+}
+
+.stand-btn, .hit-btn {
+    color: var(--white);
+    padding: 5px 10px;
+    border: 1px solid burlywood;
+    border-radius: 10px;
+    background-image:linear-gradient(rgb(108, 24, 24), rgb(159, 13, 13));
+    font-size: 20px;
+    letter-spacing: 1.3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    width: 90px;
+    cursor: pointer;
+}
+
+.hit-btn {
+    background-image: linear-gradient(midnightblue, rgb(51, 51, 203));
+}
+
+.hit-btn:active, .stand-btn:active {
+    transform: translateY(2px);
+}
   
   @media screen and (max-width: 811px) {
     .dealers-box {
       width: 720px;
-      justify-content: center;
-      border: 1px solid lime;
     }
   }
   
   @media screen and (max-width: 471px) {
     .dealers-box {
-      width: 400px;
-      border: 1px solid pink;
-  
-    
+      width: 400px;    
+    }
+
+    .user-box {
+        width: 250px;
+        border: 1px solid goldenrod;
+        position: absolute;
+        left: 50%;
+        margin-left: -125px;
+        bottom: 0;
+        padding: 30px 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .stand-btn, .hit-btn {
+        padding: 6px 10px;
+        font-size: 18px;
+        letter-spacing: 1.3px;
+        width: 80px;
     }
   }
   

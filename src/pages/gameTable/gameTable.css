@@ -64,7 +64,6 @@
 
   .user-box {
     width: 300px;
-    border: 1px solid goldenrod;
     position: absolute;
     left: 50%;
     margin-left: -150px;
@@ -110,7 +109,6 @@
 
     .user-box {
         width: 250px;
-        border: 1px solid goldenrod;
         position: absolute;
         left: 50%;
         margin-left: -125px;

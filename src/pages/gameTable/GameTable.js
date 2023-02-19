@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './gameTable.css'
 import { Deck } from "../../data/deck/Deck";
+import King from "../../components/king/King";
 
 const GameTable = () => {
   const [countDealerCards, setCountDealerCards] = useState(0)
@@ -112,7 +113,7 @@ const GameTable = () => {
         </div>
       
       </div>
- 
+    
       <div className='user-box'>
       <button className='stand-btn' onClick={()=> drawDealerCards()}>Stand</button>
       <button className='hit-btn'>Hit</button>

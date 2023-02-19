@@ -15,6 +15,12 @@
     top: 0;
   }
 
+  .second-dealer-card {
+    position: absolute; 
+    left: 20%;
+    top: 0;
+  }
+
   .user-box {
     width: 300px;
     border: 1px solid goldenrod;

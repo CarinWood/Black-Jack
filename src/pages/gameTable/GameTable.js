@@ -5,10 +5,14 @@ import { Deck } from "../../data/deck/Deck";
 const GameTable = () => {
   const [countDealerCards, setCountDealerCards] = useState(0)
   const [firstDealerCard, setFirstDealerCard] = useState(false);
+  const [secondDealerCard, setSecondDealerCard] = useState(false);
 
   useEffect(() => {
+      console.log(countDealerCards)
       if(countDealerCards === 1) {
-        setFirstDealerCard(true)
+        setFirstDealerCard(true);
+      } else if (countDealerCards === 2) {
+        setSecondDealerCard(true);
       }
 
 
@@ -20,10 +24,16 @@ const GameTable = () => {
 
   const drawFirstCard = () => {
     console.log('drawfirstcard function')
+   
     let card = Deck[0];
-    Deck.splice(0, 1);
-    return card
+    return card;
   
+  }
+
+  const drawSecondCard = () => {
+    console.log('drawSecondCard function');
+    let Card = Deck[1];
+    return Card;
   }
 
 
@@ -31,11 +41,15 @@ const GameTable = () => {
   return (
     <div className="game-table">
       <div className="dealers-box">
-
+     
+                {/* First Dealer card */}
         <div className="first-dealer-card">
           {firstDealerCard === true ? drawFirstCard() : ''}
         </div>
-     
+                {/* Second Dealer card */}
+        <div className="second-dealer-card">
+          {secondDealerCard === true ? drawSecondCard() : ''}
+        </div>
       
       </div>
  

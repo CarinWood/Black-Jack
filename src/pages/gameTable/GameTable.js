@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import './gameTable.css'
 import { Deck } from "../../data/deck/Deck";
 import King from "../../components/king/King";
+import Queen from "../../components/queen/Queen";
 
 const GameTable = () => {
   const [countDealerCards, setCountDealerCards] = useState(0)
+  const [countUserCards, setCountUserCards] = useState(0)
+
   const [firstDealerCard, setFirstDealerCard] = useState(false);
   const [secondDealerCard, setSecondDealerCard] = useState(false);
   const [thirdDealerCard, setThirdDealerCard] = useState(false);
@@ -13,8 +16,10 @@ const GameTable = () => {
   const [sixthDealerCard, setSixthDealerCard] = useState(false);
   const [seventhDealerCard, setSeventhDealerCard] = useState(false);
 
+  const [firstUserCard, setFirstUserCard] = useState(false);
+  const [secondUserCard, setSecondUserCard] = useState(false);
+
   useEffect(() => {
-      console.log(countDealerCards)
       if(countDealerCards === 1) {
         setFirstDealerCard(true);
       } else if (countDealerCards === 2) {
@@ -31,16 +36,27 @@ const GameTable = () => {
         setSeventhDealerCard(true);
       }
 
-
   },[countDealerCards])
+
+  useEffect(() => {
+    if(countUserCards === 1) {
+      setFirstUserCard(true);
+    } else if(countUserCards === 2) {
+      setSecondUserCard(true);
+    }
+
+  }, [countUserCards])
 
    const drawDealerCards = () => {
     setCountDealerCards(countDealerCards + 1);
   }
 
+  const drawUserCards = () => {
+    setCountUserCards(countUserCards + 1);
+  }
+
   const drawFirstCard = () => {
     console.log('drawfirstcard function')
-   
     let card = Deck[0];
     return card;
   
@@ -73,6 +89,16 @@ const GameTable = () => {
 
   const drawSeventhCard = () => {
     let Card = Deck[6];
+    return Card;
+  }
+
+  const drawFirstUserCard = () => {
+    let Card = Deck[7]
+    return Card;
+  }
+
+  const drawSecondUserCard = () => {
+    let Card = Deck[8]
     return Card;
   }
   
@@ -113,10 +139,19 @@ const GameTable = () => {
         </div>
       
       </div>
+
+      <div className="user-card-area">
+        <div className={firstUserCard ? "first-user-card active1": "first-user-card"}>
+        {firstUserCard ? drawFirstUserCard(): ''}
+        </div>
+        <div className={secondUserCard ? "second-user-card active2": "second-user-card"}>
+        {secondUserCard ? drawSecondUserCard(): ''}
+        </div>
+      </div>
     
       <div className='user-box'>
       <button className='stand-btn' onClick={()=> drawDealerCards()}>Stand</button>
-      <button className='hit-btn'>Hit</button>
+      <button className='hit-btn' onClick={() => drawUserCards()}>Hit</button>
     </div>
     </div>
   );

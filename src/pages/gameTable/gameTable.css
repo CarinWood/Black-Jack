@@ -4,26 +4,27 @@
   }
   
   .dealers-box {
-    display: flex;
     width: 800px;
     height: 200px;  
     position: relative;
   }
 
   .first-dealer-card, .second-dealer-card, .third-dealer-card,
-  .fourth-dealer-card, .fifth-dealer-card, .sixth-dealer-card, .seventh-dealer-card {
+  .fourth-dealer-card, .fifth-dealer-card, .sixth-dealer-card, .seventh-dealer-card,
+  .first-user-card, .second-user-card {
     position: absolute; 
     left: -80%;
     top: -200%;
   }
 
-  .active1 {
+  .active1, .activeOne {
       top: 0;
       left: 30%;
       animation-duration: 500ms;
-      transition: ease 0.5s
+      transition: ease 0.5s;
   }
-  .active2 {
+
+  .active2, .activeTwo {
       top: 0;
       left: 35%;
       animation-duration: 500ms;
@@ -33,7 +34,7 @@
       top: 0;
       left: 40%;
       animation-duration: 500ms;
-      transition: ease 0.5s
+      transition: ease 0.5s;
   }
   .active4 {
       top: 0;
@@ -61,13 +62,12 @@
       transition: ease 0.5s
   }
 
-
   .user-box {
     width: 300px;
     position: absolute;
     left: 50%;
     margin-left: -150px;
-    bottom: 0;
+    bottom: 0!important;
     padding: 40px;
     display: flex;
     justify-content: space-around;
@@ -94,6 +94,17 @@
 .hit-btn:active, .stand-btn:active {
     transform: translateY(2px);
 }
+
+.user-card-area {
+  width: 800px;
+  height: 200px;  
+  position: relative;
+  margin-top: 150px;
+}
+
+
+
+
   
   @media screen and (max-width: 811px) {
     .dealers-box {
@@ -112,11 +123,12 @@
         position: absolute;
         left: 50%;
         margin-left: -125px;
-        bottom: 50%;
+        bottom: 0;
         padding: 30px 20px;
         display: flex;
         justify-content: space-around;
         align-items: center;
+
     }
 
     .stand-btn, .hit-btn {
@@ -149,6 +161,20 @@
   }
   .active7 {
     left: 65%;
+  }
+
+  .activeOne {
+    left: 25%;
+  }
+
+  
+
+
+  .user-card-area {
+    width: 300px;
+    height: 360px;  
+    position: relative;
+    margin-top: 100px;
   }
 
   

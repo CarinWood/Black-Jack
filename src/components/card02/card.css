@@ -26,10 +26,15 @@
     color: var(--black);
 }
 
+#heart-small {
+    margin-bottom: 8px;
+    margin-left: 5px;
+}
+
 .heart-suit-small, .heart-suit-small-2 {
     color: var(--red);
     font-size: 10px;
-    margin-left: 5.5px;
+    margin-left: 2px;
     margin-bottom: 9px;
     background-color: var(--white);  
 }
@@ -242,6 +247,11 @@
 
        
     }
+
+   #heart-2 {
+    bottom: 6.8%;
+    right: 5.2%;
+   }
 
   
 }

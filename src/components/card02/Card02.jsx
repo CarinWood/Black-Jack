@@ -11,7 +11,7 @@ const Card02 = ({ suit }) => {
     <div className='card-frame'>
       <p className={suit === 'hearts' || suit === 'diamonds' ? "first-digit red": "first-digit black"}>2</p>
          
-            {suit === 'hearts' && <BsFillSuitHeartFill className='heart-suit-small'/>} 
+            {suit === 'hearts' && <BsFillSuitHeartFill className='heart-suit-small' id="heart-small"/>} 
             {suit === 'clubs' && <GiClubs className='clubs-suit-small'/>}
             {suit === 'diamonds' && <GiDiamonds className='diamonds-suit-small'/>}
             {suit === 'spades' && <GiSpades className='spades-suit-small'/>}
@@ -26,7 +26,7 @@ const Card02 = ({ suit }) => {
             {suit === 'clubs' && <GiClubs className='second-club'/>}
             {suit === 'spades' && <GiSpades className='second-spade'/>}
 
-            {suit === 'hearts' && <BsFillSuitHeartFill className='heart-suit-small-2'/>} 
+            {suit === 'hearts' && <BsFillSuitHeartFill className='heart-suit-small-2' id="heart-2"/>} 
             {suit === 'clubs' && <GiClubs className='clubs-suit-small-2'/>}
             {suit === 'diamonds' && <GiDiamonds className='diamonds-suit-small-2'/>}
             {suit === 'spades' && <GiSpades className='spades-suit-small-2'/>}

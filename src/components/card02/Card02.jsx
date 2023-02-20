@@ -20,10 +20,10 @@ const Card02 = ({ suit }) => {
             {suit === 'clubs' && <GiClubs className='first-club'/>}
             {suit === 'spades' && <GiSpades className='first-spade'/>}
             
-            {suit === 'hearts' && <GiHearts className='second-heart'/>}
-            {suit === 'diamonds' && <GiDiamonds className='second-diamond'/>}
-            {suit === 'clubs' && <GiClubs className='second-club'/>}
-            {suit === 'spades' && <GiSpades className='second-spade'/>}
+            {suit === 'hearts' && <GiHearts id='second-heart-02'/>}
+            {suit === 'diamonds' && <GiDiamonds id='second-diamond-02'/>}
+            {suit === 'clubs' && <GiClubs id='second-club-02'/>}
+            {suit === 'spades' && <GiSpades id='second-spade-02'/>}
 
             {suit === 'hearts' && <GiHearts className='heart-suit-small-2' id="heart-2"/>} 
             {suit === 'clubs' && <GiClubs className='clubs-suit-small-2' id="clubs-2"/>}

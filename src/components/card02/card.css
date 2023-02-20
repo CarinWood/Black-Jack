@@ -65,6 +65,10 @@
     right: 8%;
 }
 
+#clubs-2 {
+    bottom: 13%;
+}
+
 .heart-suit-small-2 {
     color: var(--red);
     transform: rotate(180deg);
@@ -256,6 +260,10 @@
         margin-left: -0.3px;
     }
 
+    #clubs-small {
+        margin-left: 0.6px;
+    }
+
 
   
     .diamonds-suit-small-2 {
@@ -293,9 +301,15 @@
        
     }
 
-   #heart-2, #spades-2 {
+   #heart-2 {
     bottom: 6.8%;
     right: 4.8%;
+    margin-right: 0px;
+   }
+
+   #spades-2 {
+    bottom: 6.8%;
+    right: 3.8%;
     margin-right: 0px;
    }
 
@@ -303,6 +317,11 @@
     bottom: 6.8%;
     right: 3%;
     margin-right: 0px;
+   }
+
+   #clubs-2 {
+    right: 4%;
+    bottom: 7%;
    }
 
   

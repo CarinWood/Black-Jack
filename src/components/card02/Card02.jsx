@@ -26,7 +26,7 @@ const Card02 = ({ suit }) => {
             {suit === 'spades' && <GiSpades className='second-spade'/>}
 
             {suit === 'hearts' && <GiHearts className='heart-suit-small-2' id="heart-2"/>} 
-            {suit === 'clubs' && <GiClubs className='clubs-suit-small-2'/>}
+            {suit === 'clubs' && <GiClubs className='clubs-suit-small-2' id="clubs-2"/>}
             {suit === 'diamonds' && <GiDiamonds className='diamonds-suit-small-2' id="diamonds-2"/>}
             {suit === 'spades' && <GiSpades className='spades-suit-small-2' id="spades-2"/>}
          

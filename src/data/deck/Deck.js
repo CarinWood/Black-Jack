@@ -1,7 +1,9 @@
 import Card02 from "../../components/card02/Card02";
 import King from "../../components/king/King";
+import Queen from "../../components/queen/Queen";
 
 export const Deck = [
+    <Queen suit={"spades"} />,
     <King suit={"spades"}/>,
     <Card02 suit={"hearts"} />,
     <Card02 suit={"spades"} />,

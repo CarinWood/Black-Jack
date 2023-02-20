@@ -154,16 +154,16 @@
     margin-left: -10px;
 }
 
-.first-diamond, .second-diamond {
+.first-crown, .second-crown {
     color: var(--red);
     background-color: var(--white);
-    font-size: 27px;
-    width: 27px;
-    height: 27px;
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
     position: absolute;
     top: 20%;
     left: 50%;
-    margin-left: -13.5px;
+    margin-left: -12.5px;
 }
 
 .first-club, .second-club {
@@ -189,9 +189,10 @@
     margin-left: -13.5px;
 }
 
-.second-heart, .second-club, .second-diamond, .second-spade {
+.second-crown {
     bottom: 20%;
-    top: unset
+    top: unset;
+    transform: rotate(180deg);
 }
 
 
@@ -290,7 +291,7 @@
     .second-k {
         font-size: 13px;
         margin-bottom: 1px;
-        margin-right: 3px;
+        margin-right: 4.3px;
     }
 
     .first-heart, .second-heart {
@@ -324,7 +325,7 @@
    }
 
    #king-clubs-2 {
-    right: -200%;
+    right: 3.9%;
     bottom: 7%;
    }
 

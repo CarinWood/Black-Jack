@@ -14,15 +14,15 @@ const King = ({suit}) => {
             {suit === 'diamonds' && <GiDiamonds className='diamonds-suit-small' id="diamonds-small"/>}
             {suit === 'spades' && <GiSpades className='spades-suit-small' id="spades-small"/>}
 
-            {suit === 'hearts' && <FaChessKing className='first-heart'/>}
-            {suit === 'diamonds' && <FaChessKing className='first-diamond'/>}
-            {suit === 'clubs' && <FaChessKing className='first-club'/>}
-            {suit === 'spades' && <FaChessKing className='first-spade'/>}
+            {suit === 'hearts' && <FaChessKing className='first-crown red'/>}
+            {suit === 'diamonds' && <FaChessKing className='first-crown red'/>}
+            {suit === 'clubs' && <FaChessKing className='first-crown black'/>}
+            {suit === 'spades' && <FaChessKing className='first-crown black'/>}
             
-            {suit === 'hearts' && <FaChessKing className='second-heart'/>}
-            {suit === 'diamonds' && <FaChessKing className='second-diamond'/>}
-            {suit === 'clubs' && <FaChessKing className='second-club'/>}
-            {suit === 'spades' && <FaChessKing className='second-spade'/>}
+            {suit === 'hearts' && <FaChessKing className='second-crown red'/>}
+            {suit === 'diamonds' && <FaChessKing className='second-crown red'/>}
+            {suit === 'clubs' && <FaChessKing className='second-crown black'/>}
+            {suit === 'spades' && <FaChessKing className='second-crown black'/>}
 
             {suit === 'hearts' && <GiHearts className='heart-suit-small-2' id="heart-2"/>} 
             {suit === 'clubs' && <GiClubs className='clubs-suit-small-2' id="king-clubs-2"/>}

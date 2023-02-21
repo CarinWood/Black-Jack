@@ -4,9 +4,10 @@ import { GiClubs, GiDiamonds, GiSpades, GiHearts } from "react-icons/gi";
 
 const Card02 = ({ suit }) => {
 
- 
 
   return (
+   
+
     <div className='card-frame'>
       <p className={suit === 'hearts' || suit === 'diamonds' ? "first-digit red": "first-digit black"}>2</p>
          

@@ -3,15 +3,29 @@ import King from "../../components/king/King";
 import Queen from "../../components/queen/Queen";
 
 export const Deck = [
-    <Queen suit={"diamonds"}/>,
-    <Queen suit={"clubs"}/>,
-    <Queen suit={"hearts"}/>,
-    <Queen suit={"spades"}/>,
-    <King suit={"diamonds"}/>,
-    <Card02 suit={"spades"}/>,
-    <Card02 suit={"diamonds"}/>,
-    <King suit={"clubs"}/>,
-    <Card02 suit={"hearts"}/>,
-    
+    {
+        face: <Queen suit={"diamonds"}/>,
+        value: 10,
+    },
+    {
+        face:  <Queen suit={"clubs"}/>,
+        value: 10,
+    },
+    {
+        face:  <Queen suit={"hearts"}/>,
+        value: 10,
+    },
+    {
+        face:  <Card02 suit={"hearts"}/>,
+        value: 2,
+    },
+    {
+        face:  <Card02 suit={"hearts"}/>,
+        value: 2,
+    },
+    {
+        face:  <King suit={"spades"}/>,
+        value: 10,
+    },
     
 ]

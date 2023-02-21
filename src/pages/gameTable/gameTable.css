@@ -11,7 +11,7 @@
 
   .first-dealer-card, .second-dealer-card, .third-dealer-card,
   .fourth-dealer-card, .fifth-dealer-card, .sixth-dealer-card, .seventh-dealer-card,
-  .first-user-card, .second-user-card {
+  .first-user-card, .second-user-card, .third-user-card {
     position: absolute; 
     left: -80%;
     top: -200%;
@@ -100,6 +100,17 @@
   height: 200px;  
   position: relative;
   margin-top: 150px;
+}
+
+.user-sum {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: 1px solid goldenrod;
+  background-color: black;
+  width: 40px;
+  color: goldenrod;
 }
 
 

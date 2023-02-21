@@ -18,6 +18,11 @@ const GameTable = () => {
 
   const [firstUserCard, setFirstUserCard] = useState(false);
   const [secondUserCard, setSecondUserCard] = useState(false);
+  const [thirdUserCard, setThirdUserCard] = useState(false);
+
+ 
+  const [sum, setSum] = useState(0);
+  const userPointsArray = []
 
   useEffect(() => {
       if(countDealerCards === 1) {
@@ -41,11 +46,20 @@ const GameTable = () => {
   useEffect(() => {
     if(countUserCards === 1) {
       setFirstUserCard(true);
+      updateSum()
+
+    
     } else if(countUserCards === 2) {
       setSecondUserCard(true);
+      updateSum()
     }
-
+    else if (countUserCards === 3) {
+      setThirdUserCard(true)
+      updateSum()
+    }
   }, [countUserCards])
+
+
 
    const drawDealerCards = () => {
     setCountDealerCards(countDealerCards + 1);
@@ -58,49 +72,68 @@ const GameTable = () => {
   const drawFirstCard = () => {
     console.log('drawfirstcard function')
     let card = Deck[0];
-    return card;
+    return card.face;
   
   }
 
   const drawSecondCard = () => {
-    let Card = Deck[1];
-    return Card;
+    let card = Deck[1];
+    return card.face;
   }
 
   const drawThirdCard = () => {
-    let Card = Deck[2];
-    return Card;
+    let card = Deck[2];
+    return card.face;
   }
  
   const drawFourthCard = () => {
-    let Card = Deck[3];
-    return Card;
+    let card = Deck[3];
+    return card.face;
   }
  
   const drawFifthCard = () => {
-    let Card = Deck[4];
-    return Card;
+    let card = Deck[4];
+    return card.face;
   }
 
   const drawSixthCard = () => {
-    let Card = Deck[5];
-    return Card;
+    let card = Deck[2];
+    return card.face;
   }
 
   const drawSeventhCard = () => {
-    let Card = Deck[6];
-    return Card;
+    let card = Deck[2];
+    return card.face;
   }
 
+
   const drawFirstUserCard = () => {
-    let Card = Deck[7]
-    return Card;
+    let card = Deck[0]
+    userPointsArray.push(card.value)
+    return card.face;
   }
 
   const drawSecondUserCard = () => {
-    let Card = Deck[8]
-    return Card;
+    let card = Deck[1]
+    userPointsArray.push(card.value)
+    return card.face;
   }
+
+  const drawThirdUserCard = () => {
+    let card = Deck[2]
+    userPointsArray.push(card.value)
+    return card.face;
+  }
+
+  const updateSum = () => {
+      userPointsArray.forEach(element => {
+        setSum(sum + element)
+      });
+  }
+
+
+ 
+
   
 
   return (
@@ -147,8 +180,12 @@ const GameTable = () => {
         <div className={secondUserCard ? "second-user-card active2": "second-user-card"}>
         {secondUserCard ? drawSecondUserCard(): ''}
         </div>
+        <div className={thirdUserCard ? "third-user-card active3": "third-user-card"}>
+        {thirdUserCard ? drawThirdUserCard(): ''}
+        </div>
       </div>
-    
+
+      <div className="user-sum">{sum}</div>
       <div className='user-box'>
       <button className='stand-btn' onClick={()=> drawDealerCards()}>Stand</button>
       <button className='hit-btn' onClick={() => drawUserCards()}>Hit</button>

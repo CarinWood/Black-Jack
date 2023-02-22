@@ -130,7 +130,7 @@
     right: 8%;
 }
 
-.first-heart, #second-heart-02 {
+.first-heart-03, .second-heart-03 {
     color: var(--red);
     background-color: var(--white);
     font-size: 20px;
@@ -177,11 +177,46 @@
     margin-left: -13.5px;
 }
 
-#second-heart-02, #second-club-02, #second-diamond-02, #second-spade-02 {
+.second-heart-03, #second-club-02, #second-diamond-02, #second-spade-02 {
     bottom: 20%;
     top: unset;
 }
 
+
+
+.middle-heart, .middle-diamond, .middle-club, .middle-spade  {
+    color: var(--red);
+    background-color: var(--white);
+    font-size: 27px;
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -13.5px;
+    margin-top: -13.5px;
+}
+
+.middle-heart {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+
+.middle-club, .middle-spade {
+    color: var(--black);
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+    margin-top: -11px;
+    margin-left: -14px;
+}
+
+.middle-spade {
+    margin-left: -13.5px;
+}
 
 .second-digit {
     transform: rotate(180deg);
@@ -290,8 +325,8 @@
         bottom: 1.8%!important;
     }
 
-    .first-heart, #second-heart-02 {
-        font-size: 16px;
+    .first-heart-03, .second-heart-03 {
+        font-size: 19px;
         width: 19px;
         height: 19px;
     }
@@ -323,5 +358,14 @@
     bottom: 7%;
    }
 
-  
+   .first-heart-03, .second-heart-03, .middle-heart {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+    margin-left: -9px;
+   }
+
+  .middle-heart {
+    margin-top: -9px;
+  }
 }

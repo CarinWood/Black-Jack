@@ -123,12 +123,13 @@ const GameTable = () => {
 
 
 
-const getSum = () => {
-  let sum = 0;
-  userPointsArray.forEach(element => {
-    sum += element
-})
-  return sum
+  const getSum = () => {
+    let sum = 0;
+    userPointsArray.forEach(element => {
+      sum += element
+  })
+  console.log(sum);
+
 }
 
  
@@ -184,7 +185,7 @@ const getSum = () => {
         </div>
       </div>
 
-      <div className="user-sum">{getSum()}</div>
+      {<div className="user-sum">{getSum()}</div>}
       <div className='user-box'>
       <button className='stand-btn' onClick={()=> drawDealerCards()}>Stand</button>
       <button className='hit-btn' onClick={() => drawUserCards()}>Hit</button>

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './gameTable.css'
 import { Deck } from "../../data/deck/Deck";
-import King from "../../components/king/King";
-import Queen from "../../components/queen/Queen";
 
 const GameTable = () => {
   const [countDealerCards, setCountDealerCards] = useState(0)
@@ -20,9 +18,8 @@ const GameTable = () => {
   const [secondUserCard, setSecondUserCard] = useState(false);
   const [thirdUserCard, setThirdUserCard] = useState(false);
 
- 
-  const [sum, setSum] = useState(0);
-  const userPointsArray = []
+  const [userPointsArray, setUserPointsArray] = useState([]);
+
 
   useEffect(() => {
       if(countDealerCards === 1) {
@@ -46,16 +43,14 @@ const GameTable = () => {
   useEffect(() => {
     if(countUserCards === 1) {
       setFirstUserCard(true);
-      updateSum()
-
     
     } else if(countUserCards === 2) {
       setSecondUserCard(true);
-      updateSum()
+   
     }
     else if (countUserCards === 3) {
       setThirdUserCard(true)
-      updateSum()
+ 
     }
   }, [countUserCards])
 
@@ -109,31 +104,31 @@ const GameTable = () => {
 
   const drawFirstUserCard = () => {
     let card = Deck[0]
-    userPointsArray.push(card.value)
+    setUserPointsArray(current => [...current, card.value]);
     return card.face;
   }
 
   const drawSecondUserCard = () => {
     let card = Deck[1]
-    userPointsArray.push(card.value)
+    setUserPointsArray(current => [...current, card.value]);
     return card.face;
   }
 
   const drawThirdUserCard = () => {
     let card = Deck[2]
-    userPointsArray.push(card.value)
+    setUserPointsArray(current => [...current, card.value]);
     return card.face;
   }
 
 
-  const updateSum = () => {
-    let mySum = 0
-    userPointsArray.forEach(element => {
-        mySum += element
-    })
-    setSum(sum + mySum)
-    console.log('userPointsArray = ' + userPointsArray)
-    console.log('sum = ' + sum)
+
+
+const getSum = () => {
+  let sum = 0;
+  userPointsArray.forEach(element => {
+    sum += element
+})
+  return sum
 }
 
  
@@ -189,7 +184,7 @@ const GameTable = () => {
         </div>
       </div>
 
-      <div className="user-sum">{sum}</div>
+      <div className="user-sum">{getSum()}</div>
       <div className='user-box'>
       <button className='stand-btn' onClick={()=> drawDealerCards()}>Stand</button>
       <button className='hit-btn' onClick={() => drawUserCards()}>Hit</button>

@@ -10,19 +10,19 @@ export const Deck = [
     },
     {
         face:  <Card02 suit={"hearts"}/>,
-        value: 10,
+        value: 2,
     },
     {
         face:  <Card03 suit={"hearts"}/>,
-        value: 10,
+        value: 3,
     },
     {
         face:  <Card03 suit={"spades"}/>,
-        value: 2,
+        value: 3,
     },
     {
         face:  <Queen suit={"spades"}/>,
-        value: 2,
+        value: 10,
     },
     {
         face:  <King suit={"spades"}/>,

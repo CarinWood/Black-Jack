@@ -125,12 +125,16 @@ const GameTable = () => {
     return card.face;
   }
 
-  const updateSum = () => {
-      userPointsArray.forEach(element => {
-        setSum(sum + element)
-      });
-  }
 
+  const updateSum = () => {
+    let mySum = 0
+    userPointsArray.forEach(element => {
+        mySum += element
+    })
+    setSum(sum + mySum)
+    console.log('userPointsArray = ' + userPointsArray)
+    console.log('sum = ' + sum)
+}
 
  
 

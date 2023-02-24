@@ -111,6 +111,10 @@
   background-color: black;
   width: 40px;
   color: goldenrod;
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  margin-left: -20px;
 }
 
 
@@ -188,6 +192,10 @@
     margin-top: 100px;
   }
 
+
+.user-sum {
+  bottom: 30%;
+}
   
   }
   

@@ -49,16 +49,16 @@ const GameTable = () => {
   useEffect(() => {
     if(countUserCards === 1) {
       setFirstUserCard(true);
-      updateUserPoints(1)
+      updateUserPoints(Deck[0].value)
     
     } else if(countUserCards === 2) {
       setSecondUserCard(true);
-      updateUserPoints(1)
+      updateUserPoints(Deck[1].value)
    
     }
     else if (countUserCards === 3) {
       setThirdUserCard(true)
-      updateUserPoints(1)
+      updateUserPoints(Deck[2].value)
  
     }
   }, [countUserCards])
@@ -177,13 +177,13 @@ const updateUserPoints = (points) => {
 
       <div className="user-card-area">
         <div className={firstUserCard ? "first-user-card active1": "first-user-card"}>
-        {firstUserCard ? drawFirstUserCard(): ''}
+        {firstUserCard ? Deck[0].face : ''}
         </div>
         <div className={secondUserCard ? "second-user-card active2": "second-user-card"}>
-        {secondUserCard ? drawSecondUserCard(): ''}
+        {secondUserCard ? Deck[1].face : ''}
         </div>
         <div className={thirdUserCard ? "third-user-card active3": "third-user-card"}>
-        {thirdUserCard ? drawThirdUserCard(): ''}
+        {thirdUserCard ? Deck[2].face : ''}
         </div>
       </div>
 

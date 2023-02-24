@@ -18,7 +18,13 @@ const GameTable = () => {
   const [secondUserCard, setSecondUserCard] = useState(false);
   const [thirdUserCard, setThirdUserCard] = useState(false);
 
-  const [userPointsArray, setUserPointsArray] = useState([]);
+  const [userPoints, setUserPoints] = useState(0);
+
+
+  useEffect(() => {
+    updateUserPoints(0)
+  }, [])
+ 
 
 
   useEffect(() => {
@@ -43,17 +49,19 @@ const GameTable = () => {
   useEffect(() => {
     if(countUserCards === 1) {
       setFirstUserCard(true);
+      updateUserPoints(1)
     
     } else if(countUserCards === 2) {
       setSecondUserCard(true);
+      updateUserPoints(1)
    
     }
     else if (countUserCards === 3) {
       setThirdUserCard(true)
+      updateUserPoints(1)
  
     }
   }, [countUserCards])
-
 
 
    const drawDealerCards = () => {
@@ -104,33 +112,27 @@ const GameTable = () => {
 
   const drawFirstUserCard = () => {
     let card = Deck[0]
-    setUserPointsArray(current => [...current, card.value]);
     return card.face;
   }
 
   const drawSecondUserCard = () => {
     let card = Deck[1]
-    setUserPointsArray(current => [...current, card.value]);
+
     return card.face;
   }
 
   const drawThirdUserCard = () => {
     let card = Deck[2]
-    setUserPointsArray(current => [...current, card.value]);
+
     return card.face;
   }
 
 
-
-
-  const getSum = () => {
-    let sum = 0;
-    userPointsArray.forEach(element => {
-      sum += element
-  })
-  console.log(sum);
-
+const updateUserPoints = (points) => {
+  setUserPoints(userPoints + points);
+  console.log(userPoints);
 }
+
 
  
 
@@ -185,7 +187,7 @@ const GameTable = () => {
         </div>
       </div>
 
-      {<div className="user-sum">{getSum()}</div>}
+      <div className="user-sum">{userPoints}</div>
       <div className='user-box'>
       <button className='stand-btn' onClick={()=> drawDealerCards()}>Stand</button>
       <button className='hit-btn' onClick={() => drawUserCards()}>Hit</button>

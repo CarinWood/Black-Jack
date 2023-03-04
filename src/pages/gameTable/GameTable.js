@@ -187,11 +187,20 @@ const updateUserPoints = (points) => {
         </div>
       </div>
 
-      <div className="user-sum">{userPoints}</div>
+      <div className={countUserCards > 0 ? "user-sum" : "hidden"}>{userPoints}</div>
+  
       <div className='user-box'>
       <button className='stand-btn' onClick={()=> drawDealerCards()}>Stand</button>
       <button className='hit-btn' onClick={() => drawUserCards()}>Hit</button>
     </div>
+
+    <div className='betting-box'>
+        <div class="pokerchip">100</div>
+        <div class="pokerchip redchip">200</div>
+        <div class="pokerchip bluechip">300</div>
+        <div class="pokerchip blackchip">400</div>
+    </div>
+
     </div>
   );
 };

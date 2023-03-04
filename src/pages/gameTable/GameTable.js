@@ -18,6 +18,8 @@ const GameTable = () => {
   const [firstUserCard, setFirstUserCard] = useState(false);
   const [secondUserCard, setSecondUserCard] = useState(false);
   const [thirdUserCard, setThirdUserCard] = useState(false);
+  const [fourthUserCard, setFourthUserCard] = useState(false);
+  const [fifthUserCard, setFifthUserCard] = useState(false);
 
   const [userPoints, setUserPoints] = useState(0);
 
@@ -59,13 +61,20 @@ const GameTable = () => {
     } else if(countUserCards === 2) {
       setSecondUserCard(true);
       updateUserPoints(Deck[1].value)
-   
     }
     else if (countUserCards === 3) {
       setThirdUserCard(true)
       updateUserPoints(Deck[2].value)
- 
     }
+    else if (countUserCards === 4) {
+      setFourthUserCard(true)
+      updateUserPoints(Deck[3].value);
+    }
+    else if (countUserCards === 5) {
+      setFifthUserCard(true);
+      updateUserPoints(Deck[4].value);
+    }
+  
   }, [countUserCards])
 
 
@@ -259,6 +268,12 @@ const betBlackChip = () => {
         </div>
         <div className={thirdUserCard ? "third-user-card active3": "third-user-card"}>
         {thirdUserCard ? Deck[2].face : ''}
+        </div>
+        <div className={fourthUserCard ? "fourth-user-card active4": "fourth-user-card"}>
+        {fourthUserCard ? Deck[3].face : ''}
+        </div>
+        <div className={fifthUserCard ? "fifth-user-card active5": "fifth-user-card"}>
+        {fifthUserCard ? Deck[4].face : ''}
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './gameTable.css'
 import { Deck } from "../../data/deck/Deck";
+import { MdArrowDropDown } from "react-icons/md";
 
 const GameTable = () => {
   const [countDealerCards, setCountDealerCards] = useState(0)
@@ -19,6 +20,11 @@ const GameTable = () => {
   const [thirdUserCard, setThirdUserCard] = useState(false);
 
   const [userPoints, setUserPoints] = useState(0);
+
+  const [greenBetted, setGreenBetted] = useState(false);
+  const [redBetted, setRedBetted] = useState(false);
+  const [blueBetted, setBlueBetted] = useState(false);
+  const [blackBetted, setBlackBetted] = useState(false);
 
 
   useEffect(() => {
@@ -134,6 +140,23 @@ const updateUserPoints = (points) => {
 }
 
 
+const betGreenChip = () => {
+  setGreenBetted(!greenBetted);
+}
+
+const betRedChip = () => {
+  setRedBetted(!redBetted);
+}
+
+const betBlueChip = () => {
+  setBlueBetted(!blueBetted);
+}
+
+const betBlackChip = () => {
+  setBlackBetted(!blackBetted);
+}
+
+
  
 
   
@@ -188,17 +211,24 @@ const updateUserPoints = (points) => {
       </div>
 
       <div className={countUserCards > 0 ? "user-sum" : "hidden"}>{userPoints}</div>
-  
-      <div className='user-box'>
+      <p className= {greenBetted || redBetted || blueBetted || blackBetted ? "place-bet-text hidden": "place-bet-text"}>Place Your Bet</p>
+      <div className={greenBetted || redBetted || blueBetted || blackBetted ? 'user-box' : 'user-box hidden'}>
       <button className='stand-btn' onClick={()=> drawDealerCards()}>Stand</button>
       <button className='hit-btn' onClick={() => drawUserCards()}>Hit</button>
     </div>
 
-    <div className='betting-box'>
-        <div class="pokerchip">100</div>
-        <div class="pokerchip redchip">200</div>
-        <div class="pokerchip bluechip">300</div>
-        <div class="pokerchip blackchip">400</div>
+    <div className={greenBetted || redBetted || blueBetted || blackBetted ? 'betting-box hide-chips': 'betting-box'}>
+            <MdArrowDropDown className="arrow-1"/>
+            <MdArrowDropDown className="arrow-2"/>
+            <MdArrowDropDown className="arrow-3"/>
+            <MdArrowDropDown className="arrow-4"/>
+        <div className="chips">
+            
+            <div class={greenBetted ? "pokerchip betted-chip greenchip" : "pokerchip greenchip none-transition"} onClick={() => betGreenChip()}>100</div>
+            <div class={redBetted? "pokerchip betted-chip redchip" : "pokerchip redchip none-transition"}  onClick={() => betRedChip()}>200</div>
+            <div class={blueBetted? "pokerchip betted-chip bluechip" : "pokerchip bluechip none-transition"} onClick={() => betBlueChip()}>300</div>
+            <div class={blackBetted? "pokerchip betted-chip blackchip" : "pokerchip blackchip none-transition"} onClick={() => betBlackChip()}>400</div>
+        </div>
     </div>
 
     </div>

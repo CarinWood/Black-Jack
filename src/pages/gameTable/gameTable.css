@@ -1,10 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+
 .game-table {
     width: 100%;
     height: 100%;
+  
   }
 
   .hidden {
     visibility: hidden;
+ 
+  }
+
+  .none-transition {
+    transition: none;
   }
   
   .dealers-box {
@@ -151,51 +160,195 @@
 }
 
 .betting-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid burlywood;
+  z-index: 5;
+  width: 800px;
+  height: 120px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -400px;
+}
+
+.hide-chips {
+  visibility: hidden;
+}
+
+.chips {
+  position: relative;
+  width: 800px;
+  height: 120px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .pokerchip {
   display: block;
-  width: 2.5em;
-  height: 2.5em;
-  font-size: 2em;
+  width: 85px;
+  height: 85px;
+  font-size: 20px;
   font-weight: 700;
-  letter-spacing: .1em;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
   color:  #fff;
   background: green;
-  border: 10px dashed  #fff;
+  border: 7px dashed  #fff;
   border-radius: 6em;
   padding-top: 6em/2 - 1em;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
-  margin: 2em auto;
+  margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.greenchip {
+  background: #008000;
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  margin-left: 100px;
+  transition: 0.5s ease-in-out;
 }
 
 .redchip {
   background:  #800000!important;
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  margin-left: 250px;
+  transition: 0.5s ease-in-out;
 }
 
 .bluechip {
   background-color: #000099!important;
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  margin-left: 400px;
+  transition: 0.5s ease-in-out;
+
 }
 
 .blackchip {
   background: #222222!important;
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  margin-left: 550px;
+  transition: 0.5s ease-in-out;
+
 }
 
+.betted-chip {
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -42px;
+  visibility: visible;
+}
+
+.place-bet-text {
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-left: -150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  word-spacing: 5px;
+  animation: textmove 5s ease-in-out ;
+  animation-iteration-count: infinite;
+}
+
+@keyframes textmove {
+  0% {
+      top: 30%;
+  }
+  50% {
+    top: 32%;
+  }
+  100% {
+    top: 30%;
+  }
+  
+}
+
+.arrow-1 {
+  font-size: 40px;
+  color: var(--white);
+  position: absolute;
+  top: -30%; 
+  left: 0;
+  margin-left: 273px;
+  z-index: 1;
+  animation: arrowmove 1s ease-in-out ;
+  animation-iteration-count: infinite;
+}
+
+.arrow-2 {
+  font-size: 40px;
+  color: var(--white);
+  position: absolute;
+  top: -30%; 
+  left: 0;
+  margin-left: 123px;
+  padding: 0px;
+  z-index: 1;
+  animation: arrowmove 1s ease-in-out ;
+  animation-iteration-count: infinite;
+}
+
+.arrow-3 {
+  font-size: 40px;
+  color: var(--white);
+  position: absolute;
+  top: -30%; 
+  left: 0;
+  margin-left: 423px;
+  z-index: 1;
+  animation: arrowmove 1s ease-in-out ;
+  animation-iteration-count: infinite;
+}
+
+.arrow-4 {
+  font-size: 40px;
+  color: var(--white);
+  position: absolute;
+  top: -30%; 
+  left: 0;
+  margin-left: 573px;
+  z-index: 1;
+  animation: arrowmove 1s ease-in-out ;
+  animation-iteration-count: infinite;
+
+}
+
+ @keyframes arrowmove {
+  0% {
+    top: -30%;
+  }
+  50% {
+    top: -35%;
+  }
+  100% {
+    top: -30%;
+  }
+} 
 
 
-
-
-
+.none-transition {
+  transition: none;
+}
 
 
 
@@ -287,36 +440,141 @@
   }
 
   .betting-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    border: 1px solid burlywood;
-    z-index: 5;
-    position: absolute;
-    bottom: 0;
-    width: 90%;
+    width: 300px;
+    height: 100px;
+    left: 50%;
+    margin-left: -150px;
+  }
+
+  .chips {
+    width: 300px;
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
   }
 
   .pokerchip {
-    display: block;
-    width: 52px;
-    height: 52px;
-    font-size: 13px;
-    font-weight: 700;
+    width: 55px;
+    height: 55px;
+    font-size: 12px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     text-align: center;
     text-decoration: none;
-    color:  #fff;
-    background: green;
-    border: 5px dashed  #fff;
-    border-radius: 6em;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 4px dashed  #fff;
   }
 
+  .greenchip {
+    background: #008000;
+    position: absolute;
+    bottom: 3%;
+    left: 0;
+    margin-left: 10px;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .redchip {
+    background:  #800000!important;
+    position: absolute;
+    bottom: 3%;
+    left: 0;
+    margin-left: 87px;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .bluechip {
+    background-color: #000099!important;
+    position: absolute;
+    bottom: 3%;
+    left: 0;
+    margin-left: 161px;
+    transition: 0.5s ease-in-out;
+  
+  }
+  
+  .blackchip {
+    bottom: 3%;
+    left: 0;
+    margin-left: 235px;
+    transition: 0.5s ease-in-out;
+  
+  }
+  
+  .betted-chip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -27.5px;
+    visibility: visible;
+    z-index: 10;
+  }
+
+  .hide-chips {
+    visibility: hidden;
+  }
+
+  .place-bet-text {
+    font-size: 30px;
+    margin-left: -150px;
+    width: 300px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    word-spacing: 3px;
+  }
+
+  .arrow-1 {
+    font-size: 40px;
+    color: var(--white);
+    position: absolute;
+    top: -30%; 
+    left: 0;
+    margin-left: 169.5px;
+    z-index: 1;
+    animation: arrowmove 1s ease-in-out ;
+    animation-iteration-count: infinite;
+  }
+  
+  .arrow-2 {
+    font-size: 40px;
+    color: var(--white);
+    position: absolute;
+    top: -30%; 
+    left: 0;
+    margin-left: 96px;
+    padding: 0px;
+    z-index: 1;
+    animation: arrowmove 1s ease-in-out ;
+    animation-iteration-count: infinite;
+  }
+  
+  .arrow-3 {
+    font-size: 40px;
+    color: var(--white);
+    position: absolute;
+    top: -30%; 
+    left: 0;
+    margin-left: 19px;
+    z-index: 1;
+    animation: arrowmove 1s ease-in-out ;
+    animation-iteration-count: infinite;
+  }
+  
+  .arrow-4 {
+    font-size: 40px;
+    color: var(--white);
+    position: absolute;
+    top: -30%; 
+    left: 0;
+    margin-left: 244px;
+    z-index: 1;
+    animation: arrowmove 1s ease-in-out ;
+    animation-iteration-count: infinite;
+  
+  }
+
+  .none-transition {
+    transition: none;
+  }
   
 
   }

@@ -24,7 +24,8 @@
 
   .first-dealer-card, .second-dealer-card, .third-dealer-card,
   .fourth-dealer-card, .fifth-dealer-card, .sixth-dealer-card, .seventh-dealer-card,
-  .first-user-card, .second-user-card, .third-user-card, .fourth-user-card, .fifth-user-card {
+  .first-user-card, .second-user-card, .third-user-card, .fourth-user-card, 
+  .fifth-user-card, .sixth-user-card, .seventh-user-card {
     position: absolute; 
     left: -80%;
     top: -200%;

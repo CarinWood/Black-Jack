@@ -20,6 +20,8 @@ const GameTable = () => {
   const [thirdUserCard, setThirdUserCard] = useState(false);
   const [fourthUserCard, setFourthUserCard] = useState(false);
   const [fifthUserCard, setFifthUserCard] = useState(false);
+  const [sixthUserCard, setSixthUserCard] = useState(false);
+  const [seventhUserCard, setSeventhUserCard] = useState(false);
 
   const [userPoints, setUserPoints] = useState(0);
 
@@ -73,6 +75,14 @@ const GameTable = () => {
     else if (countUserCards === 5) {
       setFifthUserCard(true);
       updateUserPoints(Deck[4].value);
+    }
+    else if (countUserCards === 6) {
+      setSixthUserCard(true);
+      updateUserPoints(Deck[5].value);
+    }
+    else if (countUserCards === 7) {
+      setSeventhUserCard(true);
+      updateUserPoints(Deck[6].value);
     }
   
   }, [countUserCards])
@@ -274,6 +284,12 @@ const betBlackChip = () => {
         </div>
         <div className={fifthUserCard ? "fifth-user-card active5": "fifth-user-card"}>
         {fifthUserCard ? Deck[4].face : ''}
+        </div>
+        <div className={sixthUserCard ? "sixth-user-card active6": "sixth-user-card"}>
+        {sixthUserCard ? Deck[5].face : ''}
+        </div>
+        <div className={seventhUserCard ? "seventh-user-card active7": "seventh-user-card"}>
+        {seventhUserCard ? Deck[6].face : ''}
         </div>
       </div>
 

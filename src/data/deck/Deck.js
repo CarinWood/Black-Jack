@@ -29,4 +29,13 @@ export const Deck = [
         value: 10,
     },
     
+    {
+        face:  <King suit={"diamonds"}/>,
+        value: 10,
+    },
+    {
+        face:  <King suit={"hearts"}/>,
+        value: 10,
+    },
+    
 ]

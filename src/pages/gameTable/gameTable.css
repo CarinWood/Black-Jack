@@ -126,9 +126,8 @@
   width: 40px;
   color: goldenrod;
   position: absolute;
-  left: 50%;
-  bottom: 20%;
-  margin-left: -20px;
+  right: 40%;
+  bottom: 42%;
   padding: 2px;
   visibility: visible;
 }
@@ -138,12 +137,12 @@
   position: absolute;
   width: 0;
   height: 0;
-  top: -16px;
-  left: 10px;
+  top: 5px;
+  left: -16px;
   border-top: 8px solid transparent;
-  border-bottom: 8px solid goldenrod;
+  border-bottom: 8px solid transparent;
   border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
+  border-right: 8px solid goldenrod;
 }
 
 .bubble-top:after {
@@ -245,7 +244,7 @@
 
 .betted-chip {
   position: absolute;
-  bottom: 120%;
+  bottom: 70%;
   left: 50%;
   margin-left: -42px;
   visibility: visible;
@@ -434,9 +433,11 @@
     margin-top: 100px;
   }
 
-  .bubble-box {
-    position: absolute;
-    bottom: 20%;
+  .user-sum {
+    font-size: 22px;
+    width: 40px;
+    right: 15%;
+    bottom: 50%;
   }
 
   .betting-box {
@@ -528,7 +529,7 @@
     position: absolute;
     top: -30%; 
     left: 0;
-    margin-left: 169.5px;
+    margin-left: 168.5px;
     z-index: 1;
     animation: arrowmove 1s ease-in-out ;
     animation-iteration-count: infinite;
@@ -540,7 +541,7 @@
     position: absolute;
     top: -30%; 
     left: 0;
-    margin-left: 96px;
+    margin-left: 95px;
     padding: 0px;
     z-index: 1;
     animation: arrowmove 1s ease-in-out ;
@@ -553,7 +554,7 @@
     position: absolute;
     top: -30%; 
     left: 0;
-    margin-left: 19px;
+    margin-left: 18px;
     z-index: 1;
     animation: arrowmove 1s ease-in-out ;
     animation-iteration-count: infinite;
@@ -565,7 +566,7 @@
     position: absolute;
     top: -30%; 
     left: 0;
-    margin-left: 244px;
+    margin-left: 243px;
     z-index: 1;
     animation: arrowmove 1s ease-in-out ;
     animation-iteration-count: infinite;

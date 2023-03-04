@@ -54,7 +54,6 @@ const GameTable = () => {
 
   useEffect(() => {
     if(countUserCards === 1) {
-      setFirstUserCard(true);
       updateUserPoints(Deck[0].value)
     
     } else if(countUserCards === 2) {
@@ -141,19 +140,72 @@ const updateUserPoints = (points) => {
 
 
 const betGreenChip = () => {
-  setGreenBetted(!greenBetted);
+  setGreenBetted(true);
+  setTimeout(() => {
+    setCountUserCards(1);
+    setFirstUserCard(true);
+  }, '500')
+
+  setTimeout(() => {
+   drawDealerCards()
+  }, '700')
+
+  setTimeout(() => {
+   setCountUserCards(2);
+   setSecondUserCard(true);
+  }, '900')
+
 }
 
 const betRedChip = () => {
-  setRedBetted(!redBetted);
+  setRedBetted(true);
+  setTimeout(() => {
+    setCountUserCards(1);
+    setFirstUserCard(true);
+  }, '500')
+
+  setTimeout(() => {
+   drawDealerCards()
+  }, '700')
+
+  setTimeout(() => {
+   setCountUserCards(2);
+   setSecondUserCard(true);
+  }, '900')
 }
 
 const betBlueChip = () => {
-  setBlueBetted(!blueBetted);
+  setBlueBetted(true);
+  setTimeout(() => {
+    setCountUserCards(1);
+    setFirstUserCard(true);
+  }, '500')
+
+  setTimeout(() => {
+   drawDealerCards()
+  }, '700')
+
+  setTimeout(() => {
+   setCountUserCards(2);
+   setSecondUserCard(true);
+  }, '900')
 }
 
 const betBlackChip = () => {
-  setBlackBetted(!blackBetted);
+  setBlackBetted(true);
+  setTimeout(() => {
+    setCountUserCards(1);
+    setFirstUserCard(true);
+  }, '500')
+
+  setTimeout(() => {
+   drawDealerCards()
+  }, '700')
+
+  setTimeout(() => {
+   setCountUserCards(2);
+   setSecondUserCard(true);
+  }, '900') 
 }
 
 

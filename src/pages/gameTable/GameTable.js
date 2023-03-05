@@ -227,6 +227,31 @@ const betBlackChip = () => {
   }, '900') 
 }
 
+const returnClass = () => {
+  if(countUserCards > 0 ) {
+    return "user-sum"
+  } else {
+    return "hidden";
+  }
+}
+
+
+const renderUserSum = () => {
+  if(countUserCards === 1 || countUserCards === 2) {
+    return <div className="user-sum">{userPoints}</div>;
+  } else if (countUserCards === 3) {
+    return <div className="user-sum user-sum-2">{userPoints}</div>;
+  } else if (countUserCards === 4) {
+    return <div className="user-sum user-sum-3">{userPoints}</div>
+  } else if (countUserCards === 5) {
+    return <div className="user-sum user-sum-4">{userPoints}</div>
+  } else if (countUserCards === 6) {
+    return <div className="user-sum user-sum-5">{userPoints}</div>
+  } else if (countUserCards === 7) {
+    return <div className="user-sum user-sum-6">{userPoints}</div>
+  }
+}
+
 
  
 
@@ -292,8 +317,7 @@ const betBlackChip = () => {
         {seventhUserCard ? Deck[6].face : ''}
         </div>
       </div>
-
-      <div className={countUserCards > 0 ? "user-sum" : "hidden"}>{userPoints}</div>
+      {renderUserSum()}
       <p className= {greenBetted || redBetted || blueBetted || blackBetted ? "place-bet-text hidden": "place-bet-text"}>Place Your Bet</p>
       <div className={greenBetted || redBetted || blueBetted || blackBetted ? 'user-box' : 'user-box hidden'}>
       <button className='stand-btn' onClick={()=> drawDealerCards()}>Stand</button>

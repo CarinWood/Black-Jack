@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import './gameTable.css'
 import { Deck } from "../../data/deck/Deck";
 import { MdArrowDropDown } from "react-icons/md";
+import cardsound from '../../assets/audio/cardsound.mp3';
 
 const GameTable = () => {
   const [countDealerCards, setCountDealerCards] = useState(0)
@@ -59,30 +60,37 @@ const GameTable = () => {
   useEffect(() => {
     if(countUserCards === 1) {
       updateUserPoints(Deck[0].value)
+  
     
     } else if(countUserCards === 2) {
       setSecondUserCard(true);
       updateUserPoints(Deck[1].value)
+   
     }
     else if (countUserCards === 3) {
       setThirdUserCard(true)
       updateUserPoints(Deck[2].value)
+ 
     }
     else if (countUserCards === 4) {
       setFourthUserCard(true)
       updateUserPoints(Deck[3].value);
+   
     }
     else if (countUserCards === 5) {
       setFifthUserCard(true);
       updateUserPoints(Deck[4].value);
+   
     }
     else if (countUserCards === 6) {
       setSixthUserCard(true);
       updateUserPoints(Deck[5].value);
+     
     }
     else if (countUserCards === 7) {
       setSeventhUserCard(true);
       updateUserPoints(Deck[6].value);
+   
     }
   
   }, [countUserCards])
@@ -93,6 +101,7 @@ const GameTable = () => {
   }
 
   const drawUserCards = () => {
+    playCardSound()
     setCountUserCards(countUserCards + 1);
   }
 
@@ -134,22 +143,7 @@ const GameTable = () => {
   }
 
 
-  const drawFirstUserCard = () => {
-    let card = Deck[0]
-    return card.face;
-  }
 
-  const drawSecondUserCard = () => {
-    let card = Deck[1]
-
-    return card.face;
-  }
-
-  const drawThirdUserCard = () => {
-    let card = Deck[2]
-
-    return card.face;
-  }
 
 
 const updateUserPoints = (points) => {
@@ -247,9 +241,13 @@ const renderUserSum = () => {
     return <div className="user-sum user-sum-4">{userPoints}</div>
   } else if (countUserCards === 6) {
     return <div className="user-sum user-sum-5">{userPoints}</div>
-  } else if (countUserCards === 7) {
+  } else if (countUserCards >= 7) {
     return <div className="user-sum user-sum-6">{userPoints}</div>
   }
+}
+
+const playCardSound = () => {
+  new Audio(cardsound).play();
 }
 
 
@@ -293,7 +291,7 @@ const renderUserSum = () => {
         </div>
       
       </div>
-
+     
       <div className="user-card-area">
         <div className={firstUserCard ? "first-user-card active1": "first-user-card"}>
         {firstUserCard ? Deck[0].face : ''}

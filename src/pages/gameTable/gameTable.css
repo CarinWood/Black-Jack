@@ -198,7 +198,7 @@
   text-decoration: none;
   color:  #fff;
   background: green;
-  border: 7px dashed  #fff;
+  border: 6px dashed  #fff;
   border-radius: 6em;
   padding-top: 6em/2 - 1em;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
@@ -363,6 +363,29 @@
       width: 620px;
       height: 200px;
     }
+
+    .user-sum {
+      right: 42%!important;
+    }
+
+    .user-sum-2 {
+      right: 34%!important;
+    }
+   
+    .user-sum-3 {
+      right: 27%!important;
+    }
+    .user-sum-4 {
+      right: 20%!important;
+    }
+   
+    .user-sum-5 {
+      right: 13%!important;
+    }
+ 
+    .user-sum-6 {
+      right: 5%!important;
+    }
   }
   
   @media screen and (max-width: 471px) {
@@ -443,38 +466,38 @@
     font-size: 22px;
     width: 40px;
     right: 38%!important;
-    bottom: 50%;
+    bottom: 40%;
   }
 
   .user-sum-2 {
     font-size: 22px;
     width: 40px;
     right: 30%!important;
-    bottom: 50%;
+    bottom: 40%;
   }
   .user-sum-3 {
     font-size: 22px;
     width: 40px;
     right: 22%!important;
-    bottom: 50%;
+    bottom: 40%;
   }
   .user-sum-4 {
     font-size: 22px;
     width: 40px;
     right: 13%!important;
-    bottom: 50%;
+    bottom: 40%;
   }
   .user-sum-5 {
     font-size: 22px;
     width: 40px;
     right: 5%!important;
-    bottom: 50%;
+    bottom: 40%;
   }
   .user-sum-6 {
     font-size: 22px;
     width: 40px;
     right: 0%!important;
-    bottom: 50%;
+    bottom: 40%;
   }
 
   .betting-box {
@@ -540,7 +563,7 @@
   
   .betted-chip {
     position: absolute;
-    bottom: 100%;
+    bottom: 92%;
     left: 50%;
     margin-left: -27.5px;
     visibility: visible;

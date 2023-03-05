@@ -25,6 +25,7 @@ const GameTable = () => {
   const [seventhUserCard, setSeventhUserCard] = useState(false);
 
   const [userPoints, setUserPoints] = useState(0);
+  const [dealerPoints, setDealerPoints] = useState(0);
 
   const [greenBetted, setGreenBetted] = useState(false);
   const [redBetted, setRedBetted] = useState(false);
@@ -41,18 +42,25 @@ const GameTable = () => {
   useEffect(() => {
       if(countDealerCards === 1) {
         setFirstDealerCard(true);
+        updateDealerPoints(Deck[Deck.length-1].value);
       } else if (countDealerCards === 2) {
         setSecondDealerCard(true);
+        updateDealerPoints(Deck[Deck.length-2].value);
       } else if (countDealerCards === 3) {
         setThirdDealerCard(true);
+        updateDealerPoints(Deck[Deck.length-3].value);
       } else if (countDealerCards === 4) {
         setFourthDealerCard(true);
+        updateDealerPoints(Deck[Deck.length-4].value);
       } else if (countDealerCards === 5) {
         setFifthDealerCard(true)
+        updateDealerPoints(Deck[Deck.length-5].value);
       } else if (countDealerCards === 6) {
         setSixthDealerCard(true)
+        updateDealerPoints(Deck[Deck.length-6].value);
       } else if (countDealerCards === 7) {
         setSeventhDealerCard(true);
+        updateDealerPoints(Deck[Deck.length-7].value);
       }
 
   },[countDealerCards])
@@ -106,39 +114,38 @@ const GameTable = () => {
   }
 
   const drawFirstCard = () => {
-    console.log('drawfirstcard function')
-    let card = Deck[0];
+    let card = Deck[Deck.length-1];
     return card.face;
   
   }
 
   const drawSecondCard = () => {
-    let card = Deck[1];
+    let card = Deck[Deck.length-2];
     return card.face;
   }
 
   const drawThirdCard = () => {
-    let card = Deck[2];
+    let card = Deck[Deck.length-3];
     return card.face;
   }
  
   const drawFourthCard = () => {
-    let card = Deck[3];
+    let card = Deck[Deck.length-4];
     return card.face;
   }
  
   const drawFifthCard = () => {
-    let card = Deck[4];
+    let card = Deck[Deck.length-5];
     return card.face;
   }
 
   const drawSixthCard = () => {
-    let card = Deck[2];
+    let card = Deck[Deck.length-6];
     return card.face;
   }
 
   const drawSeventhCard = () => {
-    let card = Deck[2];
+    let card = Deck[Deck.length-7];
     return card.face;
   }
 
@@ -148,7 +155,10 @@ const GameTable = () => {
 
 const updateUserPoints = (points) => {
   setUserPoints(userPoints + points);
-  console.log(userPoints);
+}
+
+const updateDealerPoints = (points) => {
+  setDealerPoints(dealerPoints + points);
 }
 
 
@@ -221,13 +231,7 @@ const betBlackChip = () => {
   }, '900') 
 }
 
-const returnClass = () => {
-  if(countUserCards > 0 ) {
-    return "user-sum"
-  } else {
-    return "hidden";
-  }
-}
+
 
 
 const renderUserSum = () => {
@@ -244,6 +248,23 @@ const renderUserSum = () => {
   } else if (countUserCards >= 7) {
     return <div className="user-sum user-sum-6">{userPoints}</div>
   }
+}
+
+const renderDealerSum = () => {
+  if(countDealerCards === 1 || countDealerCards === 2) {
+    return <div className="dealer-sum">{dealerPoints}</div>
+  } else if (countDealerCards === 3) {
+    return <div className="dealer-sum dealer-sum-2">{dealerPoints}</div>;
+  } else if (countDealerCards === 4) {
+    return <div className="dealer-sum dealer-sum-3">{dealerPoints}</div>
+  } else if (countDealerCards === 5) {
+    return <div className="dealer-sum dealer-sum-4">{dealerPoints}</div>
+  } else if (countDealerCards === 6) {
+    return <div className="dealer-sum dealer-sum-5">{dealerPoints}</div>
+  } else if (countDealerCards >= 7) {
+    return <div className="dealer-sum dealer-sum-6">{dealerPoints}</div>
+  }
+  
 }
 
 const playCardSound = () => {
@@ -291,6 +312,7 @@ const playCardSound = () => {
         </div>
       
       </div>
+      {renderDealerSum()}
      
       <div className="user-card-area">
         <div className={firstUserCard ? "first-user-card active1": "first-user-card"}>

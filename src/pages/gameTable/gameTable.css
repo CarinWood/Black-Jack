@@ -109,6 +109,20 @@
     transform: translateY(2px);
 }
 
+.won-box {
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  color: goldenrod;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 .user-card-area {
   width: 800px;
   height: 200px;  
@@ -468,16 +482,23 @@
     margin-top: 100px;
   }
 
-  .user-sum, .dealer-sum {
+  .user-sum {
     font-size: 22px;
     width: 40px;
     right: 38%!important;
-    bottom: 40%;
+    bottom: 39%;
   }
 
   .dealer-sum {
-    top: 17%;
+    font-size: 22px;
+    width: 40px;
+    right: 46%!important;
+    top: 9%;
     bottom: unset;
+  }
+
+  .dealer-sum-1 {
+    right: 40%!important;
   }
 
   .user-sum-2, .dealer-sum-2 {
@@ -635,6 +656,17 @@
 
   .none-transition {
     transition: none;
+  }
+
+  .won-box {
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    border: 1px solid pink;
+    z-index: 10;
   }
   
 

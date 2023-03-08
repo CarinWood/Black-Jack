@@ -32,6 +32,8 @@ const GameTable = () => {
   const [blueBetted, setBlueBetted] = useState(false);
   const [blackBetted, setBlackBetted] = useState(false);
 
+  const [hasUserWon, setHasUserWon] = useState(false);
+
 
   useEffect(() => {
     updateUserPoints(0)
@@ -46,21 +48,27 @@ const GameTable = () => {
       } else if (countDealerCards === 2) {
         setSecondDealerCard(true);
         updateDealerPoints(Deck[Deck.length-2].value);
+        drawDealerCards();
       } else if (countDealerCards === 3) {
         setThirdDealerCard(true);
         updateDealerPoints(Deck[Deck.length-3].value);
+        drawDealerCards();
       } else if (countDealerCards === 4) {
         setFourthDealerCard(true);
         updateDealerPoints(Deck[Deck.length-4].value);
+        drawDealerCards();
       } else if (countDealerCards === 5) {
         setFifthDealerCard(true)
         updateDealerPoints(Deck[Deck.length-5].value);
+        drawDealerCards();
       } else if (countDealerCards === 6) {
         setSixthDealerCard(true)
         updateDealerPoints(Deck[Deck.length-6].value);
+        drawDealerCards();
       } else if (countDealerCards === 7) {
         setSeventhDealerCard(true);
         updateDealerPoints(Deck[Deck.length-7].value);
+        drawDealerCards();
       }
 
   },[countDealerCards])
@@ -105,7 +113,15 @@ const GameTable = () => {
 
 
    const drawDealerCards = () => {
-    setCountDealerCards(countDealerCards + 1);
+    console.log(dealerPoints)
+    if(dealerPoints <= 16) {
+      setTimeout(() => {
+          setCountDealerCards(countDealerCards + 1)
+      }, 500)
+    } else {
+      console.log('time to check who won!')
+      checkWhoWon()
+    }
   }
 
   const drawUserCards = () => {
@@ -159,6 +175,7 @@ const updateUserPoints = (points) => {
 
 const updateDealerPoints = (points) => {
   setDealerPoints(dealerPoints + points);
+
 }
 
 
@@ -170,7 +187,7 @@ const betGreenChip = () => {
   }, '500')
 
   setTimeout(() => {
-   drawDealerCards()
+    setCountDealerCards(1);
   }, '700')
 
   setTimeout(() => {
@@ -188,7 +205,7 @@ const betRedChip = () => {
   }, '500')
 
   setTimeout(() => {
-   drawDealerCards()
+    setCountDealerCards(1);
   }, '700')
 
   setTimeout(() => {
@@ -205,7 +222,7 @@ const betBlueChip = () => {
   }, '500')
 
   setTimeout(() => {
-   drawDealerCards()
+    setCountDealerCards(1);
   }, '700')
 
   setTimeout(() => {
@@ -222,13 +239,20 @@ const betBlackChip = () => {
   }, '500')
 
   setTimeout(() => {
-   drawDealerCards()
+    setCountDealerCards(1);
   }, '700')
 
   setTimeout(() => {
    setCountUserCards(2);
    setSecondUserCard(true);
   }, '900') 
+}
+
+const checkWhoWon = () => {
+  console.log("this is check who won-function! cool huh?")
+  if(dealerPoints > 21 && userPoints <= 21) {
+    setHasUserWon(true);
+  }
 }
 
 
@@ -251,8 +275,10 @@ const renderUserSum = () => {
 }
 
 const renderDealerSum = () => {
-  if(countDealerCards === 1 || countDealerCards === 2) {
+  if(countDealerCards === 1) {
     return <div className="dealer-sum">{dealerPoints}</div>
+  } else if (countDealerCards === 2) {
+    return <div className="dealer-sum dealer-sum-1">{dealerPoints}</div>
   } else if (countDealerCards === 3) {
     return <div className="dealer-sum dealer-sum-2">{dealerPoints}</div>;
   } else if (countDealerCards === 4) {
@@ -313,7 +339,7 @@ const playCardSound = () => {
       
       </div>
       {renderDealerSum()}
-     
+      {hasUserWon && <div className="won-box">You Won!</div>}
       <div className="user-card-area">
         <div className={firstUserCard ? "first-user-card active1": "first-user-card"}>
         {firstUserCard ? Deck[0].face : ''}

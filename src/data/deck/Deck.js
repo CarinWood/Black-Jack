@@ -30,12 +30,12 @@ export const Deck = [
     },
     
     {
-        face:  <King suit={"diamonds"}/>,
-        value: 10,
+        face:  <Card03 suit={"diamonds"}/>,
+        value: 3,
     },
     {
-        face:  <King suit={"hearts"}/>,
-        value: 10,
+        face:  <Card03 suit={"hearts"}/>,
+        value: 3,
     },
     
 ]

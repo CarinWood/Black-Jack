@@ -5,6 +5,11 @@
   background-color: #32682c;
 }
 
+@font-face {
+  font-family: "beautyofthebeast";
+  src: url('../src/assets/fonts/Beautyofthebeast-1VpM.ttf');
+}
+
 body {
   overflow-x: hidden;
   width: 100%;

@@ -1,0 +1,63 @@
+.startpage {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: black;
+    padding-top: 300px;
+}
+
+
+.bj-heading {
+    font-family: "beautyofthebeast";
+    color: goldenrod;
+    background-color: black;
+    font-size: 60px;
+    letter-spacing: 1px;
+}
+
+.firstpage-kingcard {
+    background-color: black;
+}
+
+.button-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.button-area button {
+    width: 150px;
+    padding: 5px 10px;
+    color: goldenrod;
+    background-image: linear-gradient(midnightblue, rgb(51, 51, 203));
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 1.3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+}
+
+
+.button-area button:active {
+    transform: translateY(2px); 
+}
+
+
+.play-btn {
+
+}
+
+.rules-btn {
+
+}
+
+.credits-btn {
+
+}

@@ -13,7 +13,11 @@ export const Deck = [
         value: 2,
     },
     {
-        face:  <Card03 suit={"hearts"}/>,
+        face:  <King suit={"hearts"}/>,
+        value: 10,
+    },
+    {
+        face:  <Card03 suit={"spades"}/>,
         value: 3,
     },
     {
@@ -21,17 +25,13 @@ export const Deck = [
         value: 3,
     },
     {
-        face:  <Queen suit={"spades"}/>,
-        value: 10,
-    },
-    {
-        face:  <King suit={"spades"}/>,
-        value: 10,
+        face:  <Card03 suit={"spades"}/>,
+        value: 3,
     },
     
     {
-        face:  <Card03 suit={"diamonds"}/>,
-        value: 3,
+        face:  <Card02 suit={"diamonds"}/>,
+        value: 2,
     },
     {
         face:  <Card03 suit={"hearts"}/>,

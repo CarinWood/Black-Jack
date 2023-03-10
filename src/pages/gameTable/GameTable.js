@@ -37,38 +37,75 @@ const GameTable = () => {
 
   useEffect(() => {
     updateUserPoints(0)
+
   }, [])
  
 
+  
 
   useEffect(() => {
       if(countDealerCards === 1) {
         setFirstDealerCard(true);
         updateDealerPoints(Deck[Deck.length-1].value);
-      } else if (countDealerCards === 2) {
+      } 
+      
+      else if (countDealerCards === 2) {
         setSecondDealerCard(true);
         updateDealerPoints(Deck[Deck.length-2].value);
-        drawDealerCards();
+        const res = Deck[Deck.length-1].value + Deck[Deck.length-2].value;
+         if(res <= 16) {
+          drawDealerCards();
+        } else {
+          checkWhoWon();
+        }
+    
       } else if (countDealerCards === 3) {
         setThirdDealerCard(true);
         updateDealerPoints(Deck[Deck.length-3].value);
-        drawDealerCards();
+        const res = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value;
+        if(res <= 16) {
+          drawDealerCards();
+        }else {
+          checkWhoWon();
+        }
       } else if (countDealerCards === 4) {
         setFourthDealerCard(true);
         updateDealerPoints(Deck[Deck.length-4].value);
-        drawDealerCards();
+          const res = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value + Deck[Deck.length-4].value;
+        if(res <= 16) {
+          drawDealerCards();
+        }else {
+          checkWhoWon();
+        }
       } else if (countDealerCards === 5) {
         setFifthDealerCard(true)
         updateDealerPoints(Deck[Deck.length-5].value);
-        drawDealerCards();
+        const res = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value + Deck[Deck.length-4].value + Deck[Deck.length-5].value;
+        
+        if(res <= 16) {
+          
+          drawDealerCards();
+        }else {
+          checkWhoWon();
+        }
       } else if (countDealerCards === 6) {
         setSixthDealerCard(true)
         updateDealerPoints(Deck[Deck.length-6].value);
-        drawDealerCards();
+        const res = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value + Deck[Deck.length-4].value + Deck[Deck.length-5].value + Deck[Deck.length-6].value;
+        if(res <= 16) {
+          drawDealerCards();
+        }else {
+          checkWhoWon();
+        }
       } else if (countDealerCards === 7) {
         setSeventhDealerCard(true);
         updateDealerPoints(Deck[Deck.length-7].value);
-        drawDealerCards();
+        const res = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value + Deck[Deck.length-4].value + Deck[Deck.length-5].value + Deck[Deck.length-6].value + Deck[Deck.length-7].value;
+        if(res <= 16) {
+          drawDealerCards();
+        }else {
+          checkWhoWon();
+        }
       }
 
   },[countDealerCards])
@@ -113,15 +150,11 @@ const GameTable = () => {
 
 
    const drawDealerCards = () => {
-    console.log(dealerPoints)
-    if(dealerPoints <= 16) {
+   
       setTimeout(() => {
           setCountDealerCards(countDealerCards + 1)
       }, 500)
-    } else {
-      console.log('time to check who won!')
-      checkWhoWon()
-    }
+   
   }
 
   const drawUserCards = () => {
@@ -249,8 +282,32 @@ const betBlackChip = () => {
 }
 
 const checkWhoWon = () => {
-  console.log("this is check who won-function! cool huh?")
-  if(dealerPoints > 21 && userPoints <= 21) {
+  console.log("this is check who won-function!")
+  
+  let dealerRes = 0;
+  console.log(countDealerCards)
+  if(countDealerCards === 2) {
+    dealerRes = Deck[Deck.length-1].value + Deck[Deck.length-2].value;
+  }
+  else if (countDealerCards === 3) {
+    dealerRes = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value;
+  }
+  else if (countDealerCards === 4) {
+    dealerRes = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value + Deck[Deck.length-4].value;
+  }
+  else if (countDealerCards === 5) {
+    dealerRes = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value + Deck[Deck.length-4].value + Deck[Deck.length-5].value;
+  }
+  else if (countDealerCards === 6) {
+    dealerRes = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value + Deck[Deck.length-4].value + Deck[Deck.length-5].value + Deck[Deck.length-6].value;
+  }
+  else if (countDealerCards === 7) {
+    dealerRes = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value + Deck[Deck.length-4].value + Deck[Deck.length-5].value + Deck[Deck.length-6].value + Deck[Deck.length-7].value;
+  }
+
+  console.log('dealer points: ' + dealerRes + ' user points: ' + userPoints)
+  
+  if(dealerRes > 21 && userPoints <= 21) {
     setHasUserWon(true);
   }
 }

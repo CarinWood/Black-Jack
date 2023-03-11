@@ -1,0 +1,251 @@
+.card-frame {
+    margin-top: 10px;
+    width: 122px;
+    height: 165px;
+    padding: 4px;
+    font-size: 20px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    position: relative;
+
+}
+
+.first-Q {
+    background-color: whitesmoke;
+    margin-left: 3px;
+    margin-top: 5px;
+    font-size: 17.5px;  
+}
+
+.ace-club {
+    background-color: var(--white);
+    font-size: 30px;
+    width: 30px;
+      height: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+}
+
+.second-digit {
+    transform: rotate(180deg);
+    background-color: var(--white);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 6px;
+    margin-right: 7px;
+    font-size: 17.5; 
+}
+
+.red {
+    color: var(--red);
+}
+
+.black {
+    color: var(--black);
+}
+
+.heart-suit-small, .heart-suit-small-2 {
+    color: var(--red);
+    font-size: 10px;
+    margin-left: 5.5px;
+    margin-bottom: 9px;
+    background-color: var(--white);  
+}
+
+#queen-heart-1 {
+    margin-bottom: 5.8px;
+    margin-left: 5px;
+}
+
+.heart-suit-small-2 {
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 15%;
+    right: 8%;
+}
+
+.clubs-suit-small {
+    color: var(--black);
+    font-size: 10px;
+    background-color: var(--white);  
+    margin-left: 4.3px;
+    margin-bottom: 15px!important;
+}
+
+#queen-club-1, #queen-diamond-1 {
+    margin-bottom: 4px;
+}
+
+.clubs-suit-small-2 {
+    color: var(--black);
+    font-size: 10px;
+    background-color: var(--white); 
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 11%;
+    right: 7%;
+}
+
+.diamonds-suit-small, .diamonds-suit-small-2 {
+    color: var(--red);
+    font-size: 12px;
+    margin-left: 4.5px;
+    margin-bottom: 9px;
+    background-color: var(--white);  
+}
+
+.diamonds-suit-small-2 {
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 15%;
+    right: 7%;
+}
+
+#spades-queen-small {
+    color: var(--black);
+    font-size: 10px;
+    background-color: var(--white);  
+    margin-left: 5.2px;
+    margin-bottom: 5px;
+}
+
+.spades-suit-small-2 {
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 15%;
+    right: 9.5%;
+}
+
+
+
+@media screen and (max-width: 811px) {
+    .card-frame {
+        margin-top: 10px;
+        width: 102px;
+        height: 145px;
+      
+    }
+
+    .heart-suit-small-2, .clubs-suit-small-2, .spades-suit-small-2, .diamonds-suit-small-2 {
+        bottom: 17%;
+        right: 9.5%;
+    }
+
+    #queen-diamond-small-2 {
+        right: 8%;
+    }
+
+  
+
+}
+
+@media screen and (max-width: 471px) {
+    .card-frame {
+        margin-top: 10px;
+        width: 88px;
+        height: 120px;
+        padding: 2px;
+        font-size: 23px;
+    }
+
+    #queen-club-1 {
+        margin-bottom: 7px;
+        margin-left: 2px;
+    }
+
+    #spades-queen-small {
+        margin-left: 2px;
+        margin-bottom: 8px;
+    }
+
+    .spades-suit-small-2, .clubs-suit-small-2 {
+        bottom: 6.1%;
+        right: 5%;
+    }
+
+    #queen-diamond-1 {
+        margin-bottom: 6.5px;
+        margin-left: 1.7px;
+    }
+
+    #queen-diamond-small-2 {
+        right: 4.8%;
+        bottom: 9.2%;
+    }
+    
+    .heart-suit-small {
+        margin-left: 2px;
+        margin-bottom: 13px;
+    }
+
+    .heart-suit-small-2 {
+        bottom: 10.9%;
+        right: 5.8%;
+    }
+
+    .heart-suit-small, .heart-suit-small-2 {
+        font-size: 8px;
+    }
+
+    .diamonds-suit-small {
+        margin-left: 0.6px;
+    }
+ 
+    .diamonds-suit-small-2 {
+        bottom: 10%;
+        right: 3.5%;
+    } 
+
+    .spades-suit-small, .clubs-suit-small {
+        margin-left: 2px;
+        margin-bottom: 11px;
+    }
+
+    #queen-club-small-2 {
+        bottom: 9%;
+        right: 5.5%;
+    }
+
+    #queen-heart-1 {
+        margin-bottom: 8px;
+        margin-left: 2.8px;
+        font-size: 9px;
+    }
+   
+
+    .first-Q {
+        width: auto;
+        background-color: whitesmoke;
+        margin-left: 2px;
+        margin-top: 0px;
+        font-size: 15px;
+    }
+
+    .second-digit {
+        font-size: 15px;
+        margin-bottom: 0px;
+        margin-right: 5px;
+    }
+
+    .first-queen-heart, .first-queen-spade, .first-queen-diamond, .first-queen-club
+    .second-queen-heart, .second-queen-spade, .second-queen-diamond, .second-queen-club {
+        font-size: 26px;
+        width: 26px;
+        height: 26px;
+        margin-right: -13px;
+    }
+
+    #queen-heart-small-2 {
+        bottom: 9%;
+        right: 6.3%;
+        font-size: 9px;
+    }
+
+
+  
+}

@@ -2,6 +2,8 @@ import React from 'react'
 import './startPage.css'
 import King from '../../components/king/King'
 import { useNavigate } from 'react-router-dom'
+import Ace from '../../components/ace/Ace'
+import Back from '../../components/back/Back'
 
 const StartPage = () => {
 
@@ -16,6 +18,7 @@ const StartPage = () => {
       <h1 className='bj-heading'>Black Jack</h1>
       <div className='firstpage-kingcard'>
         <King suit={"hearts"}/>
+        <Back/>
       </div>
       <div className='button-area'>
           <button onClick={() => startGame()} className='play-btn'>Play</button>

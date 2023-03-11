@@ -10,6 +10,8 @@
 }
 
 
+
+
 .bj-heading {
     font-family: "beautyofthebeast";
     color: goldenrod;
@@ -60,5 +62,22 @@
 }
 
 .credits-btn {
+
+}
+
+@media screen and (max-width: 471px) {
+    .startpage {
+        padding-top: 100px;
+    }    
+
+    .bj-heading {
+        font-family: "beautyofthebeast";
+        color: goldenrod;
+        background-color: black;
+        font-size: 58px;
+        letter-spacing: 1px;
+        align-self: center;
+        margin-left: -11px;
+    }
 
 }

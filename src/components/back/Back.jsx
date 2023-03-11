@@ -6,7 +6,6 @@ const Back = () => {
   return (
     <div className='back-card-frame'>
         <div className='inner-frame'>
-      
         </div>
   </div>
   )

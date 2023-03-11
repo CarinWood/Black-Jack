@@ -4,8 +4,11 @@ import King from '../../components/king/King'
 import { useNavigate } from 'react-router-dom'
 import Ace from '../../components/ace/Ace'
 import Back from '../../components/back/Back'
+import { useEffect, useState } from 'react'
+
 
 const StartPage = () => {
+  const [rotateCard, setRotateCard] = useState(false);
 
   const navigate = useNavigate();
 
@@ -13,13 +16,32 @@ const StartPage = () => {
     navigate("/play");
   }
 
+
+  useEffect(() => {
+      setRotateCard(true)
+  }, 500);
+
   return (
     <div className='startpage'>
       <h1 className='bj-heading'>Black Jack</h1>
-      <div className='firstpage-kingcard'>
-        <King suit={"hearts"}/>
-        <Back/>
+      <King suit={"diamonds"}/>
+
+      <div className='card-container'>
+          <div className={rotateCard ? 'card flip': 'card'}>
+            
+          <div className='back-card-frame'>
+                    <div className='inner-frame'>
+                    </div>
+                </div>
+
+                <div className='front'>
+                      <Ace suit={"clubs"}/>
+                </div>
+
+                
+          </div>
       </div>
+    
       <div className='button-area'>
           <button onClick={() => startGame()} className='play-btn'>Play</button>
           <button className='rules-btn'>Rules</button>

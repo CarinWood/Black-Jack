@@ -33,6 +33,7 @@ const GameTable = () => {
   const [blackBetted, setBlackBetted] = useState(false);
 
   const [hasUserWon, setHasUserWon] = useState(false);
+  const [showWonChip, SetShowWonChip] = useState(false);
 
 
   useEffect(() => {
@@ -308,7 +309,12 @@ const checkWhoWon = () => {
   console.log('dealer points: ' + dealerRes + ' user points: ' + userPoints)
   
   if(dealerRes > 21 && userPoints <= 21) {
-    setHasUserWon(true);
+    setTimeout(() => {
+      setHasUserWon(true);
+      SetShowWonChip(true);
+    }, 1000)
+   
+    
 
   }
 }
@@ -353,6 +359,22 @@ const renderDealerSum = () => {
 
 const playCardSound = () => {
   new Audio(cardsound).play();
+}
+
+
+const renderWonChip = () => {
+  if (greenBetted) {
+    return <div className="won-chip pokerchip">100</div>
+  }
+  else if (redBetted) {
+    return <div className="won-chip pokerchip won-chip-red">200</div>
+  }
+  else if (blueBetted) {
+    return <div className="won-chip pokerchip won-chip-blue">300</div>
+  }
+  else if (blackBetted) {
+    return <div className="won-chip pokerchip won-chip-black">400</div>
+  }
 }
 
 
@@ -427,7 +449,7 @@ const playCardSound = () => {
       <button className='stand-btn' onClick={()=> drawDealerCards()}>Stand</button>
       <button className='hit-btn' onClick={() => drawUserCards()}>Hit</button>
     </div>
-
+   {showWonChip && renderWonChip()}
     <div className={greenBetted || redBetted || blueBetted || blackBetted ? 'betting-box hide-chips': 'betting-box'}>
             <MdArrowDropDown className="arrow-1"/>
             <MdArrowDropDown className="arrow-2"/>

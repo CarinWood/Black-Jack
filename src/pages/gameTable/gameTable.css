@@ -26,7 +26,6 @@
     top: 5%;
     left: 50%;
     margin-left: -400px;
-
   }
 
   .first-dealer-card, .second-dealer-card, .third-dealer-card,
@@ -36,6 +35,27 @@
     position: absolute; 
     left: -80%;
     top: -200%;
+  }
+
+
+  .won-chip {
+    z-index: 10!important;
+    position: absolute;
+    top: unset;
+    top: 63%;
+    left: 48%;
+    animation: won-drop 200ms ease-out;
+  }
+
+  @keyframes won-drop {
+    0% {
+      top: -20%;
+
+
+    } 
+    100% {
+      top: 63%;
+    }   
   }
 
   .active1, .activeOne {
@@ -135,6 +155,13 @@
   box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.2);
 }
 
+.won-chip {
+  z-index: 10!important;
+  position: absolute;
+  bottom: 26%;
+  left: 49%;
+}
+
 .user-card-area {
   width: 800px;
   height: 200px;  
@@ -186,18 +213,6 @@
   right: 8%!important;
 }
 
-.bubble-top:after {
-	content: '';
-	position: absolute;
-	width: 0;
-	height: 0;
-	top: -40px;
-	right: 240px;
-	border-top: 20px solid transparent;
-	border-bottom: 30px solid white;
-	border-right: 20px solid transparent;
-	border-left: 20px solid transparent;
-}
 
 .betting-box {
   z-index: 5;
@@ -263,6 +278,10 @@
   transition: 0.5s ease-in-out;
 }
 
+.won-chip-red {
+  background:  #800000!important;
+}
+
 .bluechip {
   background-color: #000099!important;
   position: absolute;
@@ -270,7 +289,10 @@
   left: 0;
   margin-left: 400px;
   transition: 0.5s ease-in-out;
+}
 
+.won-chip-blue {
+  background-color: #000099!important;
 }
 
 .blackchip {
@@ -280,7 +302,10 @@
   left: 0;
   margin-left: 550px;
   transition: 0.5s ease-in-out;
+}
 
+.won-chip-black {
+  background: #222222!important;
 }
 
 .betted-chip {
@@ -388,6 +413,42 @@
 
 .none-transition {
   transition: none;
+}
+
+@media screen and (max-width: 1700px) {
+
+  .dealers-box {
+    top: 1%;
+    left: 50%;
+    margin-left: -400px;
+  }
+
+  .won-chip {
+    z-index: 10!important;
+    position: absolute;
+    top: unset;
+    top: 72%;
+    left: 48%;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .betted-chip {
+    bottom: 68%;
+  }
+
+  .user-box {
+    bottom: 0%!important;
+  }
+
+  .user-card-area {
+  bottom: 30%;
+  
+  }
+
+  .won-box {
+    top: 33%;
+  }
+
 }
 
 
@@ -683,6 +744,22 @@
     z-index: 10;
   }
   
+  .won-chip {
+    top: 80%;
+    left: 42%;
+    animation: won-drop 200ms ease-out;
+  }
+
+  @keyframes won-drop {
+    0% {
+      top: -20%;
+
+
+    } 
+    100% {
+      top: 80%;
+    }   
+  }
 
   }
   

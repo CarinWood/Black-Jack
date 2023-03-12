@@ -314,7 +314,9 @@ const checkWhoWon = () => {
       SetShowWonChip(true);
     }, 1000)
    
-    
+    setTimeout(() => {
+        resetGame();
+    }, 2000)
 
   }
 }
@@ -375,6 +377,38 @@ const renderWonChip = () => {
   else if (blackBetted) {
     return <div className="won-chip pokerchip won-chip-black">400</div>
   }
+}
+
+
+const resetGame = () => {
+  setCountDealerCards(0);
+  setCountUserCards(0);
+  setUserPoints(0);
+  setDealerPoints(0);
+  setGreenBetted(false);
+  setRedBetted(false);
+  setBlueBetted(false);
+  setBlackBetted(false);
+  SetShowWonChip(false);
+
+  setFirstUserCard(false);
+  setSecondUserCard(false);
+  setThirdUserCard(false);
+  setFourthUserCard(false);
+  setFifthUserCard(false);
+  setSixthUserCard(false);
+  setSeventhUserCard(false);
+
+  setFirstDealerCard(false);
+  setSecondDealerCard(false);
+  setThirdDealerCard(false);
+  setFourthDealerCard(false);
+  setFifthDealerCard(false);
+  setSixthDealerCard(false);
+  setSeventhDealerCard(false);
+
+  setHasUserWon(false);
+  
 }
 
 

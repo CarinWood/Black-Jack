@@ -745,7 +745,7 @@
   }
   
   .won-chip {
-    top: 80%;
+    top: 76%;
     left: 42%;
     animation: won-drop 200ms ease-out;
   }
@@ -757,7 +757,7 @@
 
     } 
     100% {
-      top: 80%;
+      top: 76%;
     }   
   }
 

@@ -309,6 +309,7 @@ const checkWhoWon = () => {
   
   if(dealerRes > 21 && userPoints <= 21) {
     setHasUserWon(true);
+
   }
 }
 

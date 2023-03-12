@@ -4,6 +4,9 @@
 .game-table {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   
   }
 
@@ -19,7 +22,11 @@
   .dealers-box {
     width: 800px;
     height: 200px;  
-    position: relative;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    margin-left: -400px;
+
   }
 
   .first-dealer-card, .second-dealer-card, .third-dealer-card,
@@ -79,13 +86,14 @@
   .user-box {
     width: 300px;
     position: absolute;
+    bottom: 3%!important;
     left: 50%;
     margin-left: -150px;
-    bottom: 0!important;
     padding: 40px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+
 }
 
 .stand-btn, .hit-btn {
@@ -112,22 +120,29 @@
 .won-box {
   width: 200px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   margin-left: -100px;
-  color: goldenrod;
+  color: white;
   z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Source Sans Pro', sans-serif;
+  font-size: 28px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.2);
 }
 
 .user-card-area {
   width: 800px;
   height: 200px;  
-  position: relative;
-  margin-top: 150px;
+  position: absolute;
+  left: 50%;
+  margin-left: -400px;
+  bottom: 36%;
+  
 }
 
 .user-sum, .dealer-sum {
@@ -270,7 +285,7 @@
 
 .betted-chip {
   position: absolute;
-  bottom: 70%;
+  bottom: 160%;
   left: 50%;
   margin-left: -42px;
   visibility: visible;
@@ -410,7 +425,8 @@
   
   @media screen and (max-width: 471px) {
     .dealers-box {
-      width: 300px;    
+      width: 300px;   
+      margin-left: -150px; 
     }
 
     .user-box {
@@ -418,8 +434,8 @@
         position: absolute;
         left: 50%;
         margin-left: -125px;
-        bottom: 0;
-        padding: 30px 20px;
+        bottom: 0%!important;
+        padding: 15px 20px;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -478,15 +494,15 @@
   .user-card-area {
     width: 300px;
     height: 360px;  
-    position: relative;
-    margin-top: 100px;
+    margin-left: -150px;
+    bottom: -10%;
   }
 
   .user-sum {
     font-size: 22px;
     width: 40px;
     right: 38%!important;
-    bottom: 39%;
+    bottom: 34%;
   }
 
   .dealer-sum {
@@ -584,7 +600,7 @@
   
   .betted-chip {
     position: absolute;
-    bottom: 92%;
+    bottom: 63.5%;
     left: 50%;
     margin-left: -27.5px;
     visibility: visible;
@@ -659,13 +675,11 @@
   }
 
   .won-box {
-    width: 200px;
+    width: 150px;
+    margin-left: -75px;
     position: absolute;
-    top: 50%;
-    color: white;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 20px;
-    border: 1px solid pink;
+    top: 38%;
+    font-size: 23px;
     z-index: 10;
   }
   

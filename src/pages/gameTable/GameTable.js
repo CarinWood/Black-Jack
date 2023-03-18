@@ -35,6 +35,12 @@ const GameTable = () => {
   const [hasUserWon, setHasUserWon] = useState(false);
   const [showWonChip, SetShowWonChip] = useState(false);
 
+  const [isBlackJack, setBlackJack] = useState(false);
+  const [showBJChip, setShowBJChip] = useState(false);
+
+  const [disableHit, setDisableHit] = useState(false);
+  const [disableStand, setDisableStand] = useState(false);
+
 
   useEffect(() => {
     updateUserPoints(0)
@@ -119,6 +125,7 @@ const GameTable = () => {
     } else if(countUserCards === 2) {
       setSecondUserCard(true);
       updateUserPoints(Deck[1].value)
+      checkForBlackJack();
    
     }
     else if (countUserCards === 3) {
@@ -151,7 +158,10 @@ const GameTable = () => {
 
 
    const drawDealerCards = () => {
-   
+    if(disableStand) {
+      return;
+    }
+      setDisableHit(true);
       setTimeout(() => {
           setCountDealerCards(countDealerCards + 1)
       }, 500)
@@ -159,6 +169,9 @@ const GameTable = () => {
   }
 
   const drawUserCards = () => {
+      if(disableHit) {
+        return;
+      }
     playCardSound()
     setCountUserCards(countUserCards + 1);
   }
@@ -171,6 +184,7 @@ const GameTable = () => {
 
   const drawSecondCard = () => {
     let card = Deck[Deck.length-2];
+
     return card.face;
   }
 
@@ -306,9 +320,9 @@ const checkWhoWon = () => {
     dealerRes = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value + Deck[Deck.length-4].value + Deck[Deck.length-5].value + Deck[Deck.length-6].value + Deck[Deck.length-7].value;
   }
 
-  console.log('dealer points: ' + dealerRes + ' user points: ' + userPoints)
   
   if(dealerRes > 21 && userPoints <= 21) {
+    setDisableHit(true);
     setTimeout(() => {
       setHasUserWon(true);
       SetShowWonChip(true);
@@ -316,7 +330,7 @@ const checkWhoWon = () => {
    
     setTimeout(() => {
         resetGame();
-    }, 2000)
+    }, 3000)
 
   }
 }
@@ -366,7 +380,7 @@ const playCardSound = () => {
 
 const renderWonChip = () => {
   if (greenBetted) {
-    return <div className="won-chip pokerchip">100</div>
+    return <div className="won-chip pokerchip won-chip-green">100</div>
   }
   else if (redBetted) {
     return <div className="won-chip pokerchip won-chip-red">200</div>
@@ -376,6 +390,21 @@ const renderWonChip = () => {
   }
   else if (blackBetted) {
     return <div className="won-chip pokerchip won-chip-black">400</div>
+  }
+}
+
+const renderBJChip = () => {
+  if (greenBetted) {
+    return <div className="bj-chip pokerchip bj-chip-purple">50</div>
+  }
+  else if (redBetted) {
+    return <div className="won-chip pokerchip won-chip-red">100</div>
+  }
+  else if (blueBetted) {
+    return <div className="won-chip pokerchip won-chip-blue">100</div>
+  }
+  else if (blackBetted) {
+    return <div className="won-chip pokerchip won-chip-black">200</div>
   }
 }
 
@@ -408,6 +437,51 @@ const resetGame = () => {
   setSeventhDealerCard(false);
 
   setHasUserWon(false);
+  setBlackJack(false);
+
+  if(showBJChip) {
+  setShowBJChip(false);
+  }
+
+  if(disableStand) {
+    setDisableStand(false);
+  }
+  
+}
+
+
+
+const checkForBlackJack = () => {
+  if(Deck[0].value === 1 && Deck[1].value === 10) {
+    setDisableHit(true);
+    setDisableStand(true);
+    setTimeout(() => {
+      setBlackJack(true);
+      SetShowWonChip(true);
+      setShowBJChip(true);
+    }, 1000)
+
+    setTimeout(() => {
+      resetGame();
+  }, 3000)
+  }
+
+  else if (Deck[0].value === 10 && Deck[1].value === 1) {
+      setDisableHit(true);
+      setDisableStand(true);
+    setTimeout(() => {
+      setBlackJack(true);
+         setShowBJChip(true);
+    }, 1000)
+
+    setTimeout(() => {
+      resetGame();
+  }, 3000)
+  }
+  else {
+   return
+  }
+
   
 }
 
@@ -477,6 +551,7 @@ const resetGame = () => {
         {seventhUserCard ? Deck[6].face : ''}
         </div>
       </div>
+      {isBlackJack && <p className="bj-text">Black Jack!</p>}
       {renderUserSum()}
       <p className= {greenBetted || redBetted || blueBetted || blackBetted ? "place-bet-text hidden": "place-bet-text"}>Place Your Bet</p>
       <div className={greenBetted || redBetted || blueBetted || blackBetted ? 'user-box' : 'user-box hidden'}>
@@ -484,6 +559,7 @@ const resetGame = () => {
       <button className='hit-btn' onClick={() => drawUserCards()}>Hit</button>
     </div>
    {showWonChip && renderWonChip()}
+   {showBJChip && renderBJChip()}
     <div className={greenBetted || redBetted || blueBetted || blackBetted ? 'betting-box hide-chips': 'betting-box'}>
             <MdArrowDropDown className="arrow-1"/>
             <MdArrowDropDown className="arrow-2"/>

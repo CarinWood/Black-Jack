@@ -43,7 +43,7 @@
     position: absolute;
     top: unset;
     top: 63%;
-    left: 48%;
+    left: 50%;
     animation: won-drop 200ms ease-out;
   }
 
@@ -150,6 +150,7 @@
   align-items: center;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 28px;
+  letter-spacing: 1.5px;
   border: none;
   border-radius: 10px;
   box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.2);
@@ -158,9 +159,28 @@
 .won-chip {
   z-index: 10!important;
   position: absolute;
-  bottom: 26%;
-  left: 49%;
+  bottom: 3%;
+  left: 49.5%;
 }
+
+.bj-chip {
+  z-index: 10!important;
+  position: absolute;
+  left: 48.5%;
+  animation: bj-drop 400ms ease-out;
+}
+
+
+  @keyframes bj-drop {
+    0% {
+      top: -20%;
+
+
+    } 
+    100% {
+      top: 71.3%;
+    }   
+  }
 
 .user-card-area {
   width: 800px;
@@ -269,6 +289,17 @@
   transition: 0.5s ease-in-out;
 }
 
+.won-chip-green {
+  background:  #008000!important;
+  bottom: 14.9%;
+  top: unset;
+}
+
+.bj-chip-purple {
+  background: #601c92!important;
+  top: 71.3%;
+}
+
 .redchip {
   background:  #800000!important;
   position: absolute;
@@ -280,6 +311,7 @@
 
 .won-chip-red {
   background:  #800000!important;
+   bottom: 10%;
 }
 
 .bluechip {
@@ -293,6 +325,7 @@
 
 .won-chip-blue {
   background-color: #000099!important;
+   bottom: 10%;
 }
 
 .blackchip {
@@ -306,6 +339,7 @@
 
 .won-chip-black {
   background: #222222!important;
+  bottom: 10%;
 }
 
 .betted-chip {
@@ -413,6 +447,25 @@
 
 .none-transition {
   transition: none;
+}
+
+.bj-text {
+  width: 200px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -100px;
+  color: white;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 28px;
+  letter-spacing: 1.5px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.2);
 }
 
 @media screen and (max-width: 1700px) {

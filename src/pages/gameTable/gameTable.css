@@ -42,7 +42,7 @@
     z-index: 10!important;
     position: absolute;
     top: unset;
-    top: 63%;
+    top: 75.3%;
     left: 50%;
     animation: won-drop 200ms ease-out;
   }
@@ -54,7 +54,7 @@
 
     } 
     100% {
-      top: 63%;
+      top: 68;
     }   
   }
 
@@ -170,6 +170,13 @@
   animation: bj-drop 400ms ease-out;
 }
 
+.bj-chip-3 {
+  z-index: 10!important;
+  position: absolute;
+  left: 48.5%;
+  animation: bj-drop 500ms ease-out;
+}
+
 
   @keyframes bj-drop {
     0% {
@@ -249,10 +256,11 @@
 }
 
 .chips {
-  position: relative;
+  position: absolute;
   width: 800px;
   height: 120px;
-  margin: 0px;
+  left: 50%;
+  margin-left: -400px;
   padding: 0px;
 }
 
@@ -285,7 +293,7 @@
   position: absolute;
   bottom: 3%;
   left: 0;
-  margin-left: 100px;
+  margin-left: 157.5px;
   transition: 0.5s ease-in-out;
 }
 
@@ -300,18 +308,40 @@
   top: 71.3%;
 }
 
+.bj-chip-red {
+  background: #800000!important;
+  top: 71.3%;
+}
+
+.bj-chip-green {
+  background: #008000!important;
+  top: 71.3%;
+}
+
+.bj-chip-green-again {
+  background: #008000!important;
+  left: 48%;
+  top: 71.3%;
+}
+
+.bj-chip-purple-again {
+  background: #601c92!important;
+  left: 49.9%;
+  top: 71.3%;
+}
+
 .redchip {
   background:  #800000!important;
   position: absolute;
   bottom: 3%;
   left: 0;
-  margin-left: 250px;
+  margin-left: 272.5px;
   transition: 0.5s ease-in-out;
 }
 
 .won-chip-red {
   background:  #800000!important;
-   bottom: 10%;
+   bottom: 5%;
 }
 
 .bluechip {
@@ -319,7 +349,7 @@
   position: absolute;
   bottom: 3%;
   left: 0;
-  margin-left: 400px;
+  margin-left: 387.5px;
   transition: 0.5s ease-in-out;
 }
 
@@ -333,7 +363,7 @@
   position: absolute;
   bottom: 3%;
   left: 0;
-  margin-left: 550px;
+  margin-left: 502.5px;
   transition: 0.5s ease-in-out;
 }
 
@@ -354,13 +384,13 @@
   color: white;
   font-size: 40px;
   position: absolute;
-  top: 30%;
+  top: 30%!important;
   left: 50%;
+  width: 300px;
   margin-left: -150px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -388,7 +418,7 @@
   position: absolute;
   top: -30%; 
   left: 0;
-  margin-left: 273px;
+  margin-left: 182px;
   z-index: 1;
   animation: arrowmove 1s ease-in-out ;
   animation-iteration-count: infinite;
@@ -400,7 +430,7 @@
   position: absolute;
   top: -30%; 
   left: 0;
-  margin-left: 123px;
+  margin-left: 297px;
   padding: 0px;
   z-index: 1;
   animation: arrowmove 1s ease-in-out ;
@@ -413,7 +443,7 @@
   position: absolute;
   top: -30%; 
   left: 0;
-  margin-left: 423px;
+  margin-left: 411px;
   z-index: 1;
   animation: arrowmove 1s ease-in-out ;
   animation-iteration-count: infinite;
@@ -425,7 +455,7 @@
   position: absolute;
   top: -30%; 
   left: 0;
-  margin-left: 573px;
+  margin-left: 526px;
   z-index: 1;
   animation: arrowmove 1s ease-in-out ;
   animation-iteration-count: infinite;
@@ -656,6 +686,7 @@
     height: 100px;
     left: 50%;
     margin-left: -150px;
+   
   }
 
   .chips {
@@ -663,6 +694,7 @@
     height: 100px;
     margin: 0px;
     padding: 0px;
+    margin-left: -150px;
   }
 
   .pokerchip {

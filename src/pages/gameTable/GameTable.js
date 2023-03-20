@@ -398,13 +398,13 @@ const renderBJChip = () => {
     return <div className="bj-chip pokerchip bj-chip-purple">50</div>
   }
   else if (redBetted) {
-    return <div className="won-chip pokerchip won-chip-red">100</div>
+    return <div className="bj-chip pokerchip bj-chip-green">100</div>
   }
   else if (blueBetted) {
-    return <div className="won-chip pokerchip won-chip-blue">100</div>
+    return <><div className="bj-chip pokerchip bj-chip-green-again">100</div><div className="bj-chip-3 pokerchip bj-chip-purple-again">50</div></>
   }
   else if (blackBetted) {
-    return <div className="won-chip pokerchip won-chip-black">200</div>
+    return <div className="bj-chip pokerchip bj-chip-red">200</div>
   }
 }
 
@@ -439,13 +439,12 @@ const resetGame = () => {
   setHasUserWon(false);
   setBlackJack(false);
 
-  if(showBJChip) {
   setShowBJChip(false);
-  }
 
-  if(disableStand) {
+
+
     setDisableStand(false);
-  }
+  
   
 }
 
@@ -456,14 +455,14 @@ const checkForBlackJack = () => {
     setDisableHit(true);
     setDisableStand(true);
     setTimeout(() => {
-      setBlackJack(true);
-      SetShowWonChip(true);
-      setShowBJChip(true);
+        setBlackJack(true);
+        SetShowWonChip(true);
+        setShowBJChip(true);
     }, 1000)
 
-    setTimeout(() => {
-      resetGame();
-  }, 3000)
+     setTimeout(() => {
+       resetGame();
+   }, 3000)
   }
 
   else if (Deck[0].value === 10 && Deck[1].value === 1) {

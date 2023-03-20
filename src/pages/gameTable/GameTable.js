@@ -460,9 +460,9 @@ const checkForBlackJack = () => {
         setShowBJChip(true);
     }, 1000)
 
-     setTimeout(() => {
-       resetGame();
-   }, 3000)
+  //    setTimeout(() => {
+  //      resetGame();
+  //  }, 3000)
   }
 
   else if (Deck[0].value === 10 && Deck[1].value === 1) {
@@ -473,9 +473,9 @@ const checkForBlackJack = () => {
          setShowBJChip(true);
     }, 1000)
 
-    setTimeout(() => {
-      resetGame();
-  }, 3000)
+  //   setTimeout(() => {
+  //     resetGame();
+  // }, 3000)
   }
   else {
    return

@@ -716,6 +716,8 @@
     margin-left: 10px;
     transition: 0.5s ease-in-out;
   }
+
+ 
   
   .redchip {
     background:  #800000!important;
@@ -830,7 +832,7 @@
   }
   
   .won-chip {
-    top: 76%;
+    top: 74.9%;
     left: 42%;
     animation: won-drop 200ms ease-out;
   }
@@ -842,8 +844,29 @@
 
     } 
     100% {
-      top: 76%;
+      top: 74.9%;
     }   
+  }
+
+  .bj-chip-purple {
+    background: #601c92!important;
+    top: 74.9%;
+    left: 48%;
+  }
+
+  .bj-chip-green, .bj-chip-red {
+    top: 74.9%;
+    left: 48%;
+  }
+
+  .bj-chip-green-again {
+    top: 74.9%;
+    left: 47%;
+  }
+
+  .bj-chip-purple-again {
+    top: 74.9%;
+    left: 52%;
   }
 
   }

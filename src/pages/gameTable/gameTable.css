@@ -137,7 +137,7 @@
     transform: translateY(2px);
 }
 
-.won-box {
+.won-box, .dealer-wins-text {
   width: 200px;
   position: absolute;
   top: 40%;
@@ -217,6 +217,11 @@
   transition: all 0.2s ease-in-out;
 }
 
+.user-sum {
+  width: auto;
+  padding: 6px 13px;
+}
+
 .dealer-sum {
   bottom: unset;
   top: 10%;
@@ -228,7 +233,7 @@
   position: absolute;
   width: 0;
   height: 0;
-  top: 5px;
+  top: 9px;
   left: -16px;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
@@ -380,6 +385,24 @@
   visibility: visible;
 }
 
+#lose-chip {
+  position: absolute;
+  bottom: 1200%;
+  animation: loseChip 1000ms ease-in-out;
+}
+
+@keyframes loseChip {
+  0% {
+    bottom: 160%;
+
+  }
+  100% {
+
+    bottom: 1200%;
+
+  }
+}
+
 .place-bet-text {
   color: white;
   font-size: 40px;
@@ -479,7 +502,7 @@
   transition: none;
 }
 
-.bj-text {
+.bj-text, .bust-text {
   width: 200px;
   position: absolute;
   top: 40%;
@@ -867,6 +890,25 @@
   .bj-chip-purple-again {
     top: 74.9%;
     left: 52%;
+  }
+
+  #lose-chip {
+    position: absolute;
+ 
+    bottom: 703.5%;
+    animation: loseChip 1000ms ease-in-out;
+  }
+
+  @keyframes loseChip {
+    0% {
+      bottom: 63.5%;
+
+    }
+    100% {
+
+      bottom: 703.5%;
+
+    }
   }
 
   }

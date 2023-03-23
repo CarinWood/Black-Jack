@@ -41,9 +41,14 @@ const GameTable = () => {
   const [disableHit, setDisableHit] = useState(false);
   const [disableStand, setDisableStand] = useState(false);
 
+  const [isBust, setBust] = useState(false);
+  const [dealerWins, setDealerWins] = useState(false);
+  const [standOff, setStandOff] = useState(false);
 
   useEffect(() => {
     updateUserPoints(0)
+    shuffleArray(Deck)
+   
 
   }, [])
  
@@ -108,11 +113,8 @@ const GameTable = () => {
         setSeventhDealerCard(true);
         updateDealerPoints(Deck[Deck.length-7].value);
         const res = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value + Deck[Deck.length-4].value + Deck[Deck.length-5].value + Deck[Deck.length-6].value + Deck[Deck.length-7].value;
-        if(res <= 16) {
-          drawDealerCards();
-        }else {
-          checkWhoWon();
-        }
+          checkWhoWon()
+        
       }
 
   },[countDealerCards])
@@ -120,37 +122,50 @@ const GameTable = () => {
   useEffect(() => {
     if(countUserCards === 1) {
       updateUserPoints(Deck[0].value)
+
+    
   
     
     } else if(countUserCards === 2) {
       setSecondUserCard(true);
       updateUserPoints(Deck[1].value)
+
       checkForBlackJack();
    
     }
     else if (countUserCards === 3) {
       setThirdUserCard(true)
       updateUserPoints(Deck[2].value)
+  
+      checkIfBust()
  
     }
     else if (countUserCards === 4) {
       setFourthUserCard(true)
       updateUserPoints(Deck[3].value);
+
+      checkIfBust()
    
     }
     else if (countUserCards === 5) {
       setFifthUserCard(true);
       updateUserPoints(Deck[4].value);
+
+      checkIfBust()
    
     }
     else if (countUserCards === 6) {
       setSixthUserCard(true);
       updateUserPoints(Deck[5].value);
+
+      checkIfBust()
      
     }
     else if (countUserCards === 7) {
       setSeventhUserCard(true);
       updateUserPoints(Deck[6].value);
+
+      checkIfBust()
    
     }
   
@@ -219,7 +234,9 @@ const GameTable = () => {
 
 const updateUserPoints = (points) => {
   setUserPoints(userPoints + points);
+  
 }
+
 
 const updateDealerPoints = (points) => {
   setDealerPoints(dealerPoints + points);
@@ -297,8 +314,7 @@ const betBlackChip = () => {
 }
 
 const checkWhoWon = () => {
-  console.log("this is check who won-function!")
-  
+
   let dealerRes = 0;
   console.log(countDealerCards)
   if(countDealerCards === 2) {
@@ -328,10 +344,68 @@ const checkWhoWon = () => {
       SetShowWonChip(true);
     }, 1000)
    
-    setTimeout(() => {
-        resetGame();
-    }, 3000)
+    // setTimeout(() => {
+    //     resetGame();
+    // }, 3000)
 
+  }
+  else if (dealerRes < 21 && dealerRes > userPoints) {
+    setDealerWins(true);
+    setDisableHit(true);
+    setDisableStand(true);
+
+  //   setTimeout(() => {
+  //     resetGame();
+  // }, 3000)
+  }
+
+  else if (dealerRes < userPoints) {
+    setDisableHit(true);
+    setDisableStand(true);
+
+    setTimeout(() => {
+      setHasUserWon(true);
+      SetShowWonChip(true);
+    }, 1000)
+   
+    // setTimeout(() => {
+    //     resetGame();
+    // }, 3000)
+  }
+
+  else if (dealerRes === userPoints) {
+    setStandOff(true);
+  }
+  setTimeout(() => {
+    resetGame();
+}, 3000)
+}
+
+const checkIfBust = () => {
+  let userRes = 0;
+  if(countUserCards === 3) {
+    userRes = Deck[0].value + Deck[1].value + Deck[2].value;
+  }
+  else if (countUserCards === 4) {
+    userRes = Deck[0].value + Deck[1].value + Deck[2].value + Deck[3].value;
+  }
+  else if (countUserCards === 5) {
+    userRes = Deck[0].value + Deck[1].value + Deck[2].value + Deck[3].value + Deck[4].value;
+  }
+  else if (countUserCards === 6) {
+    userRes = Deck[0].value + Deck[1].value + Deck[2].value + Deck[3].value + Deck[4].value + Deck[5].value;
+  } 
+  else if (countUserCards === 7) {
+    userRes = Deck[0].value + Deck[1].value + Deck[2].value + Deck[3].value + Deck[4].value + Deck[5].value + Deck[6].value;
+  }
+
+  if(userRes > 21) {
+    setBust(true);
+    setDisableHit(true);
+    setDisableStand(true);
+    setTimeout(() => {
+        resetGame()
+    }, 2000)
   }
 }
 
@@ -339,18 +413,71 @@ const checkWhoWon = () => {
 
 
 const renderUserSum = () => {
-  if(countUserCards === 1 || countUserCards === 2) {
-    return <div className="user-sum">{userPoints}</div>;
+  if(countUserCards === 2) {
+    if(Deck[0].value2 === 11 || Deck[1].value2 === 11) {
+      if(userPoints+10 <= 21) {
+          return <div className="user-sum">{userPoints} / {userPoints+10}</div>;
+      } else {
+        return <div className="user-sum">{userPoints}</div>;
+      }
+    } else {
+      return <div className="user-sum">{userPoints}</div>;
+    }
   } else if (countUserCards === 3) {
-    return <div className="user-sum user-sum-2">{userPoints}</div>;
+    if((Deck[0].value2 === 11) || (Deck[1].value2 === 11) || (Deck[2].value2 === 11)) {
+      if(userPoints+10 <= 21) {
+      return <div className="user-sum user-sum-2">{userPoints} / {userPoints+10}</div>;
+      } else {
+        return <div className="user-sum user-sum-2">{userPoints}</div>;
+      }
+    } else {
+      return <div className="user-sum user-sum-2">{userPoints}</div>;
+    }
   } else if (countUserCards === 4) {
-    return <div className="user-sum user-sum-3">{userPoints}</div>
+    if((Deck[0].value2 === 11) || (Deck[1].value2 === 11) || (Deck[2].value2 === 11) || (Deck[3].value2 === 11)) {
+      if(userPoints+10 <= 21) {
+      return <div className="user-sum user-sum-3">{userPoints} / {userPoints+10}</div>
+      } else {
+        return <div className="user-sum user-sum-3">{userPoints}</div>
+      }
+    } else {
+      return <div className="user-sum user-sum-3">{userPoints}</div>
+    }
+   
   } else if (countUserCards === 5) {
+    if((Deck[0].value2 === 11) || (Deck[1].value2 === 11) || (Deck[2].value2 === 11) || (Deck[3].value2 === 11) || (Deck[4].value2 === 11)) {
+      if(userPoints+10 <= 21) {
+        return <div className="user-sum user-sum-4">{userPoints} / {userPoints+10}</div>
+      } else {
+           return <div className="user-sum user-sum-4">{userPoints}</div>
+      }
+     
+    } else {
     return <div className="user-sum user-sum-4">{userPoints}</div>
+    }
   } else if (countUserCards === 6) {
-    return <div className="user-sum user-sum-5">{userPoints}</div>
+    if((Deck[0].value2 === 11) || (Deck[1].value2 === 11) || (Deck[2].value2 === 11) || (Deck[3].value2 === 11) || (Deck[4].value2 === 11) || (Deck[5].value2 === 11)) {
+      if(userPoints+10 <= 21) {
+        return <div className="user-sum user-sum-5">{userPoints} / {userPoints+10}</div>
+      } else {
+        return <div className="user-sum user-sum-5">{userPoints}</div>
+      }
+      
+    } else {
+      return <div className="user-sum user-sum-5">{userPoints}</div>
+    }
+  
   } else if (countUserCards >= 7) {
-    return <div className="user-sum user-sum-6">{userPoints}</div>
+    if((Deck[0].value2 === 11) || (Deck[1].value2 === 11) || (Deck[2].value2 === 11) || (Deck[3].value2 === 11) || (Deck[4].value2 === 11) || (Deck[5].value2 === 11) || (Deck[6].value2 === 11)) {
+      if(userPoints+10 <= 21) {
+        return <div className="user-sum user-sum-6">{userPoints} / {userPoints+10}</div>
+      } else {
+        return <div className="user-sum user-sum-6">{userPoints}</div>
+      }
+      
+    } else {
+      return <div className="user-sum user-sum-6">{userPoints}</div>
+    }
   }
 }
 
@@ -410,6 +537,7 @@ const renderBJChip = () => {
 
 
 const resetGame = () => {
+  shuffleArray(Deck);
   setCountDealerCards(0);
   setCountUserCards(0);
   setUserPoints(0);
@@ -442,9 +570,11 @@ const resetGame = () => {
   setShowBJChip(false);
 
 
-
-    setDisableStand(false);
-  
+  setDisableHit(false);
+  setDisableStand(false);
+  setBust(false);
+  setDealerWins(false);
+  setStandOff(false);
   
 }
 
@@ -460,9 +590,9 @@ const checkForBlackJack = () => {
         setShowBJChip(true);
     }, 1000)
 
-  //    setTimeout(() => {
-  //      resetGame();
-  //  }, 3000)
+      setTimeout(() => {
+        resetGame();
+    }, 3000)
   }
 
   else if (Deck[0].value === 10 && Deck[1].value === 1) {
@@ -473,15 +603,25 @@ const checkForBlackJack = () => {
          setShowBJChip(true);
     }, 1000)
 
-  //   setTimeout(() => {
-  //     resetGame();
-  // }, 3000)
+     setTimeout(() => {
+       resetGame();
+   }, 3000)
   }
   else {
    return
   }
 
   
+}
+
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+  }
+
+  console.log(array);
 }
 
 
@@ -527,6 +667,7 @@ const checkForBlackJack = () => {
       </div>
       {renderDealerSum()}
       {hasUserWon && <div className="won-box">You Won!</div>}
+      {dealerWins && <div className="dealer-wins-text">Dealer Wins!</div>}
       <div className="user-card-area">
         <div className={firstUserCard ? "first-user-card active1": "first-user-card"}>
         {firstUserCard ? Deck[0].face : ''}
@@ -551,6 +692,8 @@ const checkForBlackJack = () => {
         </div>
       </div>
       {isBlackJack && <p className="bj-text">Black Jack!</p>}
+      {isBust && <p className="bust-text">Bust!</p>}
+      {standOff && <p className="bust-text">Stand off!</p>}
       {renderUserSum()}
       <p className= {greenBetted || redBetted || blueBetted || blackBetted ? "place-bet-text hidden": "place-bet-text"}>Place Your Bet</p>
       <div className={greenBetted || redBetted || blueBetted || blackBetted ? 'user-box' : 'user-box hidden'}>
@@ -566,10 +709,10 @@ const checkForBlackJack = () => {
             <MdArrowDropDown className="arrow-4"/>
         <div className="chips">
             
-            <div class={greenBetted ? "pokerchip betted-chip greenchip" : "pokerchip greenchip none-transition"} onClick={() => betGreenChip()}>100</div>
-            <div class={redBetted? "pokerchip betted-chip redchip" : "pokerchip redchip none-transition"}  onClick={() => betRedChip()}>200</div>
-            <div class={blueBetted? "pokerchip betted-chip bluechip" : "pokerchip bluechip none-transition"} onClick={() => betBlueChip()}>300</div>
-            <div class={blackBetted? "pokerchip betted-chip blackchip" : "pokerchip blackchip none-transition"} onClick={() => betBlackChip()}>400</div>
+            <div class={greenBetted ? "pokerchip betted-chip greenchip" : "pokerchip greenchip none-transition"} id={isBust || dealerWins ? 'lose-chip' : ''} onClick={() => betGreenChip()}>100</div>
+            <div class={redBetted? "pokerchip betted-chip redchip" : "pokerchip redchip none-transition"}  id={isBust || dealerWins ? 'lose-chip' : ''} onClick={() => betRedChip()}>200</div>
+            <div class={blueBetted? "pokerchip betted-chip bluechip" : "pokerchip bluechip none-transition"} id={isBust || dealerWins ? 'lose-chip' : ''} onClick={() => betBlueChip()}>300</div>
+            <div class={blackBetted? "pokerchip betted-chip blackchip" : "pokerchip blackchip none-transition"} id={isBust || dealerWins ? 'lose-chip' : ''} onClick={() => betBlackChip()}>400</div>
         </div>
     </div>
 

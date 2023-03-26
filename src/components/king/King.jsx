@@ -1,4 +1,5 @@
 import { GiClubs, GiDiamonds, GiSpades, GiHearts } from "react-icons/gi";
+import { FaChessKing } from "react-icons/fa";
 import './king.css'
 
 const King = ({suit}) => {
@@ -33,6 +34,9 @@ const renderSecondSymbol = (suit) => {
    
      {renderFirstSymbol(suit)}
      {renderSecondSymbol(suit)}
+
+     <FaChessKing className={(suit === 'spades' || suit === 'clubs') ? 'top-king black' : 'top-king red'} />
+     <FaChessKing className={(suit === 'spades' || suit === 'clubs') ? 'bottom-king black' : 'bottom-king red'} />
  </div>
   )
 }

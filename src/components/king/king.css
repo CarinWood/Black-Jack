@@ -11,7 +11,7 @@
 }
 
 .red {
-    color: var(--red);
+    color: var(--red)!important;
 }
 
 .king-first-letter {
@@ -54,6 +54,31 @@
     bottom: 17%;
 }
 
+.top-king {
+    background: transparent;
+    position: absolute;
+    top: 30%;
+    width: 22px;
+    height: 22px;
+    font-size: 22px;
+    left: 50%;
+    margin-top: -11px;
+    margin-left: -11px;
+}
+
+.bottom-king {
+    background: transparent;
+    position: absolute;
+    bottom: 30%;
+    width: 22px;
+    height: 22px;
+    font-size: 22px;
+    left: 50%;
+    margin-bottom: -11px;
+    margin-left: -11px;
+    transform: rotate(180deg);
+}
+
 @media screen and (max-width: 471px) {
     .king-frame {
         margin-top: 10px;
@@ -84,6 +109,31 @@
         font-size: 8px;
         bottom: 19%;
         right: 6%;
+    }
+
+    .top-king {
+        background: transparent;
+        position: absolute;
+        top: 30%;
+        width: 22px;
+        height: 22px;
+        font-size: 22px;
+        left: 50%;
+        margin-top: -11px;
+        margin-left: -11px;
+    }
+    
+    .bottom-king {
+        background: transparent;
+        position: absolute;
+        bottom: 30%;
+        width: 22px;
+        height: 22px;
+        font-size: 22px;
+        left: 50%;
+        margin-bottom: -11px;
+        margin-left: -11px;
+        transform: rotate(180deg);
     }
 
 }

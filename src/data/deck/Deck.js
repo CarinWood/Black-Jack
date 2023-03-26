@@ -253,8 +253,8 @@ export const Deck = [
     },
     {
         face: <Card08 suit={"diamonds"}/>,
-        value: 1,
-        value2: 11,
+        value: 8,
+        value2: 8,
     },
     {
         face: <Card09 suit={"diamonds"}/>,

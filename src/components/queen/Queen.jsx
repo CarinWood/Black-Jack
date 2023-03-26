@@ -1,4 +1,4 @@
-import { GiClubs, GiDiamonds, GiSpades, GiHearts } from "react-icons/gi";
+import { GiClubs, GiDiamonds, GiSpades, GiHearts, GiChessQueen } from "react-icons/gi";
 import './queen.css'
 
 const Queen = ({suit}) => {
@@ -31,6 +31,10 @@ const renderSecondSymbol = (suit) => {
       <p className={(suit === 'spades' || suit === 'clubs') ? 'queen-second-letter' : 'queen-second-letter red'}>Q</p>
      {renderFirstSymbol(suit)}
      {renderSecondSymbol(suit)}
+
+     <GiChessQueen className={(suit === 'spades' || suit === 'clubs') ? 'top-queen black' : 'top-queen red'} />
+     <GiChessQueen className={(suit === 'spades' || suit === 'clubs') ? 'bottom-queen black' : 'bottom-queen red'} />
+
  </div>
   )
 }

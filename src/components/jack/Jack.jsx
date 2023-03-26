@@ -1,4 +1,4 @@
-import { GiClubs, GiDiamonds, GiSpades, GiHearts } from "react-icons/gi";
+import { GiClubs, GiDiamonds, GiSpades, GiHearts, GiSharpAxe } from "react-icons/gi";
 import './jack.css'
 
 const Jack = ({suit}) => {
@@ -33,6 +33,9 @@ const renderSecondSymbol = (suit) => {
    
      {renderFirstSymbol(suit)}
      {renderSecondSymbol(suit)}
+
+     <GiSharpAxe className={(suit === 'spades' || suit === 'clubs') ? 'top-axe black' : 'top-axe red'} />
+     <GiSharpAxe className={(suit === 'spades' || suit === 'clubs') ? 'bottom-axe black' : 'bottom-axe red'} />
  </div>
   )
 }

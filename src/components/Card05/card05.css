@@ -1,0 +1,69 @@
+.card05-frame {
+    margin-top: 10px;
+    width: 122px;
+    height: 165px;
+    padding: 3px;
+    font-size: 23px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    position: relative;
+
+}
+
+.card05-first-digit {
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        color: var(--black);
+        position: absolute;
+        top: 2%;
+        left: 5%;
+        font-size: 22px;
+}
+
+.card05-second-digit {
+        transform: rotate(180deg);
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        color: var(--black);
+        position: absolute;
+        bottom: 2%;
+        right: 5%;
+        font-size: 22px;
+}
+
+.first-symbol {
+    background: transparent;
+    font-size: 11px;
+    position: absolute;
+    left: 5%;
+    top: 17%;
+}
+
+@media screen and (max-width: 471px) {
+    .card05-frame {
+        width: 73px;
+        height: 100px;
+        padding: 2px;
+        font-size: 23px;
+        position: relative!important;
+    }
+
+    .card05-first-digit {
+        font-size: 19px;
+    }
+    .card05-second-digit {
+        font-size: 19px;
+    }
+
+    .first-symbol {
+        background: transparent;
+        font-size: 9px;
+        position: absolute;
+        left: 5%;
+        top: 22%;
+    }
+
+}

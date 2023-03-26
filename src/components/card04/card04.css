@@ -1,0 +1,398 @@
+.card04-container {
+    margin-top: 10px;
+    width: 122px;
+    height: 165px;
+    padding: 3px;
+    font-size: 23px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    position: relative;
+}
+
+.digit-4 {
+    width: auto;
+    background-color: whitesmoke;
+    margin-left: 5px;
+    margin-top: 6px;
+    font-size: 20px;
+}
+
+.red {
+    color: var(--red);
+}
+
+.black {
+    color: var(--black);
+}
+
+.clubs-suit-small, .hearts-suit-small, .diamonds-suit-small, .spades-suit-small {
+    color: var(--black);
+    font-size: 10px;
+    background-color: var(--white);  
+    margin-left: 5px;
+    margin-bottom: 9px;
+}
+
+#spades-small {
+    margin-left: 5px;
+}
+
+#diamonds-small-04 {
+    color: var(--red);
+    font-size: 12px;
+    margin-left: 4px;
+ 
+
+}
+
+#clubs-small {
+  
+    margin-left: 4.3px;
+}
+
+#hearts-small-04 {
+    color: var(--red);
+    font-size: 8.8px;
+}
+
+#heart-2 {
+    font-size: 8.8px;
+    margin-bottom: 8px;
+}
+
+#spades-2 {
+    bottom: 14%;
+    right: 8%;
+}
+
+#clubs-2 {
+    bottom: 13%;
+}
+
+.heart-suit-small-2 {
+    color: var(--red);
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 15%;
+    right: 8%;
+    font-size: 8.8px;
+    margin-left: 2px;
+    margin-bottom: 8px;
+    background-color: var(--white);  
+}
+
+
+
+.clubs-suit-small-2 {
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 14%;
+    right: 8%;
+}
+
+ .diamonds-suit-small-2 {
+    color: var(--red);
+    font-size: 12px;
+    margin-left: 4.5px;
+    margin-bottom: 8px;
+    background-color: var(--white);  
+}
+
+#heart-2 {
+    bottom: 14%;
+    right: 8.3%;
+}
+
+#diamonds-small-2-04 {
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 9%;
+    right: 7%;
+}
+
+#diamonds-2 {
+    bottom: 13%!important;
+}
+
+ .spades-suit-small-2 {
+    color: var(--black);
+    font-size: 10px;
+    background-color: var(--white);  
+    margin-left: 5.5px;
+    margin-bottom: 9px;
+}
+
+.spades-suit-small-2 {
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 15%;
+    right: 8%;
+}
+
+.first-heart-03, .second-heart-03 {
+    color: var(--red);
+    background-color: var(--white);
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-left: -10px;
+}
+
+.first-diamond, #second-diamond-02 {
+    color: var(--red);
+    background-color: var(--white);
+    font-size: 27px;
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-left: -13.5px;
+}
+
+.first-club, #second-club-02 {
+    color: var(--black);
+    background-color: var(--white);
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-left: -13.5px;
+}
+.first-spade, #second-spade-02 {
+    color: var(--black);
+    background-color: var(--white);
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-left: -13.5px;
+}
+
+.second-heart-03, #second-club-02, #second-diamond-02, #second-spade-02 {
+    bottom: 10%;
+    top: unset;
+}
+
+#diamonds-2 {
+    bottom: 8%!important;
+}
+
+
+
+.first-diamond {
+    color: var(--red);
+    background-color: var(--white);
+    font-size: 27px;
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    left: 30%;
+    top: 23%;
+}
+.second-diamond {
+    color: var(--red);
+    background-color: var(--white);
+    font-size: 27px;
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    right: 20%;
+ 
+    top: 23%;
+}
+.third-diamond {
+    color: var(--red);
+    background-color: var(--white);
+    font-size: 27px;
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    bottom: 23%;
+    left: 20%;
+}
+
+.fourth-diamond {
+    color: var(--red);
+    background-color: var(--white);
+    font-size: 27px;
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    bottom: 23%;
+    right: 20%;
+}
+
+#diamonds-2 {
+    bottom: 8%!important;
+}  
+
+.second-digit {
+    transform: rotate(180deg);
+    background-color: var(--white);
+    position: absolute;
+    bottom: -2%!important;
+    right: 0;
+    margin-bottom: 6px;
+    margin-right: 10px; 
+    font-size: 20px;
+}
+
+
+
+@media screen and (max-width: 811px) {
+    .card04-container {
+        margin-top: 10px;
+        width: 102px;
+        height: 145px;
+      
+    }
+
+    .heart-suit-small-2, .clubs-suit-small-2, .spades-suit-small-2, .diamonds-suit-small-2 {
+        bottom: 17%;
+        right: 9.5%;
+    }
+
+    #heart-2 {
+        font-size: 8.8px;
+        margin-bottom: 11px;
+        margin-right: 2px;
+    }
+
+    #spades-2 {
+        right: 9.2%;
+    }
+
+    #diamonds-2 {
+        bottom: 14.5%;
+        right: 8%;
+    }
+
+  
+
+  
+
+}
+
+@media screen and (max-width: 471px) {
+    .card04-container {
+        margin-top: 10px;
+        width: 88px;
+        height: 120px;
+        padding: 2px;
+        font-size: 23px;
+        position: relative!important;
+    }
+
+    .digit-4 {
+        font-size: 18px;
+        margin-top: 0px;
+        margin-left: 2px;
+    }
+
+    #hearts-small-04 {
+        margin-left: 1px;
+        margin-bottom: 11px;
+    }
+
+    #spades-small-04 {
+        margin-left: 0.5px;
+    }
+
+    #diamonds-small-04 {
+        margin-left: 1px;
+        margin-top: -13x!important;
+    }
+
+    #clubs-small-04 {
+        margin-left: 0.6px;
+    }
+
+    .first-diamond {
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
+        left: 40%;
+        top: 23%;
+    }
+    .second-diamond {
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
+        right: 20%;
+        top: 23%;
+    }
+    .third-diamond {
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
+        bottom: 23%;
+        left: 25%;
+    }
+    
+    .fourth-diamond {
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
+        bottom: 23%;
+        right: 20%;
+    }
+    
+  
+
+    .second-digit {
+        font-size: 18px;
+        margin-bottom: 0px;
+        margin-right: 5px;
+        bottom: 1.8%!important;
+    }
+
+    .first-heart-03, .second-heart-03 {
+        font-size: 19px;
+        width: 19px;
+        height: 19px;
+    }
+
+    .second-heart {
+        transform: rotate(180deg);
+    }
+
+   #heart-2 {
+    bottom: 10%!important;
+    right: 4.8%;
+    margin-right: 0px;
+   }
+
+   #spades-2 {
+    bottom: 6.8%;
+    right: 3.8%;
+    margin-right: 0px;
+   }
+
+   #diamonds-small-2-04 {
+    bottom: 10%;
+    right: 3%;
+    margin-right: 0px;
+   }
+
+   #clubs-2 {
+    right: 4%;
+    bottom: 8%;
+   }
+
+   .first-heart-03, .second-heart-03, .middle-heart {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+    margin-left: -9px;
+   }
+
+}

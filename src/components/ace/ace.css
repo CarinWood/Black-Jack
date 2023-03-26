@@ -15,7 +15,7 @@
     background-color: whitesmoke;
     margin-left: 3px;
     margin-top: 5px;
-    font-size: 17.5px;  
+    font-size: 20px;  
 }
 
 .ace-club {
@@ -38,7 +38,7 @@
     right: 0;
     margin-bottom: 6px;
     margin-right: 7px;
-    font-size: 17.5; 
+    font-size: 20px; 
 }
 
 .red {
@@ -49,11 +49,11 @@
     color: var(--black);
 }
 
-.heart-suit-small, .heart-suit-small-2 {
+.heart-suit-small{
     color: var(--red);
-    font-size: 10px;
-    margin-left: 5.5px;
-    margin-bottom: 9px;
+    font-size: 9px;
+    margin-left: 4.5px!important;
+    margin-bottom: 10px !important;
     background-color: var(--white);  
 }
 
@@ -63,10 +63,15 @@
 }
 
 .heart-suit-small-2 {
+    color: var(--red);
+    font-size: 9px;
+    margin-left: 5.5px;
+    margin-bottom: 9px;
+    background-color: var(--white);  
     transform: rotate(180deg);
     position: absolute;
-    bottom: 15%;
-    right: 8%;
+    bottom: 10.5%;
+    right: 7.5%;
 }
 
 .clubs-suit-small {
@@ -94,33 +99,71 @@
 .diamonds-suit-small, .diamonds-suit-small-2 {
     color: var(--red);
     font-size: 12px;
-    margin-left: 4.5px;
-    margin-bottom: 9px;
+    margin-left: 3px;
+    margin-bottom: 11px!important;
     background-color: var(--white);  
 }
 
 .diamonds-suit-small-2 {
     transform: rotate(180deg);
     position: absolute;
-    bottom: 15%;
-    right: 7%;
+    bottom: 8.9%;
+    right: 6.4%;
 }
 
 #spades-queen-small {
     color: var(--black);
     font-size: 10px;
     background-color: var(--white);  
-    margin-left: 5.2px;
-    margin-bottom: 5px;
+    margin-left: 4.3px;
+    margin-bottom: 9px;
 }
 
 .spades-suit-small-2 {
     transform: rotate(180deg);
     position: absolute;
-    bottom: 15%;
-    right: 9.5%;
+    bottom: 10.5%;
+    right: 7.5%;
 }
 
+.ace-heart {
+    background: transparent;
+    color: var(--red);
+    font-size: 30px;
+    width: 30px;
+      height: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+}
+
+.ace-diamonds {
+    background: transparent;
+    color: var(--red);
+    font-size: 30px;
+    width: 30px;
+      height: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+}
+
+.ace-spades {
+    background: transparent;
+    color: var(--black);
+    font-size: 30px;
+    width: 30px;
+      height: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+}
 
 
 @media screen and (max-width: 811px) {

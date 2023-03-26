@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react";
 import './gameTable.css'
 import { Deck } from "../../data/deck/Deck";
 import { MdArrowDropDown } from "react-icons/md";
-import cardsound from '../../assets/audio/cardsound.mp3';
+import Card05 from "../../components/Card05/Card05";
+import Card06 from "../../components/Card06/Card06";
+import Card07 from "../../components/card07/Card07";
+import Card09 from "../../components/Card09/Card09";
+import Card08 from "../../components/Card08/Card08";
+import Card10 from "../../components/Card10/Card10";
 
 const GameTable = () => {
   const [countDealerCards, setCountDealerCards] = useState(0)
@@ -65,7 +70,14 @@ const GameTable = () => {
         setSecondDealerCard(true);
         updateDealerPoints(Deck[Deck.length-2].value);
         const res = Deck[Deck.length-1].value + Deck[Deck.length-2].value;
-         if(res <= 16) {
+        let altRes = 0;
+        if(Deck[Deck.length-1].value2 === 11 || Deck[Deck.length-2].value2 === 11) {
+          if(res+10 <= 21) {
+            altRes = res+10;
+          }
+       
+        }
+         if(res <= 16 && altRes <= 17) {
           drawDealerCards();
         } else {
           checkWhoWon();
@@ -75,7 +87,14 @@ const GameTable = () => {
         setThirdDealerCard(true);
         updateDealerPoints(Deck[Deck.length-3].value);
         const res = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value;
-        if(res <= 16) {
+        let altRes = 0;
+        if(Deck[Deck.length-1].value2 === 11 || Deck[Deck.length-2].value2 === 11 || Deck[Deck.length-3].value2 === 11) {
+          if(res+10 <= 21) {
+            altRes = res+10;
+          }
+         
+        }
+        if(res <= 16 && altRes <= 17) {
           drawDealerCards();
         }else {
           checkWhoWon();
@@ -84,7 +103,14 @@ const GameTable = () => {
         setFourthDealerCard(true);
         updateDealerPoints(Deck[Deck.length-4].value);
           const res = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value + Deck[Deck.length-4].value;
-        if(res <= 16) {
+          let altRes = 0;
+          if(Deck[Deck.length-1].value === 11 || Deck[Deck.length-2].value2 === 11 || Deck[Deck.length-3].value2 === 11 || Deck[Deck.length-4]. value2 === 11) {
+            if(res+10 <= 21) {
+               altRes = res+10;
+            }
+           
+          }
+          if(res <= 16 && altRes <= 17) {
           drawDealerCards();
         }else {
           checkWhoWon();
@@ -93,9 +119,14 @@ const GameTable = () => {
         setFifthDealerCard(true)
         updateDealerPoints(Deck[Deck.length-5].value);
         const res = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value + Deck[Deck.length-4].value + Deck[Deck.length-5].value;
-        
-        if(res <= 16) {
-          
+        let altRes = 0;
+        if(Deck[Deck.length-1].value === 11 || Deck[Deck.length-2].value2 === 11 || Deck[Deck.length-3].value2 === 11 || Deck[Deck.length-4]. value2 === 11 || Deck[Deck.length-5].value2 === 11) {
+          if(res+10 <= 21) {
+               altRes = res+10;
+          }
+       
+        }
+        if(res <= 16 && altRes <= 17) {
           drawDealerCards();
         }else {
           checkWhoWon();
@@ -104,7 +135,13 @@ const GameTable = () => {
         setSixthDealerCard(true)
         updateDealerPoints(Deck[Deck.length-6].value);
         const res = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value + Deck[Deck.length-4].value + Deck[Deck.length-5].value + Deck[Deck.length-6].value;
-        if(res <= 16) {
+        let altRes = 0;
+        if(Deck[Deck.length-1].value === 11 || Deck[Deck.length-2].value2 === 11 || Deck[Deck.length-3].value2 === 11 || Deck[Deck.length-4]. value2 === 11 || Deck[Deck.length-5].value2 === 11 || Deck[Deck.length-6].value2 === 11) {
+          if(res+10 <= 21) {
+            altRes = res+10;
+       }
+        }
+        if(res <= 16 && altRes <= 17) {
           drawDealerCards();
         }else {
           checkWhoWon();
@@ -112,7 +149,7 @@ const GameTable = () => {
       } else if (countDealerCards === 7) {
         setSeventhDealerCard(true);
         updateDealerPoints(Deck[Deck.length-7].value);
-        const res = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value + Deck[Deck.length-4].value + Deck[Deck.length-5].value + Deck[Deck.length-6].value + Deck[Deck.length-7].value;
+        // const res = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value + Deck[Deck.length-4].value + Deck[Deck.length-5].value + Deck[Deck.length-6].value + Deck[Deck.length-7].value;
           checkWhoWon()
         
       }
@@ -179,7 +216,7 @@ const GameTable = () => {
       setDisableHit(true);
       setTimeout(() => {
           setCountDealerCards(countDealerCards + 1)
-      }, 500)
+      }, 800)
    
   }
 
@@ -187,7 +224,7 @@ const GameTable = () => {
       if(disableHit) {
         return;
       }
-    playCardSound()
+  
     setCountUserCards(countUserCards + 1);
   }
 
@@ -314,71 +351,150 @@ const betBlackChip = () => {
 }
 
 const checkWhoWon = () => {
-
+  setDisableHit(true);
+  setDisableStand(true);
   let dealerRes = 0;
-  console.log(countDealerCards)
+  let altDealerRes = 0;
+  let altUserRes = 0;
+
+  if((Deck[0].value2 === 11) || (Deck[1].value2 === 11) || (Deck[2].value2 === 11) || (Deck[3].value2 === 11) || (Deck[4].value2 === 11) || (Deck[5].value2 === 11) || (Deck[6].value2 === 11)) {
+    if(userPoints+10 <= 21) {
+      altUserRes = userPoints+10
+    }
+  }
+
+  console.log('beginning of func value of altUserRes: ', altUserRes)
+
+
   if(countDealerCards === 2) {
     dealerRes = Deck[Deck.length-1].value + Deck[Deck.length-2].value;
+    if(Deck[Deck.length-1].value2 === 11 || Deck[Deck.length-2].value2 === 11) {
+      if(dealerRes+10 <= 21) {
+        altDealerRes = dealerRes+10;
+      } 
+    }
   }
   else if (countDealerCards === 3) {
     dealerRes = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value;
+    if(Deck[Deck.length-1].value2 === 11 || Deck[Deck.length-2].value2 === 11 || Deck[Deck.length-3].value2 === 11) {
+      if(dealerRes+10 <= 21) {
+        altDealerRes = dealerRes+10
+      }  
+    }
   }
   else if (countDealerCards === 4) {
     dealerRes = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value + Deck[Deck.length-4].value;
+    if(Deck[Deck.length-1].value2 === 11 || Deck[Deck.length-2].value2 === 11 || Deck[Deck.length-3].value2 === 11 || Deck[Deck.length-4].value2 === 11) {
+      if(dealerRes+10 <= 21) {
+        altDealerRes = dealerRes+10
+      }
+    }
   }
   else if (countDealerCards === 5) {
     dealerRes = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value + Deck[Deck.length-4].value + Deck[Deck.length-5].value;
+    if(Deck[Deck.length-1].value2 === 11 || Deck[Deck.length-2].value2 === 11 || Deck[Deck.length-3].value2 === 11 || Deck[Deck.length-4].value2 === 11 || Deck[Deck.length-5].value2 === 11) {
+      if(dealerRes+10 <= 21) {
+        altDealerRes = dealerRes+10;
+      }
+    }
+    
   }
   else if (countDealerCards === 6) {
     dealerRes = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value + Deck[Deck.length-4].value + Deck[Deck.length-5].value + Deck[Deck.length-6].value;
+    if(Deck[Deck.length-1].value2 === 11 || Deck[Deck.length-2].value2 === 11 || Deck[Deck.length-3].value2 === 11 || Deck[Deck.length-4].value2 === 11 || Deck[Deck.length-5].value2 === 11 || Deck[Deck.length-6].value2 === 11) {
+      if(dealerRes <= 21) {
+        altDealerRes = dealerRes+10;
+      }
+    }
   }
   else if (countDealerCards === 7) {
     dealerRes = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value + Deck[Deck.length-4].value + Deck[Deck.length-5].value + Deck[Deck.length-6].value + Deck[Deck.length-7].value;
+    if(Deck[Deck.length-1].value2 === 11 || Deck[Deck.length-2].value2 === 11 || Deck[Deck.length-3].value2 === 11 || Deck[Deck.length-4].value2 === 11 || Deck[Deck.length-5].value2 === 11 || Deck[Deck.length-6].value2 === 11 || Deck[Deck.length-7].value2 === 11) {
+      if(dealerRes+10 <= 21) {
+        altDealerRes = dealerRes+10;
+      }
+    }
   }
 
+
+  if(altDealerRes === 0 && altUserRes === 0) {
+
+    if(userPoints <= 21 && userPoints > dealerRes) {
+    
+      setTimeout(() => {
+        setHasUserWon(true);
+        SetShowWonChip(true);
+      }, 1000)
+     
+       setTimeout(() => {
+           resetGame();
+       }, 3000)
+
+    } else if (userPoints <= 21 && userPoints < dealerRes && dealerRes <= 21) {
+      setDealerWins(true); 
+       setTimeout(() => {
+         resetGame();
+     }, 3000)
+
+    } else if (userPoints === dealerRes) {
+      setStandOff(true);
+
+      setTimeout(() => {
+        resetGame();
+    }, 3000)
+    } else if (userPoints <= 21 && dealerRes > 21) {
+          setTimeout(() => {
+            setHasUserWon(true);
+            SetShowWonChip(true);
+          }, 1000)
+        
+          setTimeout(() => {
+              resetGame();
+          }, 3000)
+    }
+
+  } else {
+    if(altUserRes > altDealerRes || userPoints > dealerRes) {
+      setTimeout(() => {
+        setHasUserWon(true);
+        SetShowWonChip(true);
+      }, 1000)
+     
+       setTimeout(() => {
+           resetGame();
+       }, 3000)
+
+
+   
+
+    } else if (dealerRes > altUserRes || altDealerRes > userPoints) {
+              setDealerWins(true); 
+              setTimeout(() => {
+                resetGame();
+            }, 3000)
+   
+        } else if (altUserRes === altDealerRes) {
+          setStandOff(true);
+        }
+  }
+
+
+
+  if (dealerRes === userPoints || altDealerRes === userPoints || dealerRes === altUserRes) {
+
+      setStandOff(true);
+ 
   
-  if(dealerRes > 21 && userPoints <= 21) {
-    setDisableHit(true);
-    setTimeout(() => {
-      setHasUserWon(true);
-      SetShowWonChip(true);
-    }, 1000)
-   
-    // setTimeout(() => {
-    //     resetGame();
-    // }, 3000)
+         setTimeout(() => {
+           resetGame();
+       }, 3000)
 
+    
+    
   }
-  else if (dealerRes < 21 && dealerRes > userPoints) {
-    setDealerWins(true);
-    setDisableHit(true);
-    setDisableStand(true);
+  
 
-  //   setTimeout(() => {
-  //     resetGame();
-  // }, 3000)
-  }
 
-  else if (dealerRes < userPoints) {
-    setDisableHit(true);
-    setDisableStand(true);
-
-    setTimeout(() => {
-      setHasUserWon(true);
-      SetShowWonChip(true);
-    }, 1000)
-   
-    // setTimeout(() => {
-    //     resetGame();
-    // }, 3000)
-  }
-
-  else if (dealerRes === userPoints) {
-    setStandOff(true);
-  }
-  setTimeout(() => {
-    resetGame();
-}, 3000)
 }
 
 const checkIfBust = () => {
@@ -403,9 +519,9 @@ const checkIfBust = () => {
     setBust(true);
     setDisableHit(true);
     setDisableStand(true);
-    setTimeout(() => {
-        resetGame()
-    }, 2000)
+    // setTimeout(() => {
+    //     resetGame()
+    // }, 2000)
   }
 }
 
@@ -415,7 +531,10 @@ const checkIfBust = () => {
 const renderUserSum = () => {
   if(countUserCards === 2) {
     if(Deck[0].value2 === 11 || Deck[1].value2 === 11) {
-      if(userPoints+10 <= 21) {
+      if(userPoints+10 === 21) {
+        return <div className="user-sum">21</div>;
+      }
+      else if(userPoints+10 <= 21) {
           return <div className="user-sum">{userPoints} / {userPoints+10}</div>;
       } else {
         return <div className="user-sum">{userPoints}</div>;
@@ -491,7 +610,10 @@ const renderDealerSum = () => {
 
   } else if (countDealerCards === 2) {
     if (Deck[Deck.length-1].value2 === 11 || Deck[Deck.length-2].value2 === 11) {
-      if(dealerPoints+10 <= 21) {
+      if(dealerPoints+10 === 21) {
+        return <div className="dealer-sum dealer-sum-1">21</div>
+      }
+      else if(dealerPoints+10 <= 21) {
         return <div className="dealer-sum dealer-sum-1">{dealerPoints} / {dealerPoints+10}</div>
       } else {
         return <div className="dealer-sum dealer-sum-1">{dealerPoints}</div>
@@ -560,9 +682,7 @@ const renderDealerSum = () => {
   
 }
 
-const playCardSound = () => {
-  new Audio(cardsound).play();
-}
+
 
 
 const renderWonChip = () => {
@@ -597,44 +717,44 @@ const renderBJChip = () => {
 
 
 const resetGame = () => {
-  shuffleArray(Deck);
-  setCountDealerCards(0);
-  setCountUserCards(0);
-  setUserPoints(0);
-  setDealerPoints(0);
-  setGreenBetted(false);
-  setRedBetted(false);
-  setBlueBetted(false);
-  setBlackBetted(false);
-  SetShowWonChip(false);
+  // shuffleArray(Deck);
+  // setCountDealerCards(0);
+  // setCountUserCards(0);
+  // setUserPoints(0);
+  // setDealerPoints(0);
+  // setGreenBetted(false);
+  // setRedBetted(false);
+  // setBlueBetted(false);
+  // setBlackBetted(false);
+  // SetShowWonChip(false);
 
-  setFirstUserCard(false);
-  setSecondUserCard(false);
-  setThirdUserCard(false);
-  setFourthUserCard(false);
-  setFifthUserCard(false);
-  setSixthUserCard(false);
-  setSeventhUserCard(false);
+  // setFirstUserCard(false);
+  // setSecondUserCard(false);
+  // setThirdUserCard(false);
+  // setFourthUserCard(false);
+  // setFifthUserCard(false);
+  // setSixthUserCard(false);
+  // setSeventhUserCard(false);
 
-  setFirstDealerCard(false);
-  setSecondDealerCard(false);
-  setThirdDealerCard(false);
-  setFourthDealerCard(false);
-  setFifthDealerCard(false);
-  setSixthDealerCard(false);
-  setSeventhDealerCard(false);
+  // setFirstDealerCard(false);
+  // setSecondDealerCard(false);
+  // setThirdDealerCard(false);
+  // setFourthDealerCard(false);
+  // setFifthDealerCard(false);
+  // setSixthDealerCard(false);
+  // setSeventhDealerCard(false);
 
-  setHasUserWon(false);
-  setBlackJack(false);
+  // setHasUserWon(false);
+  // setBlackJack(false);
 
-  setShowBJChip(false);
+  // setShowBJChip(false);
 
 
-  setDisableHit(false);
-  setDisableStand(false);
-  setBust(false);
-  setDealerWins(false);
-  setStandOff(false);
+  // setDisableHit(false);
+  // setDisableStand(false);
+  // setBust(false);
+  // setDealerWins(false);
+  // setStandOff(false);
   
 }
 
@@ -659,7 +779,8 @@ const checkForBlackJack = () => {
       setDisableHit(true);
       setDisableStand(true);
     setTimeout(() => {
-      setBlackJack(true);
+          setBlackJack(true);
+          SetShowWonChip(true);
          setShowBJChip(true);
     }, 1000)
 
@@ -681,7 +802,7 @@ function shuffleArray(array) {
       [array[i], array[j]] = [array[j], array[i]];
   }
 
-  console.log(array);
+
 }
 
 
@@ -691,6 +812,14 @@ function shuffleArray(array) {
 
   return (
     <div className="game-table">
+      <div className="card-pretend">
+           <Card05 suit={"spades"}/>
+            <Card06 suit={"spades"}/>
+            <Card07 suit={"spades"}/>
+            <Card08 suit={"spades"}/>
+            <Card09 suit={"spades"}/>
+            <Card10 suit={"spades"}/>
+            </div>
       <div className="dealers-box">
      
                 {/* First Dealer card */}
@@ -723,8 +852,8 @@ function shuffleArray(array) {
         <div className={seventhDealerCard ? "seventh-dealer-card active7": "seventh-dealer-card"}>
           {seventhDealerCard === true ? drawSeventhCard() : ''}
         </div>
-      
       </div>
+ 
       {renderDealerSum()}
       {hasUserWon && <div className="won-box">You Won!</div>}
       {dealerWins && <div className="dealer-wins-text">Dealer Wins!</div>}

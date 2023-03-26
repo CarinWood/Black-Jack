@@ -12,7 +12,10 @@ const Ace = ({suit}) => {
           {suit === 'diamonds' && <GiDiamonds className='diamonds-suit-small' id="queen-diamond-1"/>}
           {suit === 'spades' && <GiSpades className='spades-suit-small' id="spades-queen-small"/>}
 
-          <GiClubs className='ace-club'/>
+          {suit === 'clubs' && <GiClubs className='ace-club'/>}
+          {suit === 'hearts' && <GiHearts className='ace-heart'/>}
+          {suit === 'diamonds' && <GiDiamonds className='ace-diamonds'/>}
+          {suit === 'spades' && <GiSpades className='ace-spades'/>}
 
           {suit === 'hearts' && <GiHearts className='heart-suit-small-2' id="queen-heart-small-2"/>} 
           {suit === 'clubs' && <GiClubs className='clubs-suit-small-2' id="queen-club-small-2"/>}

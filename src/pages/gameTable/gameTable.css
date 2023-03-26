@@ -1028,7 +1028,7 @@
     border-right: 8px solid goldenrod;
   }
   
-  .sum-double:after {
+  .sum-double:after, .sum-double-2:after, .sum-double-3:after, .sum-double-4:after, .sum-double-5:after, .sum-double-6:after {
     width: 0;
     height: 0;
     top: 20.5px;

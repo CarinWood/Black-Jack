@@ -198,18 +198,18 @@
   left: 50%;
   margin-left: -400px;
   bottom: 36%;
-  
 }
 
 .user-sum, .dealer-sum {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 22px!important;
   border: 1px solid goldenrod;
   border-radius: 3px;
   background-color: black;
-  width: 40px;
+  width: 50px;
+  height: 40px;
   color: goldenrod;
   position: absolute;
   right: 25%!important;
@@ -219,34 +219,23 @@
   transition: all 0.2s ease-in-out;
 }
 
+.dealer-sum {
+  bottom: unset;
+  top: 10%;
+  font-size: 20px !important;
+}
+
 .user-sum {
   width: auto;
   padding: 6px 13px;
 }
 
-.dealer-sum {
-  bottom: unset;
-  top: 10%;
-}
-
 .sum-double {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  border: 1px solid goldenrod;
   border-radius: 3px;
   background-color: black;
-  width: 30px;
+  width: 50px;
   height: 60px!important;
-  color: goldenrod;
-  position: absolute;
-  right: 25%!important;
-  bottom: 31.5%!important;
-  padding: 0px;
-  visibility: visible;
-  transition: all 0.2s ease-in-out;
+  bottom: 41%;
 }
 
 .dealer-double-sum {
@@ -254,11 +243,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 20px;
   border: 1px solid goldenrod;
   border-radius: 3px;
   background-color: black;
-  width: 30px;
+  width: 50px;
   height: 60px!important;
   color: goldenrod;
   position: absolute;
@@ -270,8 +259,8 @@
 }
 
 .line {
-  height: 0.2vh;
-  width: 5vw;
+  height: 0.1vh;
+  width: 1vw;
   background-color: goldenrod;
 }
 
@@ -736,12 +725,34 @@
     bottom: -10%;
   }
 
-  .user-sum {
+  
+  .sum-double, .sum-double-2, .sum-double-3, .sum-double-4, .sum-double-5, .sum-double-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border: 1px solid goldenrod;
+    border-radius: 3px;
+    background-color: black;
+    width: 30px;
+    height: 60px!important;
+    color: goldenrod;
+    position: absolute;
+    right: 25%!important;
+    bottom: 31.5%!important;
+    padding: 0px;
+    visibility: visible;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .user-sum, .sum-double {
     font-size: 22px;
     width: 40px;
     right: 38%!important;
     bottom: 34%;
   }
+
 
   .dealer-sum {
     font-size: 22px;
@@ -751,27 +762,27 @@
     bottom: unset;
   }
 
-  .dealer-sum-1 {
+  .dealer-sum-1  {
     right: 40%!important;
   }
 
-  .user-sum-2, .dealer-sum-2 {
+  .user-sum-2, .sum-double-2, .dealer-sum-2 {
     right: 30%!important;
   }
 
-  .user-sum-3, .dealer-sum-3 {
+  .user-sum-3, .sum-double-3, .dealer-sum-3 {
     right: 22%!important;
   }
 
-  .user-sum-4, .dealer-sum-4 {
+  .user-sum-4, .sum-double-4, .dealer-sum-4 {
     right: 13%!important;
   }
 
-  .user-sum-5, .dealer-sum-5 {
+  .user-sum-5, .sum-double-5, .dealer-sum-5 {
     right: 5%!important;
   }
 
-  .user-sum-6, .dealer-sum-6 {
+  .user-sum-6, .sum-double-6, .dealer-sum-6 {
     right: 0%!important;
   }
 
@@ -980,6 +991,58 @@
       bottom: 703.5%;
 
     }
+  }
+
+
+  
+  .dealer-double-sum {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border: 1px solid goldenrod;
+    border-radius: 3px;
+    background-color: black;
+    width: 30px;
+    height: 60px!important;
+    color: goldenrod;
+    position: absolute;
+    right: 25%!important;
+    bottom: 33%!important;
+    padding: 0px;
+    visibility: visible;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .dealer-double-sum:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 21px;
+    left: -16px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid goldenrod;
+  }
+  
+  .sum-double:after {
+    width: 0;
+    height: 0;
+    top: 20.5px;
+    left: -16px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid goldenrod;
+  }
+
+  .line {
+    height: 0.2vh;
+    width: 5vw;
+    background-color: goldenrod;
   }
 
   }

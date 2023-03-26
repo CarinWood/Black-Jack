@@ -55,6 +55,38 @@
     bottom: 17%;
 }
 
+.card02-middle-symbol-one {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    top: 30%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+
+}
+
+.card02-middle-symbol-two {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    bottom: 30%;
+    left: 50%;
+    margin-bottom: -10px;
+    margin-left: -10px;
+    transform: rotate(180deg);
+}
+
+.diamond {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+}
+
 @media screen and (max-width: 471px) {
     .card02-frame {
         margin-top: 10px;
@@ -82,6 +114,34 @@
     .card02-second-symbol {
         font-size: 8px;
         bottom: 19%;
+    }
+
+    .card02-middle-symbol-one {
+        width: 18px;
+        height: 18px;
+        font-size: 18px;
+        top: 30%;
+        left: 50%;
+        margin-top: -10px;
+        margin-left: -10px;
+    
+    }
+    
+    .card02-middle-symbol-two {
+        width: 18px;
+        height: 18px;
+        font-size: 18px;
+        bottom: 30%;
+        left: 50%;
+        margin-top: -10px;
+        margin-left: -10px;
+        transform: rotate(180deg);
+    }
+    
+    .diamond {
+        width: 22px;
+        height: 22px;
+        font-size: 22px;
     }
 
 }

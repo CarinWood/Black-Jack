@@ -54,6 +54,61 @@
     bottom: 17%;
 }
 
+.card04-middle-symbol-one {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    top: 32%;
+    left: 35%;
+    margin-top: -10px;
+    margin-left: -10px;
+
+}
+
+.card04-middle-symbol-two {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    top: 32%;
+    right: 35%;
+    margin-top: -10px;
+    margin-right: -10px;
+}
+
+.card04-middle-symbol-three {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    bottom: 32%;
+    left: 35%;
+    margin-bottom: -10px;
+    margin-left: -10px;
+}
+
+.card04-middle-symbol-four {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    bottom: 32%;
+    right: 35%;
+    margin-bottom: -10px;
+    margin-right: -10px;
+}
+
+.diamond {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+}
+
 @media screen and (max-width: 471px) {
     .card04-frame {
         margin-top: 10px;
@@ -82,5 +137,35 @@
         font-size: 8px;
         bottom: 19%;
     }
+
+    .card04-middle-symbol-one {
+        width: 18px;
+        height: 18px;
+        font-size: 18px;
+    }
+
+    .card04-middle-symbol-two {
+        width: 18px;
+        height: 18px;
+        font-size: 18px;
+    }
+
+    .card04-middle-symbol-three {
+        width: 18px;
+        height: 18px;
+        font-size: 18px;
+    }
+    .card04-middle-symbol-four {
+        width: 18px;
+        height: 18px;
+        font-size: 18px;
+    }
+    
+    
+    .diamond {
+        width: 22px;
+        height: 22px;
+        font-size: 22px;
+    }  
 
 }

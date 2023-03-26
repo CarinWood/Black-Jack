@@ -54,6 +54,93 @@
     bottom: 17%;
 }
 
+.card07-middle-symbol-one {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    top: 30%;
+    left: 30%;
+    margin-top: -10px;
+    margin-left: -10px;
+
+}
+
+.card07-middle-symbol-two {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    top: 30%;
+    right: 30%;
+    margin-top: -10px;
+    margin-right: -10px;
+}
+
+.card07-middle-symbol-three {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    bottom: 30%;
+    left: 30%;
+    margin-bottom: -10px;
+    margin-left: -10px;
+}
+
+.card07-middle-symbol-four {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    bottom: 30%;
+    right: 30%;
+    margin-bottom: -10px;
+    margin-right: -10px;
+}
+
+.card07-middle-symbol-five {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    bottom: 50%;
+    right: 30%;
+    margin-bottom: -10px;
+    margin-right: -10px;
+}
+
+.card07-middle-symbol-six {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    bottom: 50%;
+    left: 30%;
+    margin-bottom: -10px;
+    margin-left: -10px;
+}
+
+.card07-middle-symbol-seven {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    top: 38%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+
+
 @media screen and (max-width: 471px) {
     .card07-frame {
         margin-top: 10px;
@@ -77,9 +164,69 @@
         left: 5.6%;
         top: 19%;
     }
+
     .card07-second-symbol {
         font-size: 8px;
         bottom: 19%;
+    }
+
+    .card07-middle-symbol-one {
+        width: 16px;
+        height: 16px;
+        font-size: 16px;
+        margin-left: -8px;
+    }
+
+    .card07-middle-symbol-two {
+        width: 16px;
+        height: 16px;
+        font-size: 16px;
+        margin-left: -8px;
+    }
+
+    .card07-middle-symbol-three {
+        width: 16px;
+        height: 16px;
+        font-size: 16px;
+        margin-left: -8px;
+    }
+
+    .card07-middle-symbol-four {
+        width: 16px;
+        height: 16px;
+        font-size: 16px;
+        margin-left: -8px;
+    }
+ 
+    .card07-middle-symbol-five {
+        width: 16px;
+        height: 16px;
+        font-size: 16px;
+        margin-left: -8px;
+    }
+   
+    .card07-middle-symbol-six {
+        width: 16px;
+        height: 16px;
+        font-size: 16px;
+        margin-left: -8px;
+    }
+  
+    .card07-middle-symbol-seven {
+        width: 16px;
+        height: 16px;
+        font-size: 16px;
+        margin-left: -8px;
+        margin-top: -8px;
+    }
+    
+    
+   
+
+    .hearts {
+        width: 15px;
+        height: 15px;
+        font-size: 15px;
     }
 
 }

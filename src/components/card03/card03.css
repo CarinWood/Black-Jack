@@ -55,6 +55,49 @@
     bottom: 17%;
 }
 
+.card03-middle-symbol-one {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    top: 30%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+
+}
+
+.card03-middle-symbol-two {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+.card03-middle-symbol-three {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    top: 70%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+.diamond {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+}
+
 @media screen and (max-width: 471px) {
     .card03-frame {
         margin-top: 10px;
@@ -83,5 +126,30 @@
         font-size: 8px;
         bottom: 19%;
     }
+
+    .card03-middle-symbol-one {
+        width: 18px;
+        height: 18px;
+        font-size: 18px;
+    }
+
+    .card03-middle-symbol-two {
+        width: 18px;
+        height: 18px;
+        font-size: 18px;
+    }
+
+    .card03-middle-symbol-three {
+        width: 18px;
+        height: 18px;
+        font-size: 18px;
+    }
+    
+    
+    .diamond {
+        width: 22px;
+        height: 22px;
+        font-size: 22px;
+    }    
 
 }

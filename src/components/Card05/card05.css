@@ -55,6 +55,73 @@
     bottom: 17%;
 }
 
+.card05-middle-symbol-one {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    top: 30%;
+    left: 35%;
+    margin-top: -10px;
+    margin-left: -10px;
+
+}
+
+.card05-middle-symbol-two {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    top: 30%;
+    right: 35%;
+    margin-top: -10px;
+    margin-right: -10px;
+}
+
+.card05-middle-symbol-three {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    bottom: 30%;
+    left: 35%;
+    margin-bottom: -10px;
+    margin-left: -10px;
+}
+
+.card05-middle-symbol-four {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    bottom: 30%;
+    right: 35%;
+    margin-bottom: -10px;
+    margin-right: -10px;
+}
+
+.card05-middle-symbol-five {
+    background-color: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    bottom: 50%;
+    right: 50%;
+    margin-bottom: -10px;
+    margin-right: -10px;
+}
+
+.diamond {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+}
+
 @media screen and (max-width: 471px) {
     .card05-frame {
         margin-top: 10px;
@@ -91,5 +158,49 @@
         font-size: 8px;
         bottom: 19%;
     }
+
+    .card05-middle-symbol-one {
+        width: 17px;
+        height: 17px;
+        font-size: 17px;
+    }
+
+    .card05-middle-symbol-two {
+        width: 17px;
+        height: 17px;
+        font-size: 17px;
+    }
+
+    .card05-middle-symbol-three {
+        width: 17px;
+        height: 17px;
+        font-size: 17px;
+    }
+
+    .card05-middle-symbol-four {
+        width: 17px;
+        height: 17px;
+        font-size: 17px;
+    }
+ 
+    .card05-middle-symbol-five {
+        width: 17px;
+        height: 17px;
+        font-size: 17px;
+    }
+    
+    
+    .diamond {
+        width: 22px;
+        height: 22px;
+        font-size: 22px;
+    }  
+
+    .hearts {
+        width: 15px;
+        height: 15px;
+        font-size: 15px;
+    }  
+
 
 }

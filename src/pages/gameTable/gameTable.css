@@ -5,7 +5,7 @@
   left: 0;
   display: flex;
   flex-wrap:wrap;
-  width: 100%;
+  width: 40%;
   z-index: 100;
   justify-content: space-around;
 }

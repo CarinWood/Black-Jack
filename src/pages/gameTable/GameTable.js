@@ -566,7 +566,7 @@ const renderUserSum = () => {
         return <div className="user-sum">21</div>;
       }
       else if(userPoints+10 <= 21) {
-          return <div className="user-sum">{userPoints} / {userPoints+10}</div>;
+          return <div className="user-sum sum-double">{userPoints} <p className="line"></p> {userPoints+10}</div>;
       } else {
         return <div className="user-sum">{userPoints}</div>;
       }
@@ -576,7 +576,7 @@ const renderUserSum = () => {
   } else if (countUserCards === 3) {
     if((Deck[0].value2 === 11) || (Deck[1].value2 === 11) || (Deck[2].value2 === 11)) {
       if(userPoints+10 <= 21) {
-      return <div className="user-sum user-sum-2">{userPoints} / {userPoints+10}</div>;
+      return <div className="user-sum user-sum-2 sum-double">{userPoints} <p className="line"></p> {userPoints+10}</div>;
       } else {
         return <div className="user-sum user-sum-2">{userPoints}</div>;
       }
@@ -586,7 +586,7 @@ const renderUserSum = () => {
   } else if (countUserCards === 4) {
     if((Deck[0].value2 === 11) || (Deck[1].value2 === 11) || (Deck[2].value2 === 11) || (Deck[3].value2 === 11)) {
       if(userPoints+10 <= 21) {
-      return <div className="user-sum user-sum-3">{userPoints} / {userPoints+10}</div>
+      return <div className="user-sum user-sum-3 sum-double">{userPoints} <p className="line"></p> {userPoints+10}</div>
       } else {
         return <div className="user-sum user-sum-3">{userPoints}</div>
       }
@@ -597,7 +597,7 @@ const renderUserSum = () => {
   } else if (countUserCards === 5) {
     if((Deck[0].value2 === 11) || (Deck[1].value2 === 11) || (Deck[2].value2 === 11) || (Deck[3].value2 === 11) || (Deck[4].value2 === 11)) {
       if(userPoints+10 <= 21) {
-        return <div className="user-sum user-sum-4">{userPoints} / {userPoints+10}</div>
+        return <div className="user-sum user-sum-4 sum-double">{userPoints} <p className="line"></p> {userPoints+10}</div>
       } else {
            return <div className="user-sum user-sum-4">{userPoints}</div>
       }
@@ -608,7 +608,7 @@ const renderUserSum = () => {
   } else if (countUserCards === 6) {
     if((Deck[0].value2 === 11) || (Deck[1].value2 === 11) || (Deck[2].value2 === 11) || (Deck[3].value2 === 11) || (Deck[4].value2 === 11) || (Deck[5].value2 === 11)) {
       if(userPoints+10 <= 21) {
-        return <div className="user-sum user-sum-5">{userPoints} / {userPoints+10}</div>
+        return <div className="user-sum user-sum-5 sum-double">{userPoints} <p className="line"></p> {userPoints+10}</div>
       } else {
         return <div className="user-sum user-sum-5">{userPoints}</div>
       }
@@ -620,7 +620,7 @@ const renderUserSum = () => {
   } else if (countUserCards >= 7) {
     if((Deck[0].value2 === 11) || (Deck[1].value2 === 11) || (Deck[2].value2 === 11) || (Deck[3].value2 === 11) || (Deck[4].value2 === 11) || (Deck[5].value2 === 11) || (Deck[6].value2 === 11)) {
       if(userPoints+10 <= 21) {
-        return <div className="user-sum user-sum-6">{userPoints} / {userPoints+10}</div>
+        return <div className="user-sum user-sum-6 sum-double">{userPoints} <p className="line"></p> {userPoints+10}</div>
       } else {
         return <div className="user-sum user-sum-6">{userPoints}</div>
       }
@@ -832,14 +832,7 @@ function shuffleArray(array) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
   }
-
-
-}
-
-
- 
-
-  
+} 
 
   return (
     <div className="game-table"> 

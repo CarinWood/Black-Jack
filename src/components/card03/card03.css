@@ -1,8 +1,8 @@
-.card-frame {
+.card03-frame {
     margin-top: 10px;
     width: 122px;
     height: 165px;
-    padding: 0px;
+    padding: 3px;
     font-size: 23px;
     background-color: whitesmoke;
     border-radius: 5px;
@@ -11,361 +11,77 @@
 
 }
 
-.first-digit {
-    width: auto;
-    background-color: whitesmoke;
-    margin-left: 5px;
-    margin-top: 5px;
-}
-
 .red {
     color: var(--red);
 }
 
-.black {
-    color: var(--black);
+.card03-first-digit {
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        color: var(--black);
+        position: absolute;
+        top: 2%;
+        left: 5%;
+        font-size: 22px;
 }
 
-.clubs-suit-small, .hearts-suit-small, .diamonds-suit-small, .spades-suit-small {
-    color: var(--black);
-    font-size: 10px;
-    background-color: var(--white);  
-    margin-left: 5px;
-    margin-bottom: 9px;
+.card03-second-digit {
+        transform: rotate(180deg);
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        color: var(--black);
+        position: absolute;
+        bottom: 2%;
+        right: 5%;
+        font-size: 22px;
 }
 
-#spades-small {
-    margin-left: 5px;
+.card03-first-symbol {
+    background: transparent;
+    font-size: 11px;
+    position: absolute;
+    left: 5%;
+    top: 17%;
 }
 
-#diamonds-small {
-    color: var(--red);
-    font-size: 12px;
-    margin-left: 4px;
- 
-
-}
-
-#clubs-small {
-  
-    margin-left: 4.3px;
-}
-
-#hearts-small {
-    color: var(--red);
-    font-size: 8.8px;
-}
-
-#heart-2 {
-    font-size: 8.8px;
-    margin-bottom: 8px;
-}
-
-#spades-2 {
-    bottom: 14%;
-    right: 8%;
-}
-
-#clubs-2 {
-    bottom: 13%;
-}
-
-.heart-suit-small-2 {
-    color: var(--red);
+.card03-second-symbol {
     transform: rotate(180deg);
+    background: transparent;
+    font-size: 11px;
     position: absolute;
-    bottom: 15%;
-    right: 8%;
-    font-size: 8.8px;
-    margin-left: 2px;
-    margin-bottom: 8px;
-    background-color: var(--white);  
-}
-
-
-
-.clubs-suit-small-2 {
-    transform: rotate(180deg);
-    position: absolute;
-    bottom: 14%;
-    right: 8%;
-}
-
- .diamonds-suit-small-2 {
-    color: var(--red);
-    font-size: 12px;
-    margin-left: 4.5px;
-    margin-bottom: 8px;
-    background-color: var(--white);  
-}
-
-#heart-2 {
-    bottom: 14%;
-    right: 8.3%;
-}
-
-.diamonds-suit-small-2 {
-    transform: rotate(180deg);
-    position: absolute;
-    bottom: 14%;
-    right: 7%;
-}
-
-#diamonds-2 {
-    bottom: 13%!important;
-}
-
- .spades-suit-small-2 {
-    color: var(--black);
-    font-size: 10px;
-    background-color: var(--white);  
-    margin-left: 5.5px;
-    margin-bottom: 9px;
-}
-
-.spades-suit-small-2 {
-    transform: rotate(180deg);
-    position: absolute;
-    bottom: 15%;
-    right: 8%;
-}
-
-.first-heart-03, .second-heart-03 {
-    color: var(--red);
-    background-color: var(--white);
-    font-size: 20px;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    margin-left: -10px;
-}
-
-.first-diamond, #second-diamond-02 {
-    color: var(--red);
-    background-color: var(--white);
-    font-size: 27px;
-    width: 27px;
-    height: 27px;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    margin-left: -13.5px;
-}
-
-.first-club, #second-club-02 {
-    color: var(--black);
-    background-color: var(--white);
-    font-size: 22px;
-    width: 22px;
-    height: 22px;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    margin-left: -13.5px;
-}
-.first-spade, #second-spade-02 {
-    color: var(--black);
-    background-color: var(--white);
-    font-size: 22px;
-    width: 22px;
-    height: 22px;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    margin-left: -13.5px;
-}
-
-.second-heart-03, #second-club-02, #second-diamond-02, #second-spade-02 {
-    bottom: 20%;
-    top: unset;
-}
-
-
-
-.middle-heart, .middle-diamond, .middle-club, .middle-spade  {
-    color: var(--red);
-    background-color: var(--white);
-    font-size: 27px;
-    width: 27px;
-    height: 27px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -13.5px;
-    margin-top: -13.5px;
-}
-
-.middle-heart {
-    font-size: 20px;
-    width: 20px;
-    height: 20px;
-    margin-left: -10px;
-    margin-top: -10px;
-}
-
-.middle-club, .middle-spade {
-    color: var(--black);
-    font-size: 22px;
-    width: 22px;
-    height: 22px;
-    margin-top: -11px;
-    margin-left: -14px;
-}
-
-.middle-spade {
-    margin-left: -13.5px;
-}
-
-.second-digit {
-    transform: rotate(180deg);
-    background-color: var(--white);
-    position: absolute;
-    bottom: -2%!important;
-    right: 0;
-    margin-bottom: 6px;
-    margin-right: 10px; 
-}
-
-
-
-@media screen and (max-width: 811px) {
-    .card-frame {
-        margin-top: 10px;
-        width: 102px;
-        height: 145px;
-      
-    }
-
-    .heart-suit-small-2, .clubs-suit-small-2, .spades-suit-small-2, .diamonds-suit-small-2 {
-        bottom: 17%;
-        right: 9.5%;
-    }
-
-    #heart-2 {
-        font-size: 8.8px;
-        margin-bottom: 11px;
-        margin-right: 2px;
-    }
-
-    #spades-2 {
-        right: 9.2%;
-    }
-
-    #diamonds-2 {
-        bottom: 14.5%;
-        right: 8%;
-    }
-
-  
-
-  
-
+    right: 5%;
+    bottom: 17%;
 }
 
 @media screen and (max-width: 471px) {
-    .card-frame {
+    .card03-frame {
         margin-top: 10px;
         width: 88px;
         height: 120px;
-        padding: 2px;
         font-size: 23px;
+        position: relative!important;
     }
 
-    .user-box {
-        bottom: 50%;
-    }
-
-    .spades-suit-small-2, .clubs-suit-small-2 {
-        bottom: 12.8%!important;
-        right: 5%;
-    }
-
-    
- 
-
-  
-
-    #hearts-small {
-        margin-left: 1px;
-        margin-bottom: 11px;
-    }
-
-    #spades-small {
-        margin-left: 0.5px;
-    }
-
-    #diamonds-small {
-        margin-left: -0.3px;
-    }
-
-    #clubs-small {
-        margin-left: 0.6px;
-    }
-
-
-  
-    .diamonds-suit-small-2 {
-        bottom: 10%;
-        right: 3.5%;
-    } 
-   
-
-    .first-digit {
-        font-size: 18px;
-        margin-top: 0px;
-        margin-left: 2px;
-    }
-
-    .second-digit {
-        font-size: 18px;
-        margin-bottom: 0px;
-        margin-right: 5px;
-        bottom: 1.8%!important;
-    }
-
-    .first-heart-03, .second-heart-03 {
+    .card03-first-digit {
         font-size: 19px;
-        width: 19px;
-        height: 19px;
+    }
+    .card03-second-digit {
+        font-size: 19px;
+    }
+    
+    .card03-first-symbol {
+        background: transparent;
+        font-size: 8px;
+        position: absolute;
+        left: 5%;
+        top: 19%;
     }
 
-    .second-heart {
-        transform: rotate(180deg);
+    .card03-second-symbol {
+        font-size: 8px;
+        bottom: 19%;
     }
 
-   #heart-2 {
-    bottom: 10%!important;
-    right: 4.8%;
-    margin-right: 0px;
-   }
-
-   #spades-2 {
-    bottom: 6.8%;
-    right: 3.8%;
-    margin-right: 0px;
-   }
-
-   #diamonds-2 {
-    bottom: 6.8%;
-    right: 3%;
-    margin-right: 0px;
-   }
-
-   #clubs-2 {
-    right: 4%;
-    bottom: 7%;
-   }
-
-   .first-heart-03, .second-heart-03, .middle-heart {
-    font-size: 18px;
-    width: 18px;
-    height: 18px;
-    margin-left: -9px;
-   }
-
-  .middle-heart {
-    margin-top: -9px;
-  }
 }

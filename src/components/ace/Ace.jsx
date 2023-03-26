@@ -1,29 +1,39 @@
-import React from 'react'
+import { GiClubs, GiDiamonds, GiSpades, GiHearts } from "react-icons/gi";
 import './ace.css'
-import { GiClubs, GiDiamonds, GiSpades, GiHearts, GiChessQueen } from "react-icons/gi";
 
 const Ace = ({suit}) => {
+  const renderFirstSymbol = (suit) => {
+    if(suit === 'spades') {
+        return <GiSpades className="ace-first-symbol"/>
+    } else if (suit === 'hearts') {
+        return <GiHearts className="ace-first-symbol red"/>
+    } else if (suit === 'clubs') {
+      return <GiClubs className="ace-first-symbol"/>
+    } else if (suit === 'diamonds') {
+      return <GiDiamonds className="ace-first-symbol red"/>
+    }
+}
+
+  const renderSecondSymbol = (suit) => {
+    if(suit === 'spades') {
+        return <GiSpades className="ace-second-symbol"/>
+    } else if (suit === 'hearts') {
+        return <GiHearts className="ace-second-symbol red"/>
+    } else if (suit === 'clubs') {
+      return <GiClubs className="ace-second-symbol"/>
+    } else if (suit === 'diamonds') {
+      return <GiDiamonds className="ace-second-symbol red"/>
+    }
+  }
+
   return (
-    <div className='card-frame'>
-    <p className={suit === 'hearts' || suit === 'diamonds' ? "first-Q red": "first-Q black"}>A</p>
-       
-          {suit === 'hearts' && <GiHearts className='heart-suit-small' id="queen-heart-1"/>} 
-          {suit === 'clubs' && <GiClubs className='clubs-suit-small' id="queen-club-1"/>}
-          {suit === 'diamonds' && <GiDiamonds className='diamonds-suit-small' id="queen-diamond-1"/>}
-          {suit === 'spades' && <GiSpades className='spades-suit-small' id="spades-queen-small"/>}
+    <div className="ace-frame">
+    <p className={(suit === 'spades' || suit === 'clubs') ? 'ace-first-letter' : 'ace-first-letter red'}>A</p>
+    <p className={(suit === 'spades' || suit === 'clubs') ? 'ace-second-letter' : 'ace-second-letter red'}>A</p>
 
-          {suit === 'clubs' && <GiClubs className='ace-club'/>}
-          {suit === 'hearts' && <GiHearts className='ace-heart'/>}
-          {suit === 'diamonds' && <GiDiamonds className='ace-diamonds'/>}
-          {suit === 'spades' && <GiSpades className='ace-spades'/>}
-
-          {suit === 'hearts' && <GiHearts className='heart-suit-small-2' id="queen-heart-small-2"/>} 
-          {suit === 'clubs' && <GiClubs className='clubs-suit-small-2' id="queen-club-small-2"/>}
-          {suit === 'diamonds' && <GiDiamonds className='diamonds-suit-small-2' id="queen-diamond-small-2"/>}
-          {suit === 'spades' && <GiSpades className='spades-suit-small-2'/>}
-       
-          <p className={suit === 'hearts' || suit === 'diamonds' ? "second-digit red": "second-digit black"}>A</p>
-  </div>
+     {renderFirstSymbol(suit)}
+     {renderSecondSymbol(suit)}
+    </div>
   )
 }
 

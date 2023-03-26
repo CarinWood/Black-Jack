@@ -8,7 +8,10 @@
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
     position: relative;
+}
 
+.red {
+    color: var(--red);
 }
 
 .card10-first-digit {
@@ -18,8 +21,8 @@
         color: var(--black);
         position: absolute;
         top: 2%;
-        left: 5%;
-        font-size: 22px;
+        left: 2%;
+        font-size: 21px;
         letter-spacing: -1.8px;
 }
 
@@ -31,16 +34,33 @@
         color: var(--black);
         position: absolute;
         bottom: 2%;
-        right: 5%;
-        font-size: 22px;
+        right: 2%;
+        font-size: 21px;
         letter-spacing: -1.8px;
+}
+
+.card10-first-symbol{
+    background: transparent;
+    font-size: 11px;
+    position: absolute;
+    left: 5%;
+    top: 17%;
+}
+
+.card10-second-symbol {
+    transform: rotate(180deg);
+    background: transparent;
+    font-size: 11px;
+    position: absolute;
+    right: 5%;
+    bottom: 17%;
 }
 
 @media screen and (max-width: 471px) {
     .card10-frame {
-        width: 70px;
-        height: 90px;
-        padding: 2px;
+        margin-top: 10px;
+        width: 88px;
+        height: 120px;
         font-size: 23px;
         position: relative!important;
     }
@@ -52,6 +72,20 @@
     .card10-second-digit {
         font-size: 17px;
         right: 2%;
+    }
+
+    .card10-first-symbol {
+        background: transparent;
+        font-size: 8px;
+        position: absolute;
+        left: 5.6%;
+        top: 19%;
+    }
+
+    .card10-second-symbol {
+        font-size: 8px;
+        bottom: 19%;
+        right: 5.6%;
     }
 
 }

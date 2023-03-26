@@ -8,6 +8,13 @@ import Card07 from "../../components/card07/Card07";
 import Card09 from "../../components/Card09/Card09";
 import Card08 from "../../components/Card08/Card08";
 import Card10 from "../../components/Card10/Card10";
+import Card04 from "../../components/card04/Card04";
+import Card03 from "../../components/card03/Card03";
+import Card02 from "../../components/card02/Card02";
+import Jack from "../../components/jack/Jack";
+import King from "../../components/king/King";
+import Queen from "../../components/queen/Queen";
+import Ace from "../../components/ace/Ace";
 
 const GameTable = () => {
   const [countDealerCards, setCountDealerCards] = useState(0)
@@ -363,7 +370,7 @@ const checkWhoWon = () => {
     }
   }
 
-  console.log('beginning of func value of altUserRes: ', altUserRes)
+
 
 
   if(countDealerCards === 2) {
@@ -417,8 +424,14 @@ const checkWhoWon = () => {
   }
 
 
-  if(altDealerRes === 0 && altUserRes === 0) {
+  console.log('userPoints: ' + userPoints);
+  console.log('altUserRes: ' + altUserRes)
+  console.log('dealerRes: ' + dealerRes);
+  console.log('altDealerRes: ' + altDealerRes)
 
+
+  if(altDealerRes === 0 && altUserRes === 0) {
+    console.log('detta är första if-satsen')
     if(userPoints <= 21 && userPoints > dealerRes) {
     
       setTimeout(() => {
@@ -453,46 +466,64 @@ const checkWhoWon = () => {
           }, 3000)
     }
 
-  } else {
-    if(altUserRes > altDealerRes || userPoints > dealerRes) {
+  } else if (altDealerRes === 0 && altUserRes !== 0) {
+    if(altUserRes > dealerRes) {
+      setHasUserWon(true);
+      SetShowWonChip(true);
+
       setTimeout(() => {
-        setHasUserWon(true);
-        SetShowWonChip(true);
-      }, 1000)
-     
-       setTimeout(() => {
-           resetGame();
-       }, 3000)
+        resetGame();
+    }, 3000)
 
+    } else if (dealerRes > altUserRes) {
+      setDealerWins(true);
 
-   
+      setTimeout(() => {
+        resetGame();
+    }, 3000)
 
-    } else if (dealerRes > altUserRes || altDealerRes > userPoints) {
-              setDealerWins(true); 
-              setTimeout(() => {
-                resetGame();
-            }, 3000)
-   
-        } else if (altUserRes === altDealerRes) {
-          setStandOff(true);
-        }
-  }
+    } else if (dealerRes === altUserRes) {
+      setStandOff(true)
 
+      setTimeout(() => {
+        resetGame();
+    }, 3000)
 
+    }
+  } else if (altDealerRes !== 0 && altUserRes === 0) {
+    if(altDealerRes > userPoints) {
+      setDealerWins(true);
 
-  if (dealerRes === userPoints || altDealerRes === userPoints || dealerRes === altUserRes) {
+      setTimeout(() => {
+        resetGame();
+    }, 3000)
 
+    } else if (userPoints > altDealerRes) {
+      setHasUserWon(true);
+      SetShowWonChip(true)
+
+      setTimeout(() => {
+        resetGame();
+    }, 3000)
+
+    } else if (userPoints === altDealerRes) {
       setStandOff(true);
- 
-  
-         setTimeout(() => {
-           resetGame();
-       }, 3000)
 
-    
-    
+      setTimeout(() => {
+        resetGame();
+    }, 3000)
+
+    }
+  } else if (altDealerRes === altUserRes) {
+        setStandOff(true);
+
+        setTimeout(() => {
+          resetGame(); 
+         }, 3000)
   }
-  
+
+   
+ 
 
 
 }
@@ -623,7 +654,7 @@ const renderDealerSum = () => {
     }
    
   } else if (countDealerCards === 3) {
-    if(Deck[Deck.length-1].value2 === 11 || Deck[Deck.length-2].value2 === 11 || Deck[Deck.length-3].vlaue2 === 11) {
+    if(Deck[Deck.length-1].value2 === 11 || Deck[Deck.length-2].value2 === 11 || Deck[Deck.length-3].value2 === 11) {
       if(dealerPoints+10 <= 21) {
         return <div className="dealer-sum dealer-sum-2">{dealerPoints} / {dealerPoints+10}</div>;
       } else {
@@ -811,15 +842,8 @@ function shuffleArray(array) {
   
 
   return (
-    <div className="game-table">
-      <div className="card-pretend">
-           <Card05 suit={"spades"}/>
-            <Card06 suit={"spades"}/>
-            <Card07 suit={"spades"}/>
-            <Card08 suit={"spades"}/>
-            <Card09 suit={"spades"}/>
-            <Card10 suit={"spades"}/>
-            </div>
+    <div className="game-table"> 
+
       <div className="dealers-box">
      
                 {/* First Dealer card */}

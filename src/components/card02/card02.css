@@ -1,4 +1,4 @@
-.card04-frame {
+.card02-frame {
     margin-top: 10px;
     width: 122px;
     height: 165px;
@@ -8,13 +8,14 @@
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
     position: relative;
+
 }
 
 .red {
     color: var(--red);
 }
 
-.card04-first-digit {
+.card02-first-digit {
         width: 20px;
         height: 20px;
         background-color: transparent;
@@ -25,7 +26,7 @@
         font-size: 22px;
 }
 
-.card04-second-digit {
+.card02-second-digit {
         transform: rotate(180deg);
         width: 20px;
         height: 20px;
@@ -37,7 +38,7 @@
         font-size: 22px;
 }
 
-.card04-first-symbol {
+.card02-first-symbol {
     background: transparent;
     font-size: 11px;
     position: absolute;
@@ -45,7 +46,7 @@
     top: 17%;
 }
 
-.card04-second-symbol {
+.card02-second-symbol {
     transform: rotate(180deg);
     background: transparent;
     font-size: 11px;
@@ -55,7 +56,7 @@
 }
 
 @media screen and (max-width: 471px) {
-    .card04-frame {
+    .card02-frame {
         margin-top: 10px;
         width: 88px;
         height: 120px;
@@ -63,22 +64,22 @@
         position: relative!important;
     }
 
-    .card04-first-digit {
+    .card02-first-digit {
         font-size: 19px;
     }
-    .card04-second-digit {
+    .card02-second-digit {
         font-size: 19px;
     }
 
-    .card04-first-symbol {
+    .card02-first-symbol {
         background: transparent;
         font-size: 8px;
         position: absolute;
-        left: 5.3%;
+        left: 5%;
         top: 19%;
     }
 
-    .card04-second-symbol {
+    .card02-second-symbol {
         font-size: 8px;
         bottom: 19%;
     }

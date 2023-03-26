@@ -1,4 +1,4 @@
-.card04-frame {
+.jack-frame {
     margin-top: 10px;
     width: 122px;
     height: 165px;
@@ -14,48 +14,53 @@
     color: var(--red);
 }
 
-.card04-first-digit {
-        width: 20px;
-        height: 20px;
+.black {
+    color: var(--black);
+}
+
+
+.jack-first-letter {
+        width: 22px;
+        height: 22px;
         background-color: transparent;
-        color: var(--black);
         position: absolute;
         top: 2%;
         left: 5%;
         font-size: 22px;
 }
 
-.card04-second-digit {
+
+
+.jack-second-letter {
         transform: rotate(180deg);
-        width: 20px;
-        height: 20px;
+        width: 22px;
+        height: 22px;
         background-color: transparent;
-        color: var(--black);
         position: absolute;
         bottom: 2%;
         right: 5%;
         font-size: 22px;
 }
 
-.card04-first-symbol {
+.jack-first-symbol {
     background: transparent;
     font-size: 11px;
     position: absolute;
-    left: 5%;
+    left: 4%;
     top: 17%;
 }
 
-.card04-second-symbol {
+.jack-second-symbol {
     transform: rotate(180deg);
     background: transparent;
     font-size: 11px;
     position: absolute;
-    right: 5%;
+    right: 4%;
     bottom: 17%;
 }
 
 @media screen and (max-width: 471px) {
-    .card04-frame {
+    .jack-frame {
         margin-top: 10px;
         width: 88px;
         height: 120px;
@@ -63,24 +68,27 @@
         position: relative!important;
     }
 
-    .card04-first-digit {
-        font-size: 19px;
+    .jack-first-letter {
+        width: 18px;
+        height: 18px;
+        font-size: 18px;
     }
-    .card04-second-digit {
-        font-size: 19px;
+    .jack-second-letter {
+        width: 18px;
+        height: 18px;
+        font-size: 18px;
     }
-
-    .card04-first-symbol {
-        background: transparent;
+      
+    .jack-first-symbol {
         font-size: 8px;
-        position: absolute;
-        left: 5.3%;
+        left: 4%;
         top: 19%;
     }
 
-    .card04-second-symbol {
+    .jack-second-symbol {
         font-size: 8px;
         bottom: 19%;
+        right: 4%;
     }
 
 }

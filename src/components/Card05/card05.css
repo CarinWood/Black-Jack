@@ -11,6 +11,10 @@
 
 }
 
+.red {
+    color: var(--red);
+}
+
 .card05-first-digit {
         width: 20px;
         height: 20px;
@@ -34,7 +38,7 @@
         font-size: 22px;
 }
 
-.first-symbol {
+.card05-first-symbol {
     background: transparent;
     font-size: 11px;
     position: absolute;
@@ -42,11 +46,20 @@
     top: 17%;
 }
 
+.card05-second-symbol {
+    transform: rotate(180deg);
+    background: transparent;
+    font-size: 11px;
+    position: absolute;
+    right: 5%;
+    bottom: 17%;
+}
+
 @media screen and (max-width: 471px) {
     .card05-frame {
-        width: 73px;
-        height: 100px;
-        padding: 2px;
+        margin-top: 10px;
+        width: 88px;
+        height: 120px;
         font-size: 23px;
         position: relative!important;
     }
@@ -63,7 +76,20 @@
         font-size: 9px;
         position: absolute;
         left: 5%;
-        top: 22%;
+        top: 18%;
+    }
+
+    .card05-first-symbol {
+        background: transparent;
+        font-size: 8px;
+        position: absolute;
+        left: 5.2%;
+        top: 19%;
+    }
+
+    .card05-second-symbol {
+        font-size: 8px;
+        bottom: 19%;
     }
 
 }

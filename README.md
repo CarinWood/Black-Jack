@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+### Spela spelet här: 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[black-jack-carinwood.vercel.app](http://black-jack-carinwood.vercel.app)
 
-## Available Scripts
+#Dokumentation
 
-In the project directory, you can run:
+## Sammanfattning
 
-### `npm start`
+Jag ville göra ett kortspel och valde Black Jack eftersom jag har bra koll på reglerna och hur spelet går till. Jag valde att göra vissa avgränsningar i spelet då jag kände att det skulle bli för stort projekt om allting skulle finnas med. T.ex. kan man inte splitta, dubbla eller försäkra sig mot Black Jack. I övrigt har jag följt de internationella reglerna för Black Jack.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Responsivitet
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Jag har upplevt att folk jag känner i mindre utsträckning spelar mina spel om det inte går att spela dem på mobiltelefon. På grund av detta har tonvikt lagts på att göra spelet responsivt och därmed spelbart på mobiltelefon.
 
-### `npm test`
+## Styling
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Jag gick in i det här projektet med tanken om att jag ska göra all styling själv med hjälp av CSS, och det har jag också lyckats med. Jag har inspirerats av andra på nätet som gjort liknande styling av kort och marker, men i slutändan är det min egen kod, då jag inte har kopierat någonting rakt av utan, som sagt, endast har inspirerats av andra.
 
-### `npm run build`
+## Det svåraste med projektet
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Det svåraste med det här projektet har varit att göra funktionen som beräknar vem som har vunnit. Det är ett antal scenarion som kan uppstå när dealern och användaren har dragit sina kort. Ässen i leken gör det hela komplicerat genom att de kan ha både värder 1 eller 11, vilket ökar antalet vinst- eller förlorarscenarior markant.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Det roligaste med projektet
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Det roligaste med det här projektet har varit att det har varit lagom utmanande för mig samt att se allting sakta men säkert växa fram. Det har känts som ett mycket kreativt och skapande projekt.

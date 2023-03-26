@@ -8,7 +8,10 @@
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
     position: relative;
+}
 
+.red {
+    color: var(--red);
 }
 
 .card09-first-digit {
@@ -34,11 +37,28 @@
         font-size: 22px;
 }
 
+.card09-first-symbol {
+    background: transparent;
+    font-size: 11px;
+    position: absolute;
+    left: 5%;
+    top: 17%;
+}
+
+.card09-second-symbol {
+    transform: rotate(180deg);
+    background: transparent;
+    font-size: 11px;
+    position: absolute;
+    right: 5%;
+    bottom: 17%;
+}
+
 @media screen and (max-width: 471px) {
     .card09-frame {
-        width: 73px;
-        height: 100px;
-        padding: 2px;
+        margin-top: 10px;
+        width: 88px;
+        height: 120px;
         font-size: 23px;
         position: relative!important;
     }
@@ -48,6 +68,19 @@
     }
     .card09-second-digit {
         font-size: 19px;
+    }
+      
+    .card09-first-symbol {
+        background: transparent;
+        font-size: 8px;
+        position: absolute;
+        left: 5.6%;
+        top: 19%;
+    }
+
+    .card09-second-symbol {
+        font-size: 8px;
+        bottom: 19%;
     }
 
 }

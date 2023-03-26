@@ -1,40 +1,39 @@
-import React from 'react'
-import './card03.css'
 import { GiClubs, GiDiamonds, GiSpades, GiHearts } from "react-icons/gi";
+import './card03.css'
 
 const Card03 = ({suit}) => {
+
+  const renderFirstSymbol = (suit) => {
+    if(suit === 'spades') {
+      return <GiSpades className="card03-first-symbol"/>
+    } else if (suit === 'hearts') {
+        return <GiHearts className="card03-first-symbol red"/>
+    } else if (suit === 'clubs') {
+        return <GiClubs className="card03-first-symbol "/>
+    } else if (suit === 'diamonds') {
+        return <GiDiamonds className="card03-first-symbol red"/>
+    }
+  }
+
+  const renderSecondSymbol = (suit) => {
+    if(suit === 'spades') {
+        return <GiSpades className="card03-second-symbol"/>
+    } else if(suit === 'hearts') {
+        return <GiHearts className="card03-second-symbol red"/>
+    } else if(suit === 'clubs') {
+        return <GiClubs className="card03-second-symbol "/>
+    } else if (suit === 'diamonds') {
+        return <GiDiamonds className="card03-second-symbol red"/>
+    }
+  }
+
   return (
-    
-    <div className='card-frame'>
-      <p className={suit === 'hearts' || suit === 'diamonds' ? "first-digit red": "first-digit black"}>3</p>
-         
-            {suit === 'hearts' && <GiHearts className='hearts-suit-small' id="hearts-small"/>} 
-            {suit === 'clubs' && <GiClubs className='clubs-suit-small' id="clubs-small"/>}
-            {suit === 'diamonds' && <GiDiamonds className='diamonds-suit-small' id="diamonds-small"/>}
-            {suit === 'spades' && <GiSpades className='spades-suit-small' id="spades-small"/>}
-
-            {suit === 'hearts' && <GiHearts className='first-heart-03'/>}
-            {suit === 'diamonds' && <GiDiamonds className='first-diamond'/>}
-            {suit === 'clubs' && <GiClubs className='first-club'/>}
-            {suit === 'spades' && <GiSpades className='first-spade'/>}
-        
-            {suit === 'hearts' && <GiHearts className='middle-heart'/>}
-            {suit === 'diamonds' && <GiDiamonds className='middle-diamond'/>}
-            {suit === 'clubs' && <GiClubs className='middle-club'/>}
-            {suit === 'spades' && <GiSpades className='middle-spade'/>}
-            
-            {suit === 'hearts' && <GiHearts className='second-heart-03'/>}
-            {suit === 'diamonds' && <GiDiamonds id='second-diamond-02'/>}
-            {suit === 'clubs' && <GiClubs id='second-club-02'/>}
-            {suit === 'spades' && <GiSpades id='second-spade-02'/>}
-
-            {suit === 'hearts' && <GiHearts className='heart-suit-small-2' id="heart-2"/>} 
-            {suit === 'clubs' && <GiClubs className='clubs-suit-small-2' id="clubs-2"/>}
-            {suit === 'diamonds' && <GiDiamonds className='diamonds-suit-small-2' id="diamonds-2"/>}
-            {suit === 'spades' && <GiSpades className='spades-suit-small-2' id="spades-2"/>}
-         
-            <p className={suit === 'hearts' || suit === 'diamonds' ? "second-digit red": "second-digit black"}>3</p>
-    </div>
+    <div className="card03-frame">
+    <p className={(suit === 'spades' || suit === 'clubs') ? 'card03-first-digit' : 'card02-first-digit red'}>3</p>
+    <p className={(suit === 'spades' || suit === 'clubs') ? 'card03-second-digit' : 'card02-second-digit red'}>3</p>
+     {renderFirstSymbol(suit)}
+     {renderSecondSymbol(suit)}
+ </div>
   )
 }
 

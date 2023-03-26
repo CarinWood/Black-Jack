@@ -41,8 +41,8 @@ export const Deck = [
     },
     {
         face: <Card06 suit={"spades"}/>,
-        value: 1,
-        value2: 11,
+        value: 6,
+        value2: 6,
     },
     
     {

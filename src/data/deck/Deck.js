@@ -174,9 +174,9 @@ export const Deck = [
         value2: 5,
     },
     {
-        face: <Card06 suit={"clubs"}/>,
-        value: 6,
-        value2: 6,
+        face: <Ace suit={"clubs"}/>,
+        value: 1,
+        value2: 11,
     },
     
     {
@@ -200,9 +200,9 @@ export const Deck = [
         value2: 10,
     },
     {
-        face: <Jack suit={"clubs"}/>,
-        value: 10,
-        value2: 10,
+        face: <Ace suit={"clubs"}/>,
+        value: 1,
+        value2: 11,
     },
     {
         face: <Queen suit={"clubs"}/>,
@@ -236,9 +236,9 @@ export const Deck = [
     },
   
     {
-        face: <Card05 suit={"diamonds"}/>,
-        value: 5, 
-        value2: 5,
+        face: <Ace suit={"diamonds"}/>,
+        value: 1, 
+        value2: 11,
     },
     {
         face: <Card06 suit={"diamonds"}/>,
@@ -267,9 +267,9 @@ export const Deck = [
         value2: 10,
     },
     {
-        face: <Jack suit={"diamonds"}/>,
-        value: 10,
-        value2: 10,
+        face: <Ace suit={"diamonds"}/>,
+        value: 1,
+        value2: 11,
     },
     {
         face: <Queen suit={"diamonds"}/>,

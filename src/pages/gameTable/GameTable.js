@@ -843,6 +843,12 @@ function shuffleArray(array) {
 
   return (
     <div className="game-table"> 
+    <div className="card-pretend">
+      <Ace suit={"spades"} />
+      <Ace suit={"hearts"} />
+      <Ace suit={"diamonds"} />
+      <Ace suit={"clubs"} />
+    </div>
 
       <div className="dealers-box">
      

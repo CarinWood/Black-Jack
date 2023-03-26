@@ -51,6 +51,18 @@
     bottom: 17%;
 }
 
+.ace-middle-symbol {
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+
 @media screen and (max-width: 471px) {
     .ace-frame {
         margin-top: 10px;

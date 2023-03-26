@@ -26,6 +26,18 @@ const Ace = ({suit}) => {
     }
   }
 
+  const renderMiddleSymbol = (suit) => {
+    if(suit === 'spades') {
+        return <GiSpades className="ace-middle-symbol"/>
+    } else if (suit === 'hearts') {
+        return <GiHearts className="ace-middle-symbol red"/>
+    } else if (suit === 'clubs') {
+      return <GiClubs className="ace-middle-symbol"/>
+    } else if (suit === 'diamonds') {
+      return <GiDiamonds className="ace-middle-symbol red"/>
+    }
+  }
+
   return (
     <div className="ace-frame">
     <p className={(suit === 'spades' || suit === 'clubs') ? 'ace-first-letter' : 'ace-first-letter red'}>A</p>
@@ -33,6 +45,8 @@ const Ace = ({suit}) => {
 
      {renderFirstSymbol(suit)}
      {renderSecondSymbol(suit)}
+
+     {renderMiddleSymbol(suit)}
     </div>
   )
 }

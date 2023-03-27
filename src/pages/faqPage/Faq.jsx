@@ -40,18 +40,17 @@ const Faq = () => {
       </p>
 
       <p className="faq-text">
-        <p className="card-values-heading">Card Values:</p>
-        <ul>
-          <li>
-            Twos through Nines are counted at face value i.e. Three of Clubs i
-            worth three points.
-          </li>
-          <li>Tens, Jacks, Queens, and Kings are valued at 10 each</li>
-          <li>
-            Aces can be either one or 11 e.g. if you're dealt an ace and a nine
-            your score can be either 10 or 20
-          </li>
-        </ul>
+        Twos through Nines are counted at face value i.e. Three of Clubs i worth
+        three points.
+      </p>
+
+      <p className="faq-text">
+        Tens, Jacks, Queens, and Kings are valued at 10 each
+      </p>
+      
+      <p className="faq-text">
+        Aces can be either one or 11 e.g. if you're dealt an ace and a nine your
+        score can be either 10 or 20
       </p>
 
       <p className="faq-text">

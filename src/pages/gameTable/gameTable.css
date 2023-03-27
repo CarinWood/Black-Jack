@@ -762,7 +762,7 @@
     bottom: unset;
   }
 
-   /* hej */
+  
   .dealer-double-sum {
     display: flex;
     flex-direction: column;
@@ -1001,9 +1001,8 @@
 
   #lose-chip {
     position: absolute;
- 
     bottom: 703.5%;
-    animation: loseChip 1000ms ease-in-out;
+    animation: loseChip 5000ms ease-in-out;
   }
 
   @keyframes loseChip {

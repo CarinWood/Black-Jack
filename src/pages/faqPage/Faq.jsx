@@ -69,7 +69,7 @@ const Faq = () => {
       </p>
 
       <footer>
-      <p className="footer-text">&copy;2023 <span className="name-span"><a href="" target="_blank">Carin Wood</a></span></p>
+      <p className="footer-text">&copy;2023 <span className="name-span">Carin Wood</span></p>
       </footer>
     </div>
   );

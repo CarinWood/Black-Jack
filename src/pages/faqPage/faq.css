@@ -55,8 +55,6 @@
     background: transparent;
 }
 
-
-
 .end-text {
     margin-bottom: 70px;
 }
@@ -74,16 +72,6 @@ footer {
     font-size: 19px;
     font-weight: 100;
     letter-spacing: 1px;
-}
-
-.name-span {
-    position: relative;
-}
-
-
-.name-span a {
-    text-decoration: none;
-    color: white;
 }
 
 
@@ -118,12 +106,7 @@ footer {
 .demo-hit-btn, .demo-stand-btn {
     font-size: 18px;
     width: 80px;
-    margin: 10px 0px 10px 0px;
-}
-
-.btn-span {
-
-    background: transparent;
+    margin: 4px 0px 4px 0px;
 }
 
 .footer-text {

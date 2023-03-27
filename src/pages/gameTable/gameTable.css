@@ -1016,6 +1016,7 @@
     bottom: 703.5%;
     transition: unset;
     animation: loseChip 1000ms ease-in-out;
+ 
   }
 
   @keyframes loseChip {

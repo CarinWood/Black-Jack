@@ -449,7 +449,8 @@ const checkWhoWon = () => {
        }, 3000)
 
     } else if (userPoints <= 21 && userPoints < dealerRes && dealerRes <= 21) {
-      setDealerWins(true); 
+      setDealerWins(true);
+
        setTimeout(() => {
          resetGame();
      }, 3000)
@@ -460,9 +461,11 @@ const checkWhoWon = () => {
       setTimeout(() => {
         resetGame();
     }, 3000)
+
     } else if (userPoints <= 21 && dealerRes > 21) {
+      setHasUserWon(true);
+
           setTimeout(() => {
-            setHasUserWon(true);
             SetShowWonChip(true);
           }, 1000)
         
@@ -474,7 +477,10 @@ const checkWhoWon = () => {
   } else if (altDealerRes === 0 && altUserRes !== 0) {
     if(altUserRes > dealerRes) {
       setHasUserWon(true);
-      SetShowWonChip(true);
+
+        setTimeout(() => {
+            SetShowWonChip(true);
+          }, 1000)
 
       setTimeout(() => {
         resetGame();
@@ -505,7 +511,10 @@ const checkWhoWon = () => {
 
     } else if (userPoints > altDealerRes) {
       setHasUserWon(true);
-      SetShowWonChip(true)
+      
+      setTimeout(() => {
+        SetShowWonChip(true);
+      }, 1000)
 
       setTimeout(() => {
         resetGame();
@@ -525,6 +534,7 @@ const checkWhoWon = () => {
         setTimeout(() => {
           resetGame(); 
          }, 3000)
+
   } else if (altDealerRes !== 0 && altUserRes !== 0) {
     if(altDealerRes > altUserRes) {
       setDealerWins(true);
@@ -536,7 +546,10 @@ const checkWhoWon = () => {
     } else if (altUserRes > altDealerRes) {
 
           setHasUserWon(true);
-          SetShowWonChip(true)
+          
+          setTimeout(() => {
+            SetShowWonChip(true);
+          }, 1000)
 
           setTimeout(() => {
             resetGame();
@@ -580,12 +593,9 @@ const checkIfBust = () => {
     setBust(true);
     setDisableHit(true);
     setDisableStand(true);
-    console.log("user is bust")
-    console.log("setBust: " +isBust)
-    console.log("dealer wins: " +dealerWins)
      setTimeout(() => {
          resetGame()
-     }, 2000)
+     }, 3000)
   }
 }
 

@@ -35,14 +35,14 @@ export const Deck = [
     },
   
     {
-        face: <Ace suit={"spades"}/>,
-        value: 1, 
-        value2: 11,
+        face: <King suit={"spades"}/>,
+        value: 10, 
+        value2: 10,
     },
     {
-        face: <Ace suit={"spades"}/>,
-        value: 1,
-        value2: 11,
+        face: <Jack suit={"spades"}/>,
+        value: 10,
+        value2: 10,
     },
     
     {
@@ -195,14 +195,14 @@ export const Deck = [
         value2: 11,
     },
     {
-        face: <Ace suit={"clubs"}/>,
-        value: 1,
-        value2: 11,
+        face: <Queen suit={"clubs"}/>,
+        value: 10,
+        value2: 10,
     },
     {
-        face: <Ace suit={"clubs"}/>,
-        value: 1,
-        value2: 11,
+        face: <Jack suit={"clubs"}/>,
+        value: 10,
+        value2: 10,
     },
     {
         face: <Queen suit={"clubs"}/>,
@@ -210,14 +210,14 @@ export const Deck = [
         value2: 10,
     },
     {
-        face: <Ace suit={"clubs"}/>,
-        value: 1,
-        value2: 11,
+        face: <King suit={"clubs"}/>,
+        value: 10,
+        value2: 10,
     },
     {
-        face: <Ace suit={"diamonds"}/>,
-        value: 1,
-        value2: 11,
+        face: <Card03 suit={"diamonds"}/>,
+        value: 3,
+        value2: 3,
     },
     {
         face: <Card02 suit={"diamonds"}/>,
@@ -230,15 +230,15 @@ export const Deck = [
         value2: 3,
     },
     {
-        face: <Ace suit={"diamonds"}/>,
-        value: 1,
-        value2: 11,
+        face: <King suit={"diamonds"}/>,
+        value: 10,
+        value2: 10,
     },
   
     {
-        face: <Ace suit={"diamonds"}/>,
-        value: 1, 
-        value2: 11,
+        face: <Card07 suit={"diamonds"}/>,
+        value: 7, 
+        value2: 7,
     },
     {
         face: <Card06 suit={"diamonds"}/>,
@@ -262,14 +262,14 @@ export const Deck = [
         value2: 9,
     },
     {
-        face: <Ace suit={"diamonds"}/>,
-        value: 1,
-        value2: 11,
+        face: <Card10 suit={"diamonds"}/>,
+        value: 10,
+        value2: 10,
     },
     {
-        face: <Ace suit={"diamonds"}/>,
-        value: 1,
-        value2: 11,
+        face: <Card09 suit={"diamonds"}/>,
+        value: 9,
+        value2: 9,
     },
     {
         face: <Queen suit={"diamonds"}/>,

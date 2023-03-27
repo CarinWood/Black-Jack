@@ -2,9 +2,8 @@
 
 
 .faq-page {
-    width: 100vw;
+    width: 100%;
     height: auto;
-    padding-top: 700px;
     background-color: var(--black);
     display: flex;
     flex-direction: column;
@@ -90,10 +89,9 @@ footer {
 
 @media screen and (max-width: 471px) {
     .faq-page {
-        width: 100vw;
+        width: 100%;
         height: auto;
-        padding-top: 1000px;
-       
+        
     }
     .faq-heading {
         font-family: "beautyofthebeast";
@@ -102,12 +100,11 @@ footer {
         background-color: transparent;
         text-align: left;
         margin-top: 70px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         width: 300px;
         display: flex; 
         justify-content: flex-start;
         align-items: center;
- 
     }
 
     .faq-text {
@@ -120,11 +117,12 @@ footer {
     
 .demo-hit-btn, .demo-stand-btn {
     font-size: 18px;
-    width: 70px;
+    width: 80px;
+    margin: 10px 0px 10px 0px;
 }
 
 .btn-span {
-    margin: 10px 6px;
+
     background: transparent;
 }
 

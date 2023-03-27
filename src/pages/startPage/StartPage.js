@@ -19,6 +19,10 @@ const StartPage = () => {
     navigate("/faq");
   }
 
+  const toCredits = () => {
+    navigate("/credits");
+  }
+
 
 
 
@@ -36,7 +40,7 @@ const StartPage = () => {
       <div className='button-area'>
           <button onClick={() => startGame()} className='play-btn'>Play</button>
           <button className='rules-btn' onClick={() => toFAQ()}>FAQ</button>
-          <button className='credits-btn'>Credits</button>
+          <button className='credits-btn' onClick={() => toCredits()}>Credits</button>
       </div>
 
     </div>

@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+.credits-page {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: goldenrod;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.credits-heading {
+    font-family: "beautyofthebeast";
+    font-size: 55px;
+}
+
+.name {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    margin-top: 80px;
+}
+
+.more {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    margin-top: 80px;   
+}
+
+.more span a {
+    color: goldenrod;
+}
+
+.mobile-heading {
+    visibility: hidden;
+    font-size: 0px;
+}
+
+@media screen and (max-width: 471px) {
+    .credits-heading {
+      height: 0px;
+      visibility: hidden;
+    }
+
+    .mobile-heading {
+        font-family: "beautyofthebeast";
+        visibility: visible;
+        font-size: 35px;
+    }
+
+    .name {
+        margin-top: 40px;
+    }
+}

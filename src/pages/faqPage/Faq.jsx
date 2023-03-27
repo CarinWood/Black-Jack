@@ -9,7 +9,7 @@ const Faq = () => {
       <p className="faq-text">
         The goal of Black Jack is to beat the dealer. The Player wins if their
         hand has a higher value than the Dealer without going Bust. The Player
-        also wins if the Dealer goes Bust but the Player doesn't.
+        also wins if the Dealer goes Bust but the Player does not.
       </p>
 
       <p className="faq-text">
@@ -64,7 +64,7 @@ const Faq = () => {
         of chips from the Dealer.
       </p>
       <p className="faq-text end-text">
-        If your win with a Black Jack, your bet is yours to keep, and you
+        If you win with a Black Jack, your bet is yours to keep, and you
         receive 3 chips for every 2 chips you bet.
       </p>
 

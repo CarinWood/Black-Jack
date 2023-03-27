@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+
 .faq-page {
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    padding-top: 800px;
     background-color: var(--black);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     color: whitesmoke;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .faq-heading {
@@ -16,15 +21,73 @@
     color: whitesmoke;
     background-color: transparent;
     letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.faq-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: black;
+    font-size: 25px;
+    letter-spacing: 0.6px;
+    width: 600px;
+    margin-bottom: 20px;
+}
+
+.btn-span {
+    margin-left: 8px;
+    margin-right: 8px;
+    background: transparent;
+}
+
+.card-values-heading {
+    font-size: 28px;
+    background: transparent;
+    margin: 20px 0px;
+}
+
+ul {
+    background-color: transparent;
+}
+
+ul li {
+    background-color: transparent;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.end-text {
+    margin-bottom: 70px;
 }
 
 
 @media screen and (max-width: 471px) {
+    .faq-page {
+        width: 100vw;
+        height: auto;
+        padding-top: 1000px;
+       
+    }
     .faq-heading {
         font-family: "beautyofthebeast";
-        font-size: 50px;
+        font-size: 40px;
         color: whitesmoke;
         background-color: transparent;
     }
+
+    .faq-text {
+        font-family: 'Source Sans Pro', sans-serif;
+        background-color: black;
+        font-size: 20px;
+        width: 300px;
+ 
+    }
+
+    .card-values-heading {
+        font-size: 23px;
+        background: transparent;
+        margin: 16px 0px;
+    }
+
+
 
 }

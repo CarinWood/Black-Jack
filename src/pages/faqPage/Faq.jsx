@@ -64,7 +64,7 @@ const Faq = () => {
         of chips from the Dealer.
       </p>
       <p className="faq-text end-text">
-        If you win with a Black Jack, your bet is yours to keep, and you
+        If you win with a Black Jack, you keep your bet and you
         receive 3 chips for every 2 chips you bet.
       </p>
 

@@ -234,8 +234,12 @@
   border-radius: 3px;
   background-color: black;
   width: 50px;
-  height: 60px!important;
+  height: auto;
   bottom: 41%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .dealer-double-sum {
@@ -604,6 +608,8 @@
 
   .user-box {
     bottom: 0%!important;
+    justify-content: space-around;
+    padding: 30px;
   }
 
   .user-card-area {
@@ -611,8 +617,14 @@
   
   }
 
-  .won-box {
+  .won-box, .bj-text, .bust-text, .dealer-wins-text {
     top: 33%;
+  } 
+
+  .line {
+    height: 0.2vh;
+    width: 2vw;
+    background-color: goldenrod;
   }
 
 }

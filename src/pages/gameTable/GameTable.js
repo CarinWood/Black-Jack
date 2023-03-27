@@ -599,7 +599,7 @@ const renderUserSum = () => {
         return <div className="user-sum">21</div>;
       }
       else if(userPoints+10 <= 21) {
-          return <div className="user-sum sum-double">{userPoints} <p className="line"></p> {userPoints+10}</div>;
+          return <div className="user-sum sum-double">{userPoints}<p className="line"></p>{userPoints+10}</div>;
       } else {
         return <div className="user-sum">{userPoints}</div>;
       }
@@ -611,7 +611,7 @@ const renderUserSum = () => {
       if(userPoints+10 === 21) {
         return <div className="user-sum user-sum-2">21</div>;
       } else if(userPoints+10 <= 21) {
-      return <div className="user-sum user-sum-2 sum-double-2">{userPoints} <p className="line"></p> {userPoints+10}</div>;
+      return <div className="user-sum user-sum-2 sum-double sum-double-2">{userPoints} <p className="line"></p> {userPoints+10}</div>;
       } else {
         return <div className="user-sum user-sum-2">{userPoints}</div>;
       }
@@ -623,7 +623,7 @@ const renderUserSum = () => {
       if(userPoints+10 === 21) {
         return <div className="user-sum user-sum-3">21</div>
       } else if(userPoints+10 <= 21) {
-      return <div className="user-sum user-sum-3 sum-double-3">{userPoints} <p className="line"></p> {userPoints+10}</div>
+      return <div className="user-sum user-sum-3 sum-double sum-double-3">{userPoints} <p className="line"></p> {userPoints+10}</div>
       } else {
         return <div className="user-sum user-sum-3">{userPoints}</div>
       }
@@ -637,7 +637,7 @@ const renderUserSum = () => {
         return <div className="user-sum user-sum-4">21</div>
       }
       else if(userPoints+10 <= 21) {
-        return <div className="user-sum user-sum-4 sum-double-4">{userPoints} <p className="line"></p> {userPoints+10}</div>
+        return <div className="user-sum user-sum-4 sum-double sum-double-4">{userPoints} <p className="line"></p> {userPoints+10}</div>
       } else {
            return <div className="user-sum user-sum-4">{userPoints}</div>
       }
@@ -650,7 +650,7 @@ const renderUserSum = () => {
       if(userPoints+10 === 21) {
         return <div className="user-sum user-sum-5">21</div>
       } else if(userPoints+10 <= 21) {
-        return <div className="user-sum user-sum-5 sum-double-5">{userPoints} <p className="line"></p> {userPoints+10}</div>
+        return <div className="user-sum user-sum-5 sum-double sum-double-5">{userPoints} <p className="line"></p> {userPoints+10}</div>
       } else {
         return <div className="user-sum user-sum-5">{userPoints}</div>
       }
@@ -665,7 +665,7 @@ const renderUserSum = () => {
         return <div className="user-sum user-sum-6">21</div>
       }
       if(userPoints+10 <= 21) {
-        return <div className="user-sum user-sum-6 sum-double-6">{userPoints} <p className="line"></p> {userPoints+10}</div>
+        return <div className="user-sum user-sum-6 sum-double sum-double-6">{userPoints} <p className="line"></p> {userPoints+10}</div>
       } else {
         return <div className="user-sum user-sum-6">{userPoints}</div>
       }

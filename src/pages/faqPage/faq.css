@@ -33,9 +33,26 @@
     margin-bottom: 20px;
 }
 
+.demo-hit-btn, .demo-stand-btn {
+    color: var(--white);
+    padding: 5px 10px;
+    border: 1px solid burlywood;
+    border-radius: 10px;
+    background-image:linear-gradient(rgb(108, 24, 24), rgb(159, 13, 13));
+    font-size: 20px;
+    letter-spacing: 1.3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    width: 90px;
+    cursor: unset;
+
+}
+
+.demo-hit-btn {
+    background-image: linear-gradient(midnightblue, rgb(51, 51, 203));
+}
+
 .btn-span {
-    margin-left: 8px;
-    margin-right: 8px;
+    margin: 10px 8px;
     background: transparent;
 }
 
@@ -43,6 +60,31 @@
 
 .end-text {
     margin-bottom: 70px;
+}
+
+footer {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100px;
+}
+
+.footer-text {
+    font-size: 19px;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+.name-span {
+    position: relative;
+}
+
+
+.name-span a {
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -59,7 +101,7 @@
         color: whitesmoke;
         background-color: transparent;
         text-align: left;
-        margin-top: 60px;
+        margin-top: 70px;
         margin-bottom: 30px;
         width: 300px;
         display: flex; 
@@ -74,5 +116,23 @@
         font-size: 20px;
         width: 300px;
     }
+
+    
+.demo-hit-btn, .demo-stand-btn {
+    font-size: 18px;
+    width: 70px;
+}
+
+.btn-span {
+    margin: 10px 6px;
+    background: transparent;
+}
+
+.footer-text {
+    width: 300px;
+    text-align: center;
+    font-size: 16px;
+
+}
 
 }

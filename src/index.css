@@ -17,7 +17,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  background-color: black;
+  
   --red: #e44145;
   --white: whitesmoke;
   --black: black;

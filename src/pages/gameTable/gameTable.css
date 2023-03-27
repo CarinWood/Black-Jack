@@ -762,27 +762,52 @@
     bottom: unset;
   }
 
-  .dealer-sum-1  {
+   
+  .dealer-double-sum {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border: 1px solid goldenrod;
+    border-radius: 3px;
+    background-color: black;
+    width: 30px;
+    height: 60px!important;
+    color: goldenrod;
+    position: absolute;
+    right: 25%!important;
+    bottom: 33%!important;
+    padding: 0px;
+    visibility: visible;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .dealer-double-sum {
+    right: 46%!important
+  }
+
+  .dealer-sum-1, .dealer-double-sum-1  {
     right: 40%!important;
   }
 
-  .user-sum-2, .sum-double-2, .dealer-sum-2 {
+  .user-sum-2, .sum-double-2, .dealer-sum-2, .dealer-double-sum-2 {
     right: 30%!important;
   }
 
-  .user-sum-3, .sum-double-3, .dealer-sum-3 {
+  .user-sum-3, .sum-double-3, .dealer-sum-3, .dealer-double-sum-3 {
     right: 22%!important;
   }
 
-  .user-sum-4, .sum-double-4, .dealer-sum-4 {
+  .user-sum-4, .sum-double-4, .dealer-sum-4, .dealer-double-sum-4 {
     right: 13%!important;
   }
 
-  .user-sum-5, .sum-double-5, .dealer-sum-5 {
+  .user-sum-5, .sum-double-5, .dealer-sum-5, .dealer-double-sum-5 {
     right: 5%!important;
   }
 
-  .user-sum-6, .sum-double-6, .dealer-sum-6 {
+  .user-sum-6, .sum-double-6, .dealer-sum-6, .dealer-double-sum-6 {
     right: 0%!important;
   }
 
@@ -994,28 +1019,9 @@
   }
 
 
-  
-  .dealer-double-sum {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    border: 1px solid goldenrod;
-    border-radius: 3px;
-    background-color: black;
-    width: 30px;
-    height: 60px!important;
-    color: goldenrod;
-    position: absolute;
-    right: 25%!important;
-    bottom: 33%!important;
-    padding: 0px;
-    visibility: visible;
-    transition: all 0.2s ease-in-out;
-  }
+ 
 
-  .dealer-double-sum:after {
+  .dealer-double-sum:after, .dealer-double-sum-2:after, .dealer-double-sum-3:after, .dealer-double-sum-4:after, .dealer-double-sum-5:after, .dealer-double-sum-6:after {
     content: '';
     position: absolute;
     width: 0;

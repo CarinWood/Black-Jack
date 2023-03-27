@@ -19,9 +19,9 @@ export const Deck = [
         value2: 11,
     },
     {
-        face: <Card02 suit={"spades"}/>,
-        value: 2, 
-        value2: 2,
+        face: <Ace suit={"spades"}/>,
+        value: 1, 
+        value2: 11,
     },
     {
         face: <Card03 suit={"spades"}/>,
@@ -40,9 +40,9 @@ export const Deck = [
         value2: 5,
     },
     {
-        face: <Card06 suit={"spades"}/>,
-        value: 6,
-        value2: 6,
+        face: <Ace suit={"spades"}/>,
+        value: 1,
+        value2: 11,
     },
     
     {
@@ -61,9 +61,9 @@ export const Deck = [
         value2: 9,
     },
     {
-        face: <Card10 suit={"spades"}/>,
-        value: 10,
-        value2: 10,
+        face: <Ace suit={"spades"}/>,
+        value: 1,
+        value2: 11,
     },
     {
         face: <Jack suit={"spades"}/>,
@@ -230,9 +230,9 @@ export const Deck = [
         value2: 3,
     },
     {
-        face: <Card04 suit={"diamonds"}/>,
-        value: 4,
-        value2: 4,
+        face: <Ace suit={"diamonds"}/>,
+        value: 1,
+        value2: 11,
     },
   
     {
@@ -247,9 +247,9 @@ export const Deck = [
     },
     
     {
-        face: <Card07 suit={"diamonds"}/>,
-        value: 7,
-        value2: 7,
+        face: <Ace suit={"diamonds"}/>,
+        value: 1,
+        value2: 11,
     },
     {
         face: <Card08 suit={"diamonds"}/>,
@@ -262,9 +262,9 @@ export const Deck = [
         value2: 9,
     },
     {
-        face: <Card10 suit={"diamonds"}/>,
-        value: 10,
-        value2: 10,
+        face: <Ace suit={"diamonds"}/>,
+        value: 1,
+        value2: 11,
     },
     {
         face: <Ace suit={"diamonds"}/>,

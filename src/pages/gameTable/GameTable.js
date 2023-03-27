@@ -645,7 +645,7 @@ const renderDealerSum = () => {
         return <div className="dealer-sum dealer-sum-1">21</div>
       }
       else if(dealerPoints+10 <= 21) {
-        return <div className="dealer-sum dealer-sum-1 dealer-double-sum">{dealerPoints}<p className="line"></p>{dealerPoints+10}</div>
+        return <div className="dealer-sum dealer-sum-1 dealer-double-sum dealer-double-sum-1">{dealerPoints}<p className="line"></p>{dealerPoints+10}</div>
       } else {
         return <div className="dealer-sum dealer-sum-1">{dealerPoints}</div>
       }
@@ -656,7 +656,7 @@ const renderDealerSum = () => {
   } else if (countDealerCards === 3) {
     if(Deck[Deck.length-1].value2 === 11 || Deck[Deck.length-2].value2 === 11 || Deck[Deck.length-3].value2 === 11) {
       if(dealerPoints+10 <= 21) {
-        return <div className="dealer-sum dealer-sum-2 dealer-double-sum">{dealerPoints}<p className="line"></p>{dealerPoints+10}</div>;
+        return <div className="dealer-sum dealer-sum-2 dealer-double-sum dealer-double-sum-2">{dealerPoints}<p className="line"></p>{dealerPoints+10}</div>;
       } else {
         return <div className="dealer-sum dealer-sum-2">{dealerPoints}</div>;
       }
@@ -667,7 +667,7 @@ const renderDealerSum = () => {
   } else if (countDealerCards === 4) {
     if(Deck[Deck.length-1].value2 === 11 || Deck[Deck.length-2].value2 === 11 || Deck[Deck.length-3].value2 === 11 || Deck[Deck.length-4].value2 === 11) {
       if(dealerPoints+10 <= 21) {
-        return <div className="dealer-sum dealer-sum-3 dealer-double-sum">{dealerPoints}<p className="line"></p>{dealerPoints+10}</div>
+        return <div className="dealer-sum dealer-sum-3 dealer-double-sum dealer-double-sum-3">{dealerPoints}<p className="line"></p>{dealerPoints+10}</div>
       } else {
            return <div className="dealer-sum dealer-sum-3">{dealerPoints}</div>
       }
@@ -678,7 +678,7 @@ const renderDealerSum = () => {
   } else if (countDealerCards === 5) {
     if(Deck[Deck.length-1].value2 === 11 || Deck[Deck.length-2].value2 === 11 || Deck[Deck.length-3].value2 === 11 || Deck[Deck.length-4].value2 === 11 || Deck[Deck.length-5].value2 === 11) {
       if(dealerPoints+10 <= 21) {
-        return <div className="dealer-sum dealer-sum-4 dealer-double-sum">{dealerPoints}<p className="line"></p>{dealerPoints+10}</div>
+        return <div className="dealer-sum dealer-sum-4 dealer-double-sum dealer-double-sum-4">{dealerPoints}<p className="line"></p>{dealerPoints+10}</div>
       } else {
             return <div className="dealer-sum dealer-sum-4">{dealerPoints}</div>
       }
@@ -690,7 +690,7 @@ const renderDealerSum = () => {
   } else if (countDealerCards === 6) {
     if(Deck[Deck.length-1].value2 === 11 || Deck[Deck.length-2].value2 === 11 || Deck[Deck.length-3].value2 === 11 || Deck[Deck.length-4].value2 === 11 || Deck[Deck.length-5].value2 === 11 || Deck[Deck.length-6].value2 === 11) {
       if(dealerPoints+10 <= 21) {
-        return <div className="dealer-sum dealer-sum-5 dealer-double-sum">{dealerPoints}<p className="line"></p>{dealerPoints+10}</div>
+        return <div className="dealer-sum dealer-sum-5 dealer-double-sum dealer-double-sum-5">{dealerPoints}<p className="line"></p>{dealerPoints+10}</div>
       } else {
         return <div className="dealer-sum dealer-sum-5">{dealerPoints}</div>
       }
@@ -701,7 +701,7 @@ const renderDealerSum = () => {
   } else if (countDealerCards >= 7) {
     if(Deck[Deck.length-1].value2 === 11 || Deck[Deck.length-2].value2 === 11 || Deck[Deck.length-3].value2 === 11 || Deck[Deck.length-4].value2 === 11 || Deck[Deck.length-5].value2 === 11 || Deck[Deck.length-6].value2 === 11 || Deck[Deck.length-7].value2 === 11) {
       if(dealerPoints+10 <= 21) {
-        return <div className="dealer-sum dealer-sum-6 dealer-double-sum">{dealerPoints}<p className="line"></p>{dealerPoints+10}</div>
+        return <div className="dealer-sum dealer-sum-6 dealer-double-sum dealer-double-sum-6">{dealerPoints}<p className="line"></p>{dealerPoints+10}</div>
       } else {
         return <div className="dealer-sum dealer-sum-6">{dealerPoints}</div>
       }

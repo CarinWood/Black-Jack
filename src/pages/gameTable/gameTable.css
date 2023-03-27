@@ -1002,6 +1002,7 @@
   #lose-chip {
     position: absolute;
     bottom: 703.5%;
+    transition: unset;
     animation: loseChip 5000ms ease-in-out;
   }
 

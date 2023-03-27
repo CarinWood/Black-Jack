@@ -58,6 +58,9 @@
         font-size: 40px;
         color: whitesmoke;
         background-color: transparent;
+        text-align: left;
+        margin-top: 40px;
+        margin-bottom: 20px;
     }
 
     .faq-text {

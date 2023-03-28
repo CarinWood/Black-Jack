@@ -765,6 +765,10 @@
     bottom: 34%;
   }
 
+  .user-sum {
+    bottom: 30%!important;
+  }
+
 
   .dealer-sum {
     font-size: 22px;

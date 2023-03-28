@@ -813,44 +813,43 @@ const renderBJChip = () => {
 
 
 const resetGame = () => {
-  // shuffleArray(Deck);
-  // setCountDealerCards(0);
-  // setCountUserCards(0);
-  // setUserPoints(0);
-  // setDealerPoints(0);
-  // setGreenBetted(false);
-  // setRedBetted(false);
-  // setBlueBetted(false);
-  // setBlackBetted(false);
-  // SetShowWonChip(false);
+   shuffleArray(Deck);
+   setCountDealerCards(0);
+   setCountUserCards(0);
+   setUserPoints(0);
+   setDealerPoints(0);
+   setGreenBetted(false);
+   setRedBetted(false);
+   setBlueBetted(false);
+   setBlackBetted(false);
+   SetShowWonChip(false);
 
-  // setFirstUserCard(false);
-  // setSecondUserCard(false);
-  // setThirdUserCard(false);
-  // setFourthUserCard(false);
-  // setFifthUserCard(false);
-  // setSixthUserCard(false);
-  // setSeventhUserCard(false);
+   setFirstUserCard(false);
+   setSecondUserCard(false);
+   setThirdUserCard(false);
+   setFourthUserCard(false);
+   setFifthUserCard(false);
+   setSixthUserCard(false);
+   setSeventhUserCard(false);
 
-  // setFirstDealerCard(false);
-  // setSecondDealerCard(false);
-  // setThirdDealerCard(false);
-  // setFourthDealerCard(false);
-  // setFifthDealerCard(false);
-  // setSixthDealerCard(false);
-  // setSeventhDealerCard(false);
+   setFirstDealerCard(false);
+   setSecondDealerCard(false);
+   setThirdDealerCard(false);
+   setFourthDealerCard(false);
+   setFifthDealerCard(false);
+   setSixthDealerCard(false);
+   setSeventhDealerCard(false);
 
-  // setHasUserWon(false);
-  // setBlackJack(false);
+   setHasUserWon(false);
+   setBlackJack(false);
+   setShowBJChip(false);
 
-  // setShowBJChip(false);
 
-
-  // setDisableHit(false);
-  // setDisableStand(false);
-  // setBust(false);
-  // setDealerWins(false);
-  // setStandOff(false);
+   setDisableHit(false);
+   setDisableStand(false);
+   setBust(false);
+   setDealerWins(false);
+   setStandOff(false);
   
 }
 

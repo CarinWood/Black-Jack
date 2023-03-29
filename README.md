@@ -2,6 +2,8 @@
 
 [black-jack-carinwood.vercel.app](http://black-jack-carinwood.vercel.app)
 
+<img src="./src/assets/img/frontpage.JPG" width="600" />
+
 #Dokumentation
 
 ## Sammanfattning

@@ -25,7 +25,7 @@
 }
 
 .faq-text {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family:'Source Sans Pro', sans-serif;
     background-color: black;
     font-size: 25px;
     letter-spacing: 0.6px;
@@ -75,6 +75,19 @@ footer {
     letter-spacing: 1px;
 }
 
+.text-heading {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: left;
+    width: 600px;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
 
 
 @media screen and (max-width: 471px) {
@@ -116,6 +129,11 @@ footer {
     text-align: center;
     font-size: 16px;
 
+}
+
+.text-heading {
+    width: 300px;
+    font-size: 20px;
 }
 
 }

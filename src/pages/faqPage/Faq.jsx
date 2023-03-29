@@ -15,7 +15,7 @@ const Faq = () => {
       <p className="faq-text">
         To begin, you are dealt two cards. The Dealer is dealt one card.
       </p>
-
+      <h1 className="text-heading">Hit</h1>
       <p className="faq-text">
         Press
         <span className="btn-span">
@@ -29,7 +29,7 @@ const Faq = () => {
         If the value of a hand goes over 21 the hand is Bust. Players
         automatically lose if they go Bust, even if the Dealer does too.
       </p>
-
+      <h1 className="text-heading">Stand</h1>
       <p className="faq-text">
         If you feel like you are close to going Bust you can press
         <span className="btn-span">
@@ -38,6 +38,7 @@ const Faq = () => {
         The Dealer will either continue to hit or Stand themselves, at which
         point cards are shown.
       </p>
+      <h1 className="text-heading">Card Values</h1>
 
       <p className="faq-text">
         Twos through Nines are counted at face value i.e. Two of Hearts is worth
@@ -52,13 +53,13 @@ const Faq = () => {
         Aces can be either one or 11 e.g. if you are dealt an Ace and a Nine your
         score can be either 10 or 20
       </p>
-
+      <h1 className="text-heading">Black Jack</h1>
       <p className="faq-text">
         The most valuable hand to be dealt is an Ace and any card with a value
         of 10. This is called a Black Jack. A Player who is dealt a Black Jack
-        automatically wins unless both the Player and a the Dealer have Black
-        Jack. If so, it is a Stand Off between the Player and the Dealer.
+        automatically wins.
       </p>
+      <h1 className="text-heading">Winning a game</h1>
       <p className="faq-text">
         If you win, you keep your bet and you receive an equal number
         of chips from the Dealer.

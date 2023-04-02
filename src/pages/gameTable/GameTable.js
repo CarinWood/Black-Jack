@@ -48,9 +48,6 @@ const GameTable = () => {
   const [standOff, setStandOff] = useState(false);
 
   const [currentMoney, setCurrenMoney] = useState(1000);
-  const [moneyAfterWinning, setMoneyAfterWinning] = useState(0);
-  const [showCountUp, setShowCountUp] = useState(false);
-  const [showCountDown, setShowCountDown] = useState(false);
 
   useEffect(() => {
     updateUserPoints(0)

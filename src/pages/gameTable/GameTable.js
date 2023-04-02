@@ -3,6 +3,7 @@ import './gameTable.css'
 import { Deck } from "../../data/deck/Deck";
 import { MdArrowDropDown } from "react-icons/md";
 import CountDown from "../../components/CountDown/CountDown";
+import CountUp from "../../components/CountUp/CountUp";
 
 
 
@@ -47,7 +48,7 @@ const GameTable = () => {
   const [dealerWins, setDealerWins] = useState(false);
   const [standOff, setStandOff] = useState(false);
 
-  const [currentMoney, setCurrenMoney] = useState(1000);
+  const [currentMoney, setCurrentMoney] = useState(1000);
 
   useEffect(() => {
     updateUserPoints(0)
@@ -149,7 +150,7 @@ const GameTable = () => {
       } else if (countDealerCards === 7) {
         setSeventhDealerCard(true);
         updateDealerPoints(Deck[Deck.length-7].value);
-        // const res = Deck[Deck.length-1].value + Deck[Deck.length-2].value + Deck[Deck.length-3].value + Deck[Deck.length-4].value + Deck[Deck.length-5].value + Deck[Deck.length-6].value + Deck[Deck.length-7].value;
+        
           checkWhoWon()
         
       }
@@ -417,46 +418,46 @@ const checkWhoWon = () => {
   }
 
 
-  console.log('userPoints: ' + userPoints);
-  console.log('altUserRes: ' + altUserRes)
-  console.log('dealerRes: ' + dealerRes);
-  console.log('altDealerRes: ' + altDealerRes)
 
   // Check if dealer is bust:
 
   if(dealerRes > 21) {
-    console.log('this is dealer bust func!')
     setHasUserWon(true);
+    
 
     setTimeout(() => {
       SetShowWonChip(true);
-    }, 1000)
+    }, 800)
    
      setTimeout(() => {
+      setCurrentMoney(moneyAfterWinning)
          resetGame();
-     }, 3000)
+     }, 4500)
 
 
   }
 
   else if(altDealerRes === 0 && altUserRes === 0) {
-    console.log('detta är första if-satsen')
     if(userPoints <= 21 && userPoints > dealerRes) {
 
       setHasUserWon(true);
+      
 
       setTimeout(() => {
         SetShowWonChip(true);
-      }, 1000)
+      }, 800)
      
        setTimeout(() => {
+        setCurrentMoney(moneyAfterWinning)
            resetGame();
        }, 4500)
 
     } else if (userPoints <= 21 && userPoints < dealerRes && dealerRes <= 21) {
       setDealerWins(true);
+     
 
        setTimeout(() => {
+        setCurrentMoney(moneyAfterLosing)
          resetGame();
      }, 4500)
 
@@ -469,12 +470,14 @@ const checkWhoWon = () => {
 
     } else if (userPoints <= 21 && dealerRes > 21) {
       setHasUserWon(true);
+      
 
           setTimeout(() => {
             SetShowWonChip(true);
-          }, 1000)
+          }, 800)
         
           setTimeout(() => {
+            setCurrentMoney(moneyAfterWinning)
               resetGame();
           }, 4500)
     }
@@ -482,19 +485,24 @@ const checkWhoWon = () => {
   } else if (altDealerRes === 0 && altUserRes !== 0) {
     if(altUserRes > dealerRes) {
       setHasUserWon(true);
+      
 
         setTimeout(() => {
+          
             SetShowWonChip(true);
-          }, 1000)
+          }, 800)
 
       setTimeout(() => {
+        setCurrentMoney(moneyAfterWinning)
         resetGame();
     }, 4500)
 
     } else if (dealerRes > altUserRes) {
       setDealerWins(true);
+      
 
       setTimeout(() => {
+        setCurrentMoney(moneyAfterLosing)
         resetGame();
     }, 4500)
 
@@ -509,19 +517,23 @@ const checkWhoWon = () => {
   } else if (altDealerRes !== 0 && altUserRes === 0) {
     if(altDealerRes > userPoints) {
       setDealerWins(true);
+      
 
       setTimeout(() => {
+        setCurrentMoney(moneyAfterLosing)
         resetGame();
     }, 4500)
 
     } else if (userPoints > altDealerRes) {
       setHasUserWon(true);
       
-      setTimeout(() => {
-        SetShowWonChip(true);
-      }, 1000)
 
       setTimeout(() => {
+        SetShowWonChip(true);
+      }, 800)
+
+      setTimeout(() => {
+        setCurrentMoney(moneyAfterWinning)
         resetGame();
     }, 4500)
 
@@ -543,25 +555,27 @@ const checkWhoWon = () => {
   } else if (altDealerRes !== 0 && altUserRes !== 0) {
     if(altDealerRes > altUserRes) {
       setDealerWins(true);
+      
 
       setTimeout(() => {
+        setCurrentMoney(moneyAfterLosing)
         resetGame();
       }, 4500)
 
     } else if (altUserRes > altDealerRes) {
-
           setHasUserWon(true);
+          
           
           setTimeout(() => {
             SetShowWonChip(true);
-          }, 1000)
+          }, 800)
 
           setTimeout(() => {
+            setCurrentMoney(moneyAfterWinning)
             resetGame();
         }, 4500)
 
     } else if (altUserRes === altDealerRes) {
-
           setStandOff(true);
 
           setTimeout(() => {
@@ -600,10 +614,17 @@ const checkIfBust = () => {
     setDisableStand(true);
 
      setTimeout(() => {
-         resetGame()
+        setCurrentMoney(moneyAfterLosing)
+        resetGame()
+        
      }, 4500)
   }
 }
+
+
+
+
+
 
 const moneyAfterLosing = useMemo(() => {
   if (greenBetted) {
@@ -617,28 +638,53 @@ const moneyAfterLosing = useMemo(() => {
   }
 }, [currentMoney, greenBetted, redBetted, blueBetted, blackBetted, dealerWins]);
 
-const renderCounterDown = () => {
 
+
+const renderCounterDown = () => {
   if(isBust || dealerWins) {
     if(greenBetted) {
-     
-      return <CountDown start={currentMoney} end={moneyAfterLosing} />;
+      return <CountDown start={currentMoney} end={moneyAfterLosing} /> 
     } 
     else if(redBetted) {
-      console.log('red betted!')
       return <CountDown start={currentMoney} end={moneyAfterLosing} />
     }
     else if(blueBetted) {
-
       return <CountDown start={currentMoney} end={moneyAfterLosing} />
     }
     else if(blackBetted) {
-
       return <CountDown start={currentMoney} end={moneyAfterLosing} />
     }
   }
 
-  
+}
+
+const moneyAfterWinning = useMemo(() => {
+  if (greenBetted) {
+    return currentMoney + 100;
+  } else if (redBetted) {
+    return currentMoney + 200;
+  } else if (blueBetted) {
+    return currentMoney + 300;
+  } else if (blackBetted) {
+    return currentMoney + 400;
+  }
+}, [currentMoney, greenBetted, redBetted, blueBetted, blackBetted, hasUserWon]);
+
+const renderCounterUp = () => {
+  if(hasUserWon) {
+    if(greenBetted) {
+      return <CountUp start={currentMoney} end={moneyAfterWinning} /> 
+    } 
+    else if(redBetted) {
+      return <CountUp start={currentMoney} end={moneyAfterWinning} />
+    }
+    else if(blueBetted) {
+      return <CountUp start={currentMoney} end={moneyAfterWinning} />
+    }
+    else if(blackBetted) {
+      return <CountUp start={currentMoney} end={moneyAfterWinning} />
+    }
+  }
 
 }
 
@@ -884,20 +930,18 @@ const resetGame = () => {
     setBlackJack(false);
    setShowBJChip(false);
 
-
+    
     setDisableHit(false);
     setDisableStand(false);
 
 
-    if(setBust) {
-      setCurrenMoney(moneyAfterLosing)
-      setBust(false);
-    }
+    
+    setBust(false);
+    
   
-    if(dealerWins) {
-      setCurrenMoney(moneyAfterLosing)
-      setDealerWins(false);
-    }
+  
+    
+    
 
       
     setGreenBetted(false);
@@ -961,6 +1005,7 @@ function shuffleArray(array) {
   return (
     <div className="game-table"> 
       {renderCounterDown()}
+      {renderCounterUp()}
       <div className="dealers-box">
      
                 {/* First Dealer card */}

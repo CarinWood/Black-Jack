@@ -1,4 +1,5 @@
 import {useState, useRef, useEffect} from 'react'
+import './countUp.css'
 
 const CountUp = ({start, end}) => {
   const [countup, setCountup] = useState(null)
@@ -15,7 +16,7 @@ const CountUp = ({start, end}) => {
         ref.current = result
       }
 
-      setTimeout(updateCounterState, 5)
+      setTimeout(updateCounterState, 10)
   }
 
   useEffect(() => {
@@ -27,8 +28,8 @@ const CountUp = ({start, end}) => {
   },[end, start])
 
   return (
-    <div>
-        {countup}
+    <div className='counterup'>
+        $ {countup}
     </div>
   )
 }

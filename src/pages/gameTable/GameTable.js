@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import './gameTable.css'
 import { Deck } from "../../data/deck/Deck";
 import { MdArrowDropDown } from "react-icons/md";
+import CountDown from "../../components/CountDown/CountDown";
+
 
 
 const GameTable = () => {
@@ -45,9 +47,15 @@ const GameTable = () => {
   const [dealerWins, setDealerWins] = useState(false);
   const [standOff, setStandOff] = useState(false);
 
+  const [currentMoney, setCurrenMoney] = useState(1000);
+  const [moneyAfterWinning, setMoneyAfterWinning] = useState(0);
+  const [showCountUp, setShowCountUp] = useState(false);
+  const [showCountDown, setShowCountDown] = useState(false);
+
   useEffect(() => {
     updateUserPoints(0)
     shuffleArray(Deck)
+
    
 
   }, [])
@@ -593,14 +601,50 @@ const checkIfBust = () => {
     setBust(true);
     setDisableHit(true);
     setDisableStand(true);
+    setShowCountDown(true);
+
      setTimeout(() => {
          resetGame()
-     }, 3000)
+     }, 4500)
   }
 }
 
+const moneyAfterLosing = useMemo(() => {
+  if (greenBetted) {
+    return currentMoney - 100;
+  } else if (redBetted) {
+    return currentMoney -200;
+  } else if (blueBetted) {
+    return currentMoney - 300;
+  } else if (blackBetted) {
+    return currentMoney- 400;
+  }
+}, [currentMoney, greenBetted, redBetted, blueBetted, blackBetted]);
 
+const renderCounterDown = () => {
 
+  if(isBust) {
+    if(greenBetted) {
+     
+      return <CountDown start={currentMoney} end={moneyAfterLosing} />;
+    } 
+    else if(redBetted) {
+      console.log('red betted!')
+      return <CountDown start={currentMoney} end={moneyAfterLosing} />
+    }
+    else if(blueBetted) {
+
+      return <CountDown start={currentMoney} end={moneyAfterLosing} />
+    }
+    else if(blackBetted) {
+
+      return <CountDown start={currentMoney} end={moneyAfterLosing} />
+    }
+  }
+
+  
+
+}
 
 const renderUserSum = () => {
   if(countUserCards === 2) {
@@ -813,43 +857,59 @@ const renderBJChip = () => {
 
 
 const resetGame = () => {
-   shuffleArray(Deck);
-   setCountDealerCards(0);
-   setCountUserCards(0);
-   setUserPoints(0);
-   setDealerPoints(0);
-   setGreenBetted(false);
-   setRedBetted(false);
-   setBlueBetted(false);
-   setBlackBetted(false);
-   SetShowWonChip(false);
+    shuffleArray(Deck);
+    setCountDealerCards(0);
+    setCountUserCards(0);
+    setUserPoints(0);
+    setDealerPoints(0);
+    setGreenBetted(false);
+    setRedBetted(false);
+    setBlueBetted(false);
+    setBlackBetted(false);
+    SetShowWonChip(false);
 
-   setFirstUserCard(false);
-   setSecondUserCard(false);
-   setThirdUserCard(false);
-   setFourthUserCard(false);
-   setFifthUserCard(false);
-   setSixthUserCard(false);
+    setFirstUserCard(false);
+    setSecondUserCard(false);
+    setThirdUserCard(false);
+    setFourthUserCard(false);
+    setFifthUserCard(false);
+    setSixthUserCard(false);
    setSeventhUserCard(false);
 
-   setFirstDealerCard(false);
-   setSecondDealerCard(false);
-   setThirdDealerCard(false);
+    setFirstDealerCard(false);
+    setSecondDealerCard(false);
+    setThirdDealerCard(false);
    setFourthDealerCard(false);
-   setFifthDealerCard(false);
+    setFifthDealerCard(false);
    setSixthDealerCard(false);
    setSeventhDealerCard(false);
 
    setHasUserWon(false);
-   setBlackJack(false);
+    setBlackJack(false);
    setShowBJChip(false);
 
 
-   setDisableHit(false);
-   setDisableStand(false);
-   setBust(false);
-   setDealerWins(false);
-   setStandOff(false);
+    setDisableHit(false);
+    setDisableStand(false);
+
+
+    if(setBust) {
+      setCurrenMoney(moneyAfterLosing)
+      setBust(false);
+    }
+  
+
+      
+    setGreenBetted(false);
+    setRedBetted(false);
+    setBlueBetted(false);
+    setBlackBetted(false);
+   
+    setDealerWins(false);
+    setStandOff(false);
+
+
+  
   
 }
 
@@ -900,7 +960,7 @@ function shuffleArray(array) {
 
   return (
     <div className="game-table"> 
- 
+      {renderCounterDown()}
       <div className="dealers-box">
      
                 {/* First Dealer card */}
@@ -979,10 +1039,10 @@ function shuffleArray(array) {
             <MdArrowDropDown className="arrow-4"/>
         <div className="chips">
             
-            <div class={greenBetted ? "pokerchip betted-chip greenchip" : "pokerchip greenchip none-transition"} id={isBust || dealerWins ? 'lose-chip' : ''} onClick={() => betGreenChip()}>100</div>
-            <div class={redBetted? "pokerchip betted-chip redchip" : "pokerchip redchip none-transition"}  id={isBust || dealerWins ? 'lose-chip' : ''} onClick={() => betRedChip()}>200</div>
-            <div class={blueBetted? "pokerchip betted-chip bluechip" : "pokerchip bluechip none-transition"} id={isBust || dealerWins ? 'lose-chip' : ''} onClick={() => betBlueChip()}>300</div>
-            <div class={blackBetted? "pokerchip betted-chip blackchip" : "pokerchip blackchip none-transition"} id={isBust || dealerWins ? 'lose-chip' : ''} onClick={() => betBlackChip()}>400</div>
+            <div className={greenBetted ? "pokerchip betted-chip greenchip" : "pokerchip greenchip none-transition"} id={isBust || dealerWins ? 'lose-chip' : ''} onClick={() => betGreenChip()}>100</div>
+            <div className={redBetted? "pokerchip betted-chip redchip" : "pokerchip redchip none-transition"}  id={isBust || dealerWins ? 'lose-chip' : ''} onClick={() => betRedChip()}>200</div>
+            <div className={blueBetted? "pokerchip betted-chip bluechip" : "pokerchip bluechip none-transition"} id={isBust || dealerWins ? 'lose-chip' : ''} onClick={() => betBlueChip()}>300</div>
+            <div className={blackBetted? "pokerchip betted-chip blackchip" : "pokerchip blackchip none-transition"} id={isBust || dealerWins ? 'lose-chip' : ''} onClick={() => betBlackChip()}>400</div>
         </div>
     </div>
 

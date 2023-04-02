@@ -1,0 +1,15 @@
+.counterdown {
+    color: whitesmoke;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 150px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 39.5%;
+    left: 50%;
+    margin-left: -75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

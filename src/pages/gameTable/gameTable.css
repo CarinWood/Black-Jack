@@ -114,7 +114,7 @@
     margin-left: -150px;
     padding: 40px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -142,7 +142,7 @@
 .won-box, .dealer-wins-text {
   width: 200px;
   position: absolute;
-  top: 40%;
+  top: 34%;
   left: 50%;
   margin-left: -100px;
   color: white;
@@ -569,7 +569,7 @@
 .bj-text, .bust-text {
   width: 200px;
   position: absolute;
-  top: 40%;
+  top: 34%;
   left: 50%;
   margin-left: -100px;
   color: white;

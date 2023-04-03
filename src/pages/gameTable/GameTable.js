@@ -1134,7 +1134,8 @@ function shuffleArray(array) {
       {isBust && <p className="bust-text">Bust!</p>}
       {standOff && <p className="bust-text standoff-text">Stand off!</p>}
       {renderUserSum()}
-      <p className= {greenBetted || redBetted || blueBetted || blackBetted ? "place-bet-text hidden": "place-bet-text"}>Place Your Bet <span className="balance">Balance: $ {currentMoney}</span></p>
+      <p className= {greenBetted || redBetted || blueBetted || blackBetted ? "place-bet-text hidden": "place-bet-text"}>Place Your Bet</p>
+      <p className= {greenBetted || redBetted || blueBetted || blackBetted ? "balance hidden": "balance"}>Balance: $ {currentMoney}</p>
       <div className={greenBetted || redBetted || blueBetted || blackBetted ? 'user-box' : 'user-box hidden'}>
       <button className='stand-btn' onClick={()=> drawDealerCards()}>Stand</button>
       <button className='hit-btn' onClick={() => drawUserCards()}>Hit</button>

@@ -487,10 +487,8 @@
 }
 
 .balance {
-    top: 118%!important;
-    width: 400px;
+    top: 39%!important;
     font-size: 24px;
-    margin-left: -200px;
 }
 
 @keyframes textmove {
@@ -1081,7 +1079,6 @@
   }
 
   .balance {
-    top: 168%!important;
     width: 300px;
     font-size: 18px;
     margin-left: -150px;

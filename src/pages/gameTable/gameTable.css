@@ -1080,6 +1080,13 @@
     background-color: goldenrod;
   }
 
+  .balance {
+    top: 128%!important;
+    width: 300px;
+    font-size: 18px;
+    margin-left: -150px;
+}
+
   }
   
   

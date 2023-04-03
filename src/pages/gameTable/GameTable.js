@@ -5,10 +5,12 @@ import { MdArrowDropDown } from "react-icons/md";
 import CountDown from "../../components/CountDown/CountDown";
 import CountUp from "../../components/CountUp/CountUp";
 import { GameOver } from "../../gameOver/GameOver";
+import { useNavigate } from "react-router-dom";
 
 
 
 const GameTable = () => {
+  const navigate = useNavigate();
   const [countDealerCards, setCountDealerCards] = useState(0)
   const [countUserCards, setCountUserCards] = useState(0)
 
@@ -52,6 +54,7 @@ const GameTable = () => {
   const [currentMoney, setCurrentMoney] = useState(1000);
 
   const [gameOver, setGameOver] = useState(false);
+
 
   useEffect(() => {
     updateUserPoints(0)
@@ -640,7 +643,7 @@ const moneyAfterLosing = useMemo(() => {
   } else if (blackBetted) {
     return currentMoney- 400;
   }
-}, [currentMoney, greenBetted, redBetted, blueBetted, blackBetted, dealerWins]);
+}, [greenBetted, redBetted, blueBetted, blackBetted, dealerWins]);
 
 
 
@@ -672,7 +675,19 @@ const moneyAfterWinning = useMemo(() => {
   } else if (blackBetted) {
     return currentMoney + 400;
   }
-}, [currentMoney, greenBetted, redBetted, blueBetted, blackBetted, hasUserWon]);
+}, [greenBetted, redBetted, blueBetted, blackBetted, hasUserWon]);
+
+const moneyAfterBJ = useMemo(() => {
+  if (greenBetted) {
+    return currentMoney + 150;
+  } else if (redBetted) {
+    return currentMoney + 300;
+  } else if (blueBetted) {
+    return currentMoney + 450;
+  } else if (blackBetted) {
+    return currentMoney + 600;
+  }
+}, [greenBetted, redBetted, blueBetted, blackBetted, isBlackJack]);
 
 const renderCounterUp = () => {
   if(hasUserWon) {
@@ -687,6 +702,19 @@ const renderCounterUp = () => {
     }
     else if(blackBetted) {
       return <CountUp start={currentMoney} end={moneyAfterWinning} />
+    }
+  } else if (isBlackJack) {
+    if(greenBetted) {
+      return <CountUp start={currentMoney} end ={moneyAfterBJ} />
+    }
+    else if (redBetted) {
+      return <CountUp start={currentMoney} end={moneyAfterBJ} />
+    }
+    else if (blueBetted) {
+      return <CountUp start={currentMoney} end={moneyAfterBJ} />
+    }
+    else if (blackBetted) {
+      return <CountUp start={currentMoney} end={moneyAfterBJ} />
     }
   }
 
@@ -958,18 +986,30 @@ const checkForGameOver = () => {
   if(greenBetted) {
     if(currentMoney-100 <= 0) {
       setGameOver(true);
+      setTimeout(() => {
+          navigate("/")
+      }, 3000)
     }
   } else if (redBetted) {
     if(currentMoney-200 <= 0) {
       setGameOver(true);
+       setTimeout(() => {
+          navigate("/")
+      }, 3000)
     }
   } else if (blueBetted) {
     if(currentMoney-300 <= 0) {
       setGameOver(true);
+       setTimeout(() => {
+          navigate("/")
+      }, 3000)
     }
   } else if (blackBetted) {
     if(currentMoney-400 <= 0) {
       setGameOver(true);
+       setTimeout(() => {
+          navigate("/")
+      }, 3000)
     }
   } 
 }
@@ -987,6 +1027,7 @@ const checkForBlackJack = () => {
     }, 1000)
 
       setTimeout(() => {
+        setCurrentMoney(moneyAfterWinning)
         resetGame();
     }, 3000)
   }
@@ -997,7 +1038,7 @@ const checkForBlackJack = () => {
     setTimeout(() => {
           setBlackJack(true);
           SetShowWonChip(true);
-         setShowBJChip(true);
+          setShowBJChip(true);
     }, 1000)
 
      setTimeout(() => {
@@ -1021,8 +1062,9 @@ function shuffleArray(array) {
 
   return (
     <div className="game-table"> 
-      {gameOver && <GameOver/>}
-      {gameOver && <div className="gameOver-veil"></div>}
+      {gameOver ? <GameOver/>
+      : <>
+      
       {renderCounterDown()}
       {renderCounterUp()}
       <div className="dealers-box">
@@ -1109,7 +1151,10 @@ function shuffleArray(array) {
             <div className={blackBetted? "pokerchip betted-chip blackchip" : "pokerchip blackchip none-transition"} id={isBust || dealerWins ? 'lose-chip' : ''} onClick={() => betBlackChip()}>400</div>
         </div>
     </div>
-
+      </>}
+      
+     
+    
     </div>
   );
 };

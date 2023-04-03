@@ -8,6 +8,7 @@
     background-color: #32682c!important;
   }
 
+
   .hidden {
     visibility: hidden;
  
@@ -466,7 +467,7 @@
   }
 }
 
-.place-bet-text {
+.place-bet-text, .balance {
   color: white;
   font-size: 40px;
   position: absolute;
@@ -483,6 +484,13 @@
   word-spacing: 5px;
   animation: textmove 5s ease-in-out ;
   animation-iteration-count: infinite;
+}
+
+.balance {
+    top: 118%!important;
+    width: 400px;
+    font-size: 24px;
+    margin-left: -200px;
 }
 
 @keyframes textmove {

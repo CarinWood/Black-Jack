@@ -9,6 +9,11 @@
   src: url('../src/assets/fonts/Beautyofthebeast-1VpM.ttf');
 }
 
+@font-face {
+  font-family: 'Source Sans Pro', sans-serif;
+  src: url('../src/assets/fonts/SourceSansPro-Regular.ttf');
+}
+
 body {
   overflow-x: hidden;
   width: 100%;

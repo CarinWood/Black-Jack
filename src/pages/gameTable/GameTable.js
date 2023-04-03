@@ -4,6 +4,7 @@ import { Deck } from "../../data/deck/Deck";
 import { MdArrowDropDown } from "react-icons/md";
 import CountDown from "../../components/CountDown/CountDown";
 import CountUp from "../../components/CountUp/CountUp";
+import { GameOver } from "../../gameOver/GameOver";
 
 
 
@@ -49,6 +50,8 @@ const GameTable = () => {
   const [standOff, setStandOff] = useState(false);
 
   const [currentMoney, setCurrentMoney] = useState(1000);
+
+  const [gameOver, setGameOver] = useState(false);
 
   useEffect(() => {
     updateUserPoints(0)
@@ -615,6 +618,7 @@ const checkIfBust = () => {
 
      setTimeout(() => {
         setCurrentMoney(moneyAfterLosing)
+        checkForGameOver();
         resetGame()
         
      }, 4500)
@@ -916,34 +920,26 @@ const resetGame = () => {
     setFourthUserCard(false);
     setFifthUserCard(false);
     setSixthUserCard(false);
-   setSeventhUserCard(false);
+    setSeventhUserCard(false);
 
     setFirstDealerCard(false);
     setSecondDealerCard(false);
     setThirdDealerCard(false);
-   setFourthDealerCard(false);
+    setFourthDealerCard(false);
     setFifthDealerCard(false);
-   setSixthDealerCard(false);
-   setSeventhDealerCard(false);
+    setSixthDealerCard(false);
+    setSeventhDealerCard(false);
 
-   setHasUserWon(false);
+    setHasUserWon(false);
     setBlackJack(false);
-   setShowBJChip(false);
+    setShowBJChip(false);
 
     
     setDisableHit(false);
     setDisableStand(false);
 
-
-    
     setBust(false);
-    
-  
-  
-    
-    
-
-      
+ 
     setGreenBetted(false);
     setRedBetted(false);
     setBlueBetted(false);
@@ -955,6 +951,27 @@ const resetGame = () => {
 
     console.log(currentMoney);
   
+}
+
+
+const checkForGameOver = () => {
+  if(greenBetted) {
+    if(currentMoney-100 <= 0) {
+      setGameOver(true);
+    }
+  } else if (redBetted) {
+    if(currentMoney-200 <= 0) {
+      setGameOver(true);
+    }
+  } else if (blueBetted) {
+    if(currentMoney-300 <= 0) {
+      setGameOver(true);
+    }
+  } else if (blackBetted) {
+    if(currentMoney-400 <= 0) {
+      setGameOver(true);
+    }
+  } 
 }
 
 
@@ -1004,6 +1021,8 @@ function shuffleArray(array) {
 
   return (
     <div className="game-table"> 
+      {gameOver && <GameOver/>}
+      {gameOver && <div className="gameOver-veil"></div>}
       {renderCounterDown()}
       {renderCounterUp()}
       <div className="dealers-box">

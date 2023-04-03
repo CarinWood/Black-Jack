@@ -935,7 +935,7 @@ const renderBJChip = () => {
 
 
 const resetGame = () => {
-   /*  shuffleArray(Deck);
+    shuffleArray(Deck);
     setCountDealerCards(0);
     setCountUserCards(0);
     setUserPoints(0);
@@ -979,7 +979,7 @@ const resetGame = () => {
    
     setDealerWins(false);
     setStandOff(false);
- */
+
   
 }
 

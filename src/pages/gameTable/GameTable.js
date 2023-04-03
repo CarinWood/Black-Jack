@@ -438,7 +438,7 @@ const checkWhoWon = () => {
      setTimeout(() => {
       setCurrentMoney(moneyAfterWinning)
          resetGame();
-     }, 4500)
+     }, 5000)
 
 
   }
@@ -456,7 +456,7 @@ const checkWhoWon = () => {
        setTimeout(() => {
         setCurrentMoney(moneyAfterWinning)
            resetGame();
-       }, 4500)
+       }, 5000)
 
     } else if (userPoints <= 21 && userPoints < dealerRes && dealerRes <= 21) {
       setDealerWins(true);
@@ -464,8 +464,9 @@ const checkWhoWon = () => {
 
        setTimeout(() => {
         setCurrentMoney(moneyAfterLosing)
+        checkForGameOver();
          resetGame();
-     }, 4500)
+     }, 5000)
 
     } else if (userPoints === dealerRes) {
       setStandOff(true);
@@ -485,7 +486,7 @@ const checkWhoWon = () => {
           setTimeout(() => {
             setCurrentMoney(moneyAfterWinning)
               resetGame();
-          }, 4500)
+          }, 5000)
     }
 
   } else if (altDealerRes === 0 && altUserRes !== 0) {
@@ -501,7 +502,7 @@ const checkWhoWon = () => {
       setTimeout(() => {
         setCurrentMoney(moneyAfterWinning)
         resetGame();
-    }, 4500)
+    }, 5000)
 
     } else if (dealerRes > altUserRes) {
       setDealerWins(true);
@@ -509,15 +510,16 @@ const checkWhoWon = () => {
 
       setTimeout(() => {
         setCurrentMoney(moneyAfterLosing)
+        checkForGameOver();
         resetGame();
-    }, 4500)
+    }, 5000)
 
     } else if (dealerRes === altUserRes) {
       setStandOff(true)
 
       setTimeout(() => {
         resetGame();
-    }, 4500)
+    }, 5000)
 
     }
   } else if (altDealerRes !== 0 && altUserRes === 0) {
@@ -527,8 +529,9 @@ const checkWhoWon = () => {
 
       setTimeout(() => {
         setCurrentMoney(moneyAfterLosing)
+        checkForGameOver();
         resetGame();
-    }, 4500)
+    }, 5000)
 
     } else if (userPoints > altDealerRes) {
       setHasUserWon(true);
@@ -541,14 +544,14 @@ const checkWhoWon = () => {
       setTimeout(() => {
         setCurrentMoney(moneyAfterWinning)
         resetGame();
-    }, 4500)
+    }, 5000)
 
     } else if (userPoints === altDealerRes) {
       setStandOff(true);
 
       setTimeout(() => {
         resetGame();
-    }, 4500)
+    }, 5000)
 
     }
   } else if (altDealerRes === altUserRes) {
@@ -556,7 +559,7 @@ const checkWhoWon = () => {
 
         setTimeout(() => {
           resetGame(); 
-         }, 4500)
+         }, 5000)
 
   } else if (altDealerRes !== 0 && altUserRes !== 0) {
     if(altDealerRes > altUserRes) {
@@ -565,8 +568,9 @@ const checkWhoWon = () => {
 
       setTimeout(() => {
         setCurrentMoney(moneyAfterLosing)
+        checkForGameOver();
         resetGame();
-      }, 4500)
+      }, 5000)
 
     } else if (altUserRes > altDealerRes) {
           setHasUserWon(true);
@@ -579,14 +583,14 @@ const checkWhoWon = () => {
           setTimeout(() => {
             setCurrentMoney(moneyAfterWinning)
             resetGame();
-        }, 4500)
+        }, 5000)
 
     } else if (altUserRes === altDealerRes) {
           setStandOff(true);
 
           setTimeout(() => {
             resetGame(); 
-          }, 4500)
+          }, 5000)
         }
   }
 
@@ -624,7 +628,7 @@ const checkIfBust = () => {
         checkForGameOver();
         resetGame()
         
-     }, 4500)
+     }, 5000)
   }
 }
 
@@ -931,7 +935,7 @@ const renderBJChip = () => {
 
 
 const resetGame = () => {
-    shuffleArray(Deck);
+   /*  shuffleArray(Deck);
     setCountDealerCards(0);
     setCountUserCards(0);
     setUserPoints(0);
@@ -975,7 +979,7 @@ const resetGame = () => {
    
     setDealerWins(false);
     setStandOff(false);
-
+ */
   
 }
 
@@ -1027,7 +1031,7 @@ const checkForBlackJack = () => {
       setTimeout(() => {
         setCurrentMoney(moneyAfterBJ)
         resetGame();
-    }, 3000)
+    }, 5000)
   }
 
   else if (Deck[0].value === 10 && Deck[1].value === 1) {
@@ -1040,8 +1044,9 @@ const checkForBlackJack = () => {
     }, 1000)
 
      setTimeout(() => {
+       setCurrentMoney(moneyAfterBJ)
        resetGame();
-   }, 3000)
+   }, 5000)
   }
   else {
    return
@@ -1127,7 +1132,7 @@ function shuffleArray(array) {
       </div>
       {isBlackJack && <p className="bj-text">Black Jack!</p>}
       {isBust && <p className="bust-text">Bust!</p>}
-      {standOff && <p className="bust-text">Stand off!</p>}
+      {standOff && <p className="bust-text standoff-text">Stand off!</p>}
       {renderUserSum()}
       <p className= {greenBetted || redBetted || blueBetted || blackBetted ? "place-bet-text hidden": "place-bet-text"}>Place Your Bet</p>
       <div className={greenBetted || redBetted || blueBetted || blackBetted ? 'user-box' : 'user-box hidden'}>

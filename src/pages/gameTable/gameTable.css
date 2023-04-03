@@ -617,8 +617,14 @@
   }
 
   .won-box, .bj-text, .bust-text, .dealer-wins-text {
-    top: 33%;
+    font-size: 24px;
+    top: 31%;
   } 
+
+  .standoff-text {
+    font-size: 24px;
+    top: 33%;
+  }
 
   .line {
     height: 0.2vh;

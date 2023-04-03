@@ -16,7 +16,7 @@ const CountUp = ({start, end}) => {
         ref.current = result
       }
 
-      setTimeout(updateCounterState, 10)
+      setTimeout(updateCounterState, 8)
   }
 
   useEffect(() => {

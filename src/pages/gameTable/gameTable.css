@@ -7,27 +7,6 @@
     justify-content: flex-start;
     background-color: #32682c!important;
   }
-/* 
-  .gameOver-veil {
-    width: 100%;
-    height: 100%;
-    background-color: #32682c;
-    opacity: 0.8;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    animation: fadeveil 1000ms;
-  }
-
-  @keyframes fadeveil {
-    0% {
-        opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  } */
 
   .hidden {
     visibility: hidden;
@@ -991,7 +970,7 @@
     width: 150px;
     margin-left: -75px;
     position: absolute;
-    top: 38%;
+    top: 34%;
     font-size: 23px;
     z-index: 10;
   }

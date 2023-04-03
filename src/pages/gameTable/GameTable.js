@@ -976,8 +976,6 @@ const resetGame = () => {
     setDealerWins(false);
     setStandOff(false);
 
-
-    console.log(currentMoney);
   
 }
 

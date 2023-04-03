@@ -466,7 +466,7 @@ const checkWhoWon = () => {
         setCurrentMoney(moneyAfterLosing)
         checkForGameOver();
          resetGame();
-     }, 5000)
+     }, 6000)
 
     } else if (userPoints === dealerRes) {
       setStandOff(true);
@@ -512,14 +512,14 @@ const checkWhoWon = () => {
         setCurrentMoney(moneyAfterLosing)
         checkForGameOver();
         resetGame();
-    }, 5000)
+    }, 6000)
 
     } else if (dealerRes === altUserRes) {
       setStandOff(true)
 
       setTimeout(() => {
         resetGame();
-    }, 5000)
+    }, 4500)
 
     }
   } else if (altDealerRes !== 0 && altUserRes === 0) {
@@ -531,7 +531,7 @@ const checkWhoWon = () => {
         setCurrentMoney(moneyAfterLosing)
         checkForGameOver();
         resetGame();
-    }, 5000)
+    }, 6000)
 
     } else if (userPoints > altDealerRes) {
       setHasUserWon(true);
@@ -551,7 +551,7 @@ const checkWhoWon = () => {
 
       setTimeout(() => {
         resetGame();
-    }, 5000)
+    }, 4500)
 
     }
   } else if (altDealerRes === altUserRes) {
@@ -559,7 +559,7 @@ const checkWhoWon = () => {
 
         setTimeout(() => {
           resetGame(); 
-         }, 5000)
+         }, 4500)
 
   } else if (altDealerRes !== 0 && altUserRes !== 0) {
     if(altDealerRes > altUserRes) {
@@ -570,7 +570,7 @@ const checkWhoWon = () => {
         setCurrentMoney(moneyAfterLosing)
         checkForGameOver();
         resetGame();
-      }, 5000)
+      }, 6000)
 
     } else if (altUserRes > altDealerRes) {
           setHasUserWon(true);
@@ -590,7 +590,7 @@ const checkWhoWon = () => {
 
           setTimeout(() => {
             resetGame(); 
-          }, 5000)
+          }, 4500)
         }
   }
 
@@ -628,7 +628,7 @@ const checkIfBust = () => {
         checkForGameOver();
         resetGame()
         
-     }, 5000)
+     }, 6000)
   }
 }
 

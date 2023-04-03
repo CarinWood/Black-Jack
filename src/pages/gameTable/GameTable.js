@@ -1025,7 +1025,7 @@ const checkForBlackJack = () => {
     }, 1000)
 
       setTimeout(() => {
-        setCurrentMoney(moneyAfterWinning)
+        setCurrentMoney(moneyAfterBJ)
         resetGame();
     }, 3000)
   }

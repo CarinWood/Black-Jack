@@ -986,28 +986,28 @@ const checkForGameOver = () => {
       setGameOver(true);
       setTimeout(() => {
           navigate("/")
-      }, 3000)
+      }, 4000)
     }
   } else if (redBetted) {
     if(currentMoney-200 <= 0) {
       setGameOver(true);
        setTimeout(() => {
           navigate("/")
-      }, 3000)
+      }, 4000)
     }
   } else if (blueBetted) {
     if(currentMoney-300 <= 0) {
       setGameOver(true);
        setTimeout(() => {
           navigate("/")
-      }, 3000)
+      }, 4000)
     }
   } else if (blackBetted) {
     if(currentMoney-400 <= 0) {
       setGameOver(true);
        setTimeout(() => {
           navigate("/")
-      }, 3000)
+      }, 4000)
     }
   } 
 }

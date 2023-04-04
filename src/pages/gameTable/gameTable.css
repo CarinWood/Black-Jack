@@ -629,9 +629,38 @@
     z-index: 10!important;
     position: absolute;
     top: unset;
-    top: 72%;
+    top: 72.2%;
     left: 48%;
     transition: all 0.5s ease-in-out;
+  }
+
+  .bj-chip-green {
+    top: 72.2%;
+    left: 50%;
+
+  }
+ 
+  .bj-chip-red {
+    top: 72.2%;
+    left: 50%;
+
+  }
+
+  .bj-chip-green-again {
+    left: 50%;
+    top: 72.2%;
+  }
+  
+  .bj-chip-purple-again {
+    background: #601c92!important;
+    left: 52%;
+    top: 72.2%;
+  }
+
+  .bj-chip-purple {
+    background: #601c92!important;
+    left: 50%;
+    top: 72.2%;
   }
 
   .betted-chip {

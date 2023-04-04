@@ -622,6 +622,7 @@ const checkIfBust = () => {
     setBust(true);
     setDisableHit(true);
     setDisableStand(true);
+   
 
      setTimeout(() => {
         setCurrentMoney(moneyAfterLosing)
@@ -639,13 +640,31 @@ const checkIfBust = () => {
 
 const moneyAfterLosing = useMemo(() => {
   if (greenBetted) {
-    return currentMoney - 100;
+    if(currentMoney -100 < 0) {
+      return 0;
+    } else {
+      return currentMoney - 100;
+    }
+    
   } else if (redBetted) {
-    return currentMoney -200;
+    if(currentMoney -200 < 0) {
+      return 0;
+    } else {
+      return currentMoney -200;
+    }
+
   } else if (blueBetted) {
+    if(currentMoney -300 < 0) {
+      return 0;
+    } else {
     return currentMoney - 300;
+    }
   } else if (blackBetted) {
-    return currentMoney- 400;
+    if(currentMoney -400 < 0) {
+      return 0;
+    } else {
+    return currentMoney - 400;
+    }
   }
 }, [greenBetted, redBetted, blueBetted, blackBetted, dealerWins]);
 
@@ -1136,10 +1155,15 @@ function shuffleArray(array) {
       {renderUserSum()}
       <p className= {greenBetted || redBetted || blueBetted || blackBetted ? "place-bet-text hidden": "place-bet-text"}>Place Your Bet</p>
       <p className= {greenBetted || redBetted || blueBetted || blackBetted ? "balance hidden": "balance"}>Balance: $ {currentMoney}</p>
-      <div className={greenBetted || redBetted || blueBetted || blackBetted ? 'user-box' : 'user-box hidden'}>
-      <button className='stand-btn' onClick={()=> drawDealerCards()}>Stand</button>
-      <button className='hit-btn' onClick={() => drawUserCards()}>Hit</button>
-    </div>
+      
+      
+      {hasUserWon || isBlackJack || isBust || dealerWins || standOff ? <button className="new-deal-btn" onClick={() => resetGame()}>New Bet</button>
+      : <div className={greenBetted || redBetted || blueBetted || blackBetted ? 'user-box' : 'user-box hidden'}>
+          <button className='stand-btn' onClick={()=> drawDealerCards()}>Stand</button>
+          <button className='hit-btn' onClick={() => drawUserCards()}>Hit</button>
+        </div>
+      }
+    
    {showWonChip && renderWonChip()}
    {showBJChip && renderBJChip()}
     <div className={greenBetted || redBetted || blueBetted || blackBetted ? 'betting-box hide-chips': 'betting-box'}>

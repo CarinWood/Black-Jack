@@ -118,7 +118,7 @@
     align-items: center;
 }
 
-.stand-btn, .hit-btn {
+.stand-btn, .hit-btn, .new-deal-btn {
     color: var(--white);
     padding: 5px 10px;
     border: 1px solid burlywood;
@@ -129,6 +129,15 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
     width: 90px;
     cursor: pointer;
+}
+
+.new-deal-btn {
+  background-image: linear-gradient(rgb(7, 99, 7), green);
+  position: absolute;
+  left: 50%;
+  margin-left: -60px;
+  bottom: 4%;
+  width: 120px;
 }
 
 .hit-btn {
@@ -748,11 +757,17 @@
 
     }
 
-    .stand-btn, .hit-btn {
+    .stand-btn, .hit-btn, .new-deal-btn {
         padding: 6px 10px;
         font-size: 18px;
         letter-spacing: 1.3px;
         width: 80px;
+    }
+
+    .new-deal-btn {
+      margin-left: -50px;
+      bottom: 3%;
+      width: 100px;
     }
 
  

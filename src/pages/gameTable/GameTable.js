@@ -622,7 +622,6 @@ const checkIfBust = () => {
     setBust(true);
     setDisableHit(true);
     setDisableStand(true);
-   
 
      setTimeout(() => {
         setCurrentMoney(moneyAfterLosing)
@@ -1155,15 +1154,10 @@ function shuffleArray(array) {
       {renderUserSum()}
       <p className= {greenBetted || redBetted || blueBetted || blackBetted ? "place-bet-text hidden": "place-bet-text"}>Place Your Bet</p>
       <p className= {greenBetted || redBetted || blueBetted || blackBetted ? "balance hidden": "balance"}>Balance: $ {currentMoney}</p>
-      
-      
-      {hasUserWon || isBlackJack || isBust || dealerWins || standOff ? <button className="new-deal-btn" onClick={() => resetGame()}>New Bet</button>
-      : <div className={greenBetted || redBetted || blueBetted || blackBetted ? 'user-box' : 'user-box hidden'}>
-          <button className='stand-btn' onClick={()=> drawDealerCards()}>Stand</button>
-          <button className='hit-btn' onClick={() => drawUserCards()}>Hit</button>
-        </div>
-      }
-    
+      <div className={greenBetted || redBetted || blueBetted || blackBetted ? 'user-box' : 'user-box hidden'}>
+      <button className='stand-btn' onClick={()=> drawDealerCards()}>Stand</button>
+      <button className='hit-btn' onClick={() => drawUserCards()}>Hit</button>
+    </div>
    {showWonChip && renderWonChip()}
    {showBJChip && renderBJChip()}
     <div className={greenBetted || redBetted || blueBetted || blackBetted ? 'betting-box hide-chips': 'betting-box'}>

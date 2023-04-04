@@ -59,7 +59,10 @@ const Faq = () => {
         of 10. This is called a Black Jack. A Player who is dealt a Black Jack
         automatically wins.
       </p>
-      <h1 className="text-heading">Winning a game</h1>
+      <h1 className="text-heading">Winning and Losing</h1>
+      <p className="faq-text">
+        You start the game with $1000. If you lose all your money you get Game Over.
+      </p>
       <p className="faq-text">
         If you win, you keep your bet and you receive an equal number
         of chips from the Dealer.

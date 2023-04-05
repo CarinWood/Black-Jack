@@ -1083,7 +1083,7 @@ function shuffleArray(array) {
 
   return (
     <div className="game-table"> 
-      {gameOver ? <div className="game-over-div"><GameOver/></div>
+      {gameOver ? <GameOver/>
       : <>
       
       {renderCounterDown()}

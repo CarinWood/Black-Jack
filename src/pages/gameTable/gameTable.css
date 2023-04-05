@@ -8,34 +8,6 @@
     background-color: #32682c!important;
   }
 
-  .game-over-div {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    animation: fadeToBlack 4s ease-in-out;
-    background-color: black;
-    opacity: 0;
-    z-index: 100
-  }
-
-  @keyframes fadeToBlack {
-    0% {
-      
-      opacity: 0;
-
-
-    }
-
-    100% {
-  
-      opacity: 1;
-    }
-  }
-
-
   .hidden {
     visibility: hidden;
  

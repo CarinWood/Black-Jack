@@ -630,14 +630,14 @@
 
   .betted-chip {
     position: absolute;
-    bottom: 50%!important;
+    bottom: 48%!important;
     left: 51.5%!important;
     margin-left: -40px;
     visibility: visible;
   }
 
   .user-card-area {
-    bottom: 16%;
+    bottom: 14%;
     }
 
   

@@ -628,6 +628,14 @@
     letter-spacing: 0.5px;
   }
 
+  .betted-chip {
+    position: absolute;
+    bottom: 60%!important;
+    left: 50%!important;
+    margin-left: -35px;
+    visibility: visible;
+  }
+
   
 .greenchip, .redchip, .bluechip, .blackchip {
   left: 1%;
@@ -635,6 +643,21 @@
 
 .arrow-1, .arrow-2, .arrow-3, .arrow-4 {
   top: -27%;
+}
+
+.user-box {
+  bottom: 3%!important;
+  justify-content: space-around;
+  padding: 0px;
+  width: 250px;
+  margin-left: -125px;
+}
+
+.stand-btn, .hit-btn {
+  padding: 5px 8px;
+  font-size: 18px;
+  letter-spacing: 1.3px;
+  width: 85px;  
 }
 
 
@@ -686,11 +709,7 @@
     bottom: 68%;
   }
 
-  .user-box {
-    bottom: 0%!important;
-    justify-content: space-around;
-    padding: 30px;
-  }
+
 
   .user-card-area {
   bottom: 30%;

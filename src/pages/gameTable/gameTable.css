@@ -697,6 +697,24 @@
     visibility: visible;
   }
 
+  #lose-chip {
+    position: absolute;
+    bottom: 1000%!important;
+    animation: loseChip 2000ms ease-in-out!important;
+  }
+  
+  @keyframes loseChip {
+    0% {
+      bottom: 43%!important;
+  
+    }
+    100% {
+  
+      bottom: 1000%!important;
+  
+    }
+  }
+
   .won-chip {
     z-index: 10!important;
     position: absolute;
@@ -764,26 +782,7 @@
     height: 0.2vh;
     width: 2vw;
     background-color: goldenrod;
-  }
-
-  #lose-chip {
-    position: absolute;
-    bottom: 1200%;
-    animation: loseChip2 1000ms ease-in-out!important;
-  }
-  
-  @keyframes loseChip2 {
-    0% {
-      bottom: 43%;
-  
-    }
-    100% {
-  
-      bottom: 1200%;
-  
-    }
-  }
-  
+  } 
 
 }
 

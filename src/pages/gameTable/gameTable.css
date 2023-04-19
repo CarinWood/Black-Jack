@@ -621,6 +621,12 @@
 }
 
 @media screen and (max-width: 1800px) {
+  .pokerchip {
+    width: 70px;
+    height: 70px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
 
   .dealers-box {
     top: 1%;
@@ -698,6 +704,8 @@
   }
 
 }
+
+
 
 
 

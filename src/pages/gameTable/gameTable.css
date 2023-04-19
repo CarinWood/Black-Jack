@@ -628,6 +628,16 @@
     letter-spacing: 0.5px;
   }
 
+  
+.greenchip, .redchip, .bluechip, .blackchip {
+  left: 1%;
+}
+
+.arrow-1, .arrow-2, .arrow-3, .arrow-4 {
+  top: -27%;
+}
+
+
   .dealers-box {
     top: 1%;
     left: 50%;

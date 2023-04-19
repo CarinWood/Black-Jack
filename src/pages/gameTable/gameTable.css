@@ -641,8 +641,6 @@
   left: 1.35%;
 }
 
-
-
 .user-box {
   bottom: 3%!important;
   justify-content: space-around;
@@ -658,11 +656,22 @@
   width: 85px;  
 }
 
-
-  .dealers-box {
-    top: 1%;
+.dealers-box {
+    top: 0.1%;
     left: 50%;
     margin-left: -400px;
+    height: auto; 
+  }
+
+  .dealer-sum {
+    top: 8%;
+  }
+
+  .dealer-double-sum {
+    width: 50px;
+    height: 60px!important;
+    bottom: 34%!important;
+    visibility: visible;
   }
 
   .won-chip {
@@ -707,11 +716,20 @@
     bottom: 68%;
   }
 
-
-
   .user-card-area {
-  bottom: 30%;
-  
+  bottom: 18%;
+  }
+
+  .sum-double {
+    border-radius: 3px;
+    background-color: black;
+    width: 50px;
+    height: auto;
+    bottom: 28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .won-box, .bj-text, .bust-text, .dealer-wins-text {

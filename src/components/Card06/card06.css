@@ -133,7 +133,7 @@
     font-size: 24px;
 }
 
-@media screen and (max-width: 471px) {
+@media screen and (max-width: 1800px) {
     .card06-frame {
         margin-top: 10px;
         width: 88px;

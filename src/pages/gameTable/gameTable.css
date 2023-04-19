@@ -630,15 +630,15 @@
 
   .betted-chip {
     position: absolute;
-    bottom: 50%!important;
-    left: 50%!important;
+    bottom: 60%!important;
+    left: 51.5%!important;
     margin-left: -40px;
     visibility: visible;
   }
 
   
 .greenchip, .redchip, .bluechip, .blackchip {
-  left: 1.35%;
+  left: 2%;
 }
 
 .user-box {
@@ -664,7 +664,7 @@
   }
 
   .dealer-sum {
-    top: 8%;
+    top: 6%;
   }
 
   .dealer-double-sum {

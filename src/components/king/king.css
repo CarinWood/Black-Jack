@@ -79,7 +79,7 @@
     transform: rotate(180deg);
 }
 
-@media screen and (max-width: 471px) {
+@media screen and (max-width: 1800px) {
     .king-frame {
         margin-top: 10px;
         width: 88px;

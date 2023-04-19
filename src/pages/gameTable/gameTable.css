@@ -622,28 +622,26 @@
 
 @media screen and (max-width: 1800px) {
   .pokerchip {
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
     font-size: 14px;
     letter-spacing: 0.5px;
   }
 
   .betted-chip {
     position: absolute;
-    bottom: 60%!important;
+    bottom: 50%!important;
     left: 50%!important;
-    margin-left: -35px;
+    margin-left: -32.5px;
     visibility: visible;
   }
 
   
 .greenchip, .redchip, .bluechip, .blackchip {
-  left: 1%;
+  left: 1.35%;
 }
 
-.arrow-1, .arrow-2, .arrow-3, .arrow-4 {
-  top: -27%;
-}
+
 
 .user-box {
   bottom: 3%!important;

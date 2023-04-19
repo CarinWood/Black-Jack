@@ -630,11 +630,15 @@
 
   .betted-chip {
     position: absolute;
-    bottom: 56%!important;
+    bottom: 52%!important;
     left: 51.5%!important;
     margin-left: -40px;
     visibility: visible;
   }
+
+  .user-card-area {
+    bottom: 16%;
+    }
 
   
 .greenchip, .redchip, .bluechip, .blackchip {
@@ -731,13 +735,8 @@
     top: 72.2%;
   }
 
-  .betted-chip {
-    bottom: 68%;
-  }
 
-  .user-card-area {
-  bottom: 16%;
-  }
+
 
   .sum-double {
     border-radius: 3px;

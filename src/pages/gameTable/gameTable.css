@@ -630,7 +630,7 @@
 
   .betted-chip {
     position: absolute;
-    bottom: 60%!important;
+    bottom: 58%!important;
     left: 51.5%!important;
     margin-left: -40px;
     visibility: visible;
@@ -638,7 +638,7 @@
 
   
 .greenchip, .redchip, .bluechip, .blackchip {
-  left: 2%;
+  left: 1.8%;
 }
 
 .user-box {
@@ -663,8 +663,27 @@
     height: auto; 
   }
 
+  .user-sum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px!important;
+    border: 1px solid goldenrod;
+    border-radius: 3px;
+    background-color: black;
+    width: 50px;
+    height: 40px;
+    color: goldenrod;
+    position: absolute;
+    right: 25%!important;
+    bottom: 33%;
+    padding: 2px;
+    visibility: visible;
+    transition: all 0.2s ease-in-out;
+  }
+
   .dealer-sum {
-    top: 6%;
+    top: 7%;
   }
 
   .dealer-double-sum {

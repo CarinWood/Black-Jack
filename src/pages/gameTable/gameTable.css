@@ -628,13 +628,13 @@
     letter-spacing: 0.5px;
   }
 
-  .betted-chip {
+   .betted-chip {
     position: absolute;
     bottom: 43%!important;
     left: 51.5%!important;
     margin-left: -40px;
     visibility: visible;
-  }
+  } 
 
   .user-card-area {
     bottom: 14%;
@@ -765,6 +765,25 @@
     width: 2vw;
     background-color: goldenrod;
   }
+
+  #lose-chip {
+    position: absolute;
+    bottom: 1200%;
+    animation: loseChip2 1000ms ease-in-out!important;
+  }
+  
+  @keyframes loseChip2 {
+    0% {
+      bottom: 43%;
+  
+    }
+    100% {
+  
+      bottom: 1200%;
+  
+    }
+  }
+  
 
 }
 

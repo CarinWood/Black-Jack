@@ -1181,7 +1181,7 @@
     position: absolute;
     bottom: 703.5%;
     transition: unset;
-    animation: loseChip 1000ms ease-in-out;
+    animation: loseChip 200ms ease-in-out;
  
   }
 
